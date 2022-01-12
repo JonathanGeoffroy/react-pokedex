@@ -1,13 +1,7 @@
-import styles from './app.module.scss';
-import NxWelcome from './nx-welcome';
+import './app.module.scss';
 
 export function App() {
-  return (
-    <>
-      <NxWelcome title="web" />
-      <div />
-    </>
-  );
+  return <h1>Welcome web</h1>;
 }
 
 export default App;
