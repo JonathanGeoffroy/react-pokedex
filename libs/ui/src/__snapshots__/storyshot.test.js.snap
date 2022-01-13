@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button Default Button 2`] = `
+<button
+  className="btn border default"
+  onClick={[Function]}
+  onDragStart={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchCancel={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  type="button"
+>
+  Click me
+</button>
+`;
+
+exports[`Storyshots Button Extra Small Button 2`] = `
+<button
+  className="btn border xs"
+  onClick={[Function]}
+  onDragStart={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchCancel={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  type="button"
+>
+  Click me
+</button>
+`;
+
+exports[`Storyshots Button Large Button 2`] = `
+<button
+  className="btn border xl"
+  onClick={[Function]}
+  onDragStart={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchCancel={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  type="button"
+>
+  Click me
+</button>
+`;
+
+exports[`Storyshots Button Primary Button 2`] = `
+<button
+  className="btn bg-primary-500 hover:bg-primary-400 text-primary-complementary default"
+  onClick={[Function]}
+  onDragStart={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchCancel={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  type="button"
+>
+  Click me
+</button>
+`;
+
+exports[`Storyshots Button Secondary Button 2`] = `
+<button
+  className="btn bg-secondary-500 hover:bg-secondary-400  text-secondary-complementary default"
+  onClick={[Function]}
+  onDragStart={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchCancel={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  type="button"
+>
+  Click me
+</button>
+`;
+
+exports[`Storyshots Button Small Button 2`] = `
+<button
+  className="btn border sm"
+  onClick={[Function]}
+  onDragStart={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchCancel={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  type="button"
+>
+  Click me
+</button>
+`;

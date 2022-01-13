@@ -1,0 +1,13 @@
+.btn {
+  @apply px-2 py-1 rounded-3xl;
+
+  &.xs {
+    @apply text-xs;
+  }
+  &.sm {
+    @apply text-sm;
+  }
+  &.xl {
+    @apply text-xl;
+  }
+}
