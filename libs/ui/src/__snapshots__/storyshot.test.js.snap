@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Button Default Button 2`] = `
+exports[`Storyshots Button Default Button 1`] = `
 <button
   className="btn border default"
   onClick={[Function]}
@@ -21,7 +21,7 @@ exports[`Storyshots Button Default Button 2`] = `
 </button>
 `;
 
-exports[`Storyshots Button Extra Small Button 2`] = `
+exports[`Storyshots Button Extra Small Button 1`] = `
 <button
   className="btn border xs"
   onClick={[Function]}
@@ -42,7 +42,7 @@ exports[`Storyshots Button Extra Small Button 2`] = `
 </button>
 `;
 
-exports[`Storyshots Button Large Button 2`] = `
+exports[`Storyshots Button Large Button 1`] = `
 <button
   className="btn border xl"
   onClick={[Function]}
@@ -63,7 +63,7 @@ exports[`Storyshots Button Large Button 2`] = `
 </button>
 `;
 
-exports[`Storyshots Button Primary Button 2`] = `
+exports[`Storyshots Button Primary Button 1`] = `
 <button
   className="btn bg-primary-500 hover:bg-primary-400 text-primary-complementary default"
   onClick={[Function]}
@@ -84,7 +84,7 @@ exports[`Storyshots Button Primary Button 2`] = `
 </button>
 `;
 
-exports[`Storyshots Button Secondary Button 2`] = `
+exports[`Storyshots Button Secondary Button 1`] = `
 <button
   className="btn bg-secondary-500 hover:bg-secondary-400  text-secondary-complementary default"
   onClick={[Function]}
@@ -105,7 +105,7 @@ exports[`Storyshots Button Secondary Button 2`] = `
 </button>
 `;
 
-exports[`Storyshots Button Small Button 2`] = `
+exports[`Storyshots Button Small Button 1`] = `
 <button
   className="btn border sm"
   onClick={[Function]}

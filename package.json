@@ -7,9 +7,10 @@
     "start": "nx serve",
     "storybook": "nx run ui:storybook",
     "build": "nx build",
-    "test": "npm run test:storybook && npm run test:e2e",
-    "test:storybook": "start-server-and-test storybook http://localhost:4400 test:storybook-jest",
-    "test:storybook-jest": "cd ./libs/ui && npx jest",
+    "test": "npm run test:ui && npm run test:e2e",
+    "test:ui": "start-server-and-test storybook http://localhost:4400 test:ui-jest",
+    "test:ui-jest": "cd ./libs/ui && npx jest",
+    "test:ui-jest-update": "cd ./libs/ui && npx jest -u",
     "test:e2e": "nx run-many --target=e2e --all"
   },
   "private": true,
