@@ -6,7 +6,7 @@ import cn from 'classnames';
 
 /* eslint-disable-next-line */
 export interface ButtonProps extends AriaButtonProps<'button'> {
-  children: ReactChild
+  children: ReactChild;
   kind?: 'default' | 'primary' | 'secondary';
   size?: 'default' | 'xs' | 'sm' | 'xl';
   className?: string;
