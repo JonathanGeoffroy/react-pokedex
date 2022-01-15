@@ -12,9 +12,9 @@ export interface TopBarProps {
 export function TopBar({ kind, children, className }: TopBarProps) {
   const kindClassnames =
     kind === 'primary'
-      ? `bg-primary-500 hover:bg-primary-400 text-primary-complementary`
+      ? `bg-primary-500 text-primary-complementary`
       : kind === 'secondary'
-      ? 'bg-secondary-500 hover:bg-secondary-400 text-secondary-complementary'
+      ? 'bg-secondary-500 text-secondary-complementary'
       : 'border';
 
   return (
