@@ -1,0 +1,9 @@
+.top-bar {
+  @apply sticky w-screen px-4 py-1 shadow flex justify-between content-center;
+  min-height: 2.5rem;
+  align-items: center;
+
+  > * {
+    align-self: center;
+  }
+}

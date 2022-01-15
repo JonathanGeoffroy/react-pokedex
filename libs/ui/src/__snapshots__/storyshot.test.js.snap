@@ -125,3 +125,41 @@ exports[`Storyshots Button Small Button 1`] = `
   Click me
 </button>
 `;
+
+exports[`Storyshots TopBar Empty 1`] = `
+<div
+  className="top-bar border"
+/>
+`;
+
+exports[`Storyshots TopBar Primary 1`] = `
+<div
+  className="top-bar bg-primary-500 hover:bg-primary-400 text-primary-complementary"
+>
+  Some content
+</div>
+`;
+
+exports[`Storyshots TopBar Secondary 1`] = `
+<div
+  className="top-bar bg-secondary-500 hover:bg-secondary-400 text-secondary-complementary"
+>
+  <div>
+    One 
+  </div>
+  <div>
+    Two
+  </div>
+  <div>
+    Three
+  </div>
+</div>
+`;
+
+exports[`Storyshots TopBar With Children 1`] = `
+<div
+  className="top-bar border"
+>
+  Some content
+</div>
+`;

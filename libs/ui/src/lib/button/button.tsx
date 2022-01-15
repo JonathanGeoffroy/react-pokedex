@@ -3,11 +3,12 @@ import { useButton } from '@react-aria/button';
 import { AriaButtonProps } from '@react-types/button';
 import { ReactChild, useRef } from 'react';
 import cn from 'classnames';
+import { Kind } from '../computeKind';
 
 /* eslint-disable-next-line */
 export interface ButtonProps extends AriaButtonProps<'button'> {
   children: ReactChild;
-  kind?: 'default' | 'primary' | 'secondary';
+  kind?: Kind;
   size?: 'default' | 'xs' | 'sm' | 'xl';
   className?: string;
 }
@@ -22,7 +23,7 @@ export function Button({
   const ref = useRef<HTMLButtonElement>(null);
   const { buttonProps } = useButton(props, ref);
 
-  const kindClassName =
+  const kindClassnames =
     kind === 'primary'
       ? `bg-primary-500 hover:bg-primary-400 text-primary-complementary`
       : kind === 'secondary'
@@ -31,7 +32,7 @@ export function Button({
 
   return (
     <button
-      className={cn(classes['btn'], kindClassName, classes[size], className)}
+      className={cn(classes['btn'], kindClassnames, classes[size], className)}
       {...buttonProps}
       ref={ref}
     >
