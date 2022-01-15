@@ -126,6 +126,28 @@ exports[`Storyshots Button Small Button 1`] = `
 </button>
 `;
 
+exports[`Storyshots Card Empty 1`] = `
+<div
+  className="border-4 p-4 bg-white rounded-xl hover:shadow bg-gray-500 w-32 h-32"
+/>
+`;
+
+exports[`Storyshots Card With Children 1`] = `
+<div
+  className="border-4 p-4 bg-white rounded-xl hover:shadow w-32 h-32"
+>
+  <div>
+    First
+  </div>
+  <div>
+    Second
+  </div>
+  <div>
+    Third
+  </div>
+</div>
+`;
+
 exports[`Storyshots TopBar Empty 1`] = `
 <div
   className="top-bar border"
