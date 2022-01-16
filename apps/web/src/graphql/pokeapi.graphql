@@ -1,7 +1,0 @@
-query test($orderBy: [pokemon_v2_pokemon_order_by!], $limit: Int) {
-  pokemon_v2_pokemon(order_by: $orderBy, limit: $limit) {
-    id
-    name
-    order
-  }
-}
