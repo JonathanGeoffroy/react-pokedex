@@ -6,17 +6,23 @@
     "start-e2e": "nx e2e web-e2e --watch",
     "start": "nx serve",
     "storybook": "nx run ui:storybook",
-    "build": "nx build",
+    "build": "npm run codegen && nx build",
     "test": "npm run test:ui && npm run test:e2e",
     "test:ui": "start-server-and-test storybook http://localhost:4400 test:ui-jest",
     "test:ui-jest": "cd ./libs/ui && npx jest",
     "test:ui-jest-update": "cd ./libs/ui && npx jest -u",
-    "test:e2e": "nx run-many --target=e2e --all"
+    "test:e2e": "nx run-many --target=e2e --all",
+    "codegen": "graphql-codegen --config apps/web/codegen.yml"
   },
   "private": true,
   "devDependencies": {
     "@babel/core": "7.12.13",
     "@babel/preset-typescript": "7.12.13",
+    "@graphql-codegen/cli": "2.3.1",
+    "@graphql-codegen/introspection": "2.1.1",
+    "@graphql-codegen/typescript": "2.4.2",
+    "@graphql-codegen/typescript-operations": "2.2.2",
+    "@graphql-codegen/typescript-react-apollo": "3.2.4",
     "@nrwl/cli": "13.4.4",
     "@nrwl/cypress": "13.4.4",
     "@nrwl/eslint-plugin-nx": "13.4.4",
@@ -67,13 +73,19 @@
     "url-loader": "^3.0.0"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.7",
+    "@graphql-codegen/cli": "^2.3.1",
     "classnames": "^2.3.1",
     "core-js": "^3.6.5",
+    "graphql": "^15.8.0",
     "react": "17.0.2",
     "react-aria": "^3.12.0",
     "react-dom": "17.0.2",
     "react-stately": "^3.11.0",
     "regenerator-runtime": "0.13.7",
     "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "graphql": "^15.8.0"
   }
 }

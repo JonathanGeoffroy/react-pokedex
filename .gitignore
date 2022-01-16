@@ -37,3 +37,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Graphql auto-generated files
+*.graphql.tsx
+graphql.schema.json
