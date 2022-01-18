@@ -8,9 +8,10 @@ query pokemonList(
     name
     order
     height
-    pokemon_v2_pokemonsprites {
-      id
-      sprites
+    types: pokemon_v2_pokemontypes {
+      type: pokemon_v2_type {
+        name
+      }
     }
   }
 }

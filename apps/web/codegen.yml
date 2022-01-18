@@ -1,12 +1,14 @@
 overwrite: true
-schema: "https://beta.pokeapi.co/graphql/v1beta"
-documents: "apps/web/**/*.graphql"
+schema: 'https://beta.pokeapi.co/graphql/v1beta'
+documents: 'apps/web/**/*.graphql'
 generates:
   apps/web/src/__generated/pokeapi.graphql.tsx:
     plugins:
-      - "typescript"
-      - "typescript-operations"
-      - "typescript-react-apollo"
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+    config:
+      exportFragmentSpreadSubTypes: true
   ./graphql.schema.json:
     plugins:
-      - "introspection"
+      - 'introspection'
