@@ -12,7 +12,7 @@ export function Card({ className, children, style }: CardProps) {
   return (
     <div
       style={style}
-      className={cn('border-4 p-4 bg-white rounded-xl hover:shadow', className)}
+      className={cn('border-4 p-1 rounded-xl hover:shadow', className)}
     >
       {children}
     </div>

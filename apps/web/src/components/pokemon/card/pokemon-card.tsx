@@ -1,25 +1,27 @@
 import './pokemon-card.module.scss';
 import { Card } from '@react-pokedex/ui';
-import { CSSProperties } from 'react';
 import { PokemonType } from '../type/pokemon-type';
+import colors, { PokemonType as Type } from '../colors';
 
 /* eslint-disable-next-line */
 export interface CardProps {
   name: string;
   order?: number | null;
   sprite: string;
-  types: PokemonType[];
+  types: Type[];
 }
 
 export function PokemonCard({ name, order, sprite, types }: CardProps) {
   return (
-    <Card>
-      <div className="w-full text-right text-gray-400">
+    <Card className={types.length ? colors[types[0]].background : undefined}>
+      <div className="w-full text-right text-neutral-900">
         {order ? `#${order}` : ''}
       </div>
-      <h3 className="text-lg text-gray-500 capitalize">{name}</h3>
+      <h3 className="text-lg text-center text-neutral-900 capitalize">
+        {name}
+      </h3>
 
-      <div className="flex flex-row justify-between items-center gap-4">
+      <div className="flex flex-row justify-between items-center px-4 gap-4">
         <div className="flex flex-col gap-1 flex-grow">
           {types.map((type) => (
             <PokemonType key={type} className="w-full" type={type} />

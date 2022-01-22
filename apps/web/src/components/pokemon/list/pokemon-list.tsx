@@ -14,7 +14,7 @@ export function List() {
           id: Order_By.AscNullsLast,
         },
       ],
-      limit: 20,
+      limit: 120,
     },
   });
 
