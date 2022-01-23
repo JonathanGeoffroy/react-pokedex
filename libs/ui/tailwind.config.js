@@ -19,7 +19,7 @@ function invertColor(hex) {
 }
 
 module.exports = {
-  content: ['./libs/ui/src/**/*.{html,tsx}'],
+  content: ['./libs/ui/src/**/*.{html,tsx,ts}'],
   darkMode: 'class',
   theme: {
     extend: {

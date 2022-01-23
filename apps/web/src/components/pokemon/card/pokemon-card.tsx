@@ -13,9 +13,12 @@ export interface CardProps {
 
 export function PokemonCard({ name, order, sprite, types }: CardProps) {
   return (
-    <Card className={types.length ? colors[types[0]].background : undefined}>
+    <Card
+      data-testid={`pokemon-card-${order}`}
+      className={types.length ? colors[types[0]].background : undefined}
+    >
       <div className="w-full text-right text-neutral-900">
-        {order ? `#${order}` : ''}
+        {order ? `#${order.toString().padStart(3, '0')}` : ''}
       </div>
       <h3 className="text-lg text-center text-neutral-900 capitalize">
         {name}

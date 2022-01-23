@@ -6,12 +6,13 @@ export interface CardProps {
   children?: React.ReactNode;
   className?: string;
   style?: CSSProperties;
+  'data-testid'?: string;
 }
 
-export function Card({ className, children, style }: CardProps) {
+export function Card({ className, children, ...passThrough }: CardProps) {
   return (
     <div
-      style={style}
+      {...passThrough}
       className={cn('border-4 p-1 rounded-xl hover:shadow', className)}
     >
       {children}

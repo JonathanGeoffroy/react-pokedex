@@ -1,10 +1,9 @@
 import cn from 'classnames';
-import colors, { PokemonType } from '../colors';
+import colors, { PokemonType as Type } from '../colors';
 import './pokemon-type.module.scss';
 
-
 export interface PokemonTypeProps {
-  type: PokemonType;
+  type: Type;
   className?: string;
 }
 

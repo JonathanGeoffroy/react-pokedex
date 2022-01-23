@@ -7,7 +7,7 @@ const cache = new InMemoryCache({
   typePolicies: {
     Query: {
       fields: {
-        pokemonList: {
+        pokemon_v2_pokemon: {
           keyArgs: false,
           merge(existing = [], incoming) {
             return [...existing, ...incoming];

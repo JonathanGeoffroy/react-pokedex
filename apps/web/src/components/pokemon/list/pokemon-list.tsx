@@ -1,22 +1,10 @@
-import {
-  Order_By,
-  usePokemonListQuery,
-} from '../../../__generated/pokeapi.graphql';
 import { PokemonCard } from '../card/pokemon-card';
-import PokemonType from '../type/pokemon-type';
+import { PokemonType } from '../colors';
 import './pokemon-list.module.scss';
+import usePokemonPagination from './use-pokemon-pagination';
 
 export function List() {
-  const { data, loading, error, fetchMore } = usePokemonListQuery({
-    variables: {
-      orderBy: [
-        {
-          id: Order_By.AscNullsLast,
-        },
-      ],
-      limit: 120,
-    },
-  });
+  const { pokemonList, loading, error } = usePokemonPagination();
 
   if (error) {
     throw error;
@@ -26,12 +14,12 @@ export function List() {
     return <div>Loading ...</div>;
   }
 
-  if (!data?.pokemon_v2_pokemon) {
-    return null;
-  }
   return (
-    <div className="m-4 max-w-screen-md mx-auto pokemon-list grid md:grid-cols-3 grid-cols-2 gap-4">
-      {data?.pokemon_v2_pokemon?.map((pokemon) => (
+    <div
+      data-testid="pokemon-list"
+      className="m-4 max-w-screen-md mx-auto pokemon-list grid md:grid-cols-3 grid-cols-2 gap-4"
+    >
+      {pokemonList.map((pokemon) => (
         <PokemonCard
           key={pokemon.id}
           name={pokemon.name}
