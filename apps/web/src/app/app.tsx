@@ -1,34 +1,14 @@
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Header from '../components/header/header';
-import PokemonList from '../components/pokemon/list/pokemon-list';
 import './app.module.scss';
-
-const cache = new InMemoryCache({
-  typePolicies: {
-    Query: {
-      fields: {
-        pokemon_v2_pokemon: {
-          keyArgs: false,
-          merge(existing = [], incoming) {
-            return [...existing, ...incoming];
-          },
-        },
-      },
-    },
-  },
-});
-
-const client = new ApolloClient({
-  uri: 'https://beta.pokeapi.co/graphql/v1beta',
-  cache,
-});
+import GraphQLProvider from './graphql';
+import Router from './router';
 
 export function App() {
   return (
-    <ApolloProvider client={client}>
+    <GraphQLProvider>
       <Header />
-      <PokemonList />
-    </ApolloProvider>
+      <Router />
+    </GraphQLProvider>
   );
 }
 
