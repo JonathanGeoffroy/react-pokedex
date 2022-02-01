@@ -4,6 +4,7 @@
             {
                 "details": {
                     "id": "1",
+                    "order": 1,
                     "name": "bulbasaur",
                     "types": [
                         "grass",
@@ -15,6 +16,7 @@
             {
                 "details": {
                     "id": "2",
+                    "order": 2,
                     "name": "ivysaur",
                     "types": [
                         "grass",
@@ -26,6 +28,7 @@
             {
                 "details": {
                     "id": "3",
+                    "order": 3,
                     "name": "venusaur",
                     "types": [
                         "grass",
@@ -37,6 +40,7 @@
             {
                 "details": {
                     "id": "4",
+                    "order": 5,
                     "name": "charmander",
                     "types": [
                         "fire"
@@ -47,6 +51,7 @@
             {
                 "details": {
                     "id": "5",
+                    "order": 6,
                     "name": "charmeleon",
                     "types": [
                         "fire"
@@ -57,6 +62,7 @@
             {
                 "details": {
                     "id": "6",
+                    "order": 7,
                     "name": "charizard",
                     "types": [
                         "fire",
@@ -68,6 +74,7 @@
             {
                 "details": {
                     "id": "7",
+                    "order": 10,
                     "name": "squirtle",
                     "types": [
                         "water"
@@ -78,6 +85,7 @@
             {
                 "details": {
                     "id": "8",
+                    "order": 11,
                     "name": "wartortle",
                     "types": [
                         "water"
@@ -88,6 +96,7 @@
             {
                 "details": {
                     "id": "9",
+                    "order": 12,
                     "name": "blastoise",
                     "types": [
                         "water"
@@ -98,6 +107,7 @@
             {
                 "details": {
                     "id": "10",
+                    "order": 14,
                     "name": "caterpie",
                     "types": [
                         "bug"
@@ -108,6 +118,7 @@
             {
                 "details": {
                     "id": "11",
+                    "order": 15,
                     "name": "metapod",
                     "types": [
                         "bug"
@@ -118,6 +129,7 @@
             {
                 "details": {
                     "id": "12",
+                    "order": 16,
                     "name": "butterfree",
                     "types": [
                         "bug",
@@ -129,6 +141,7 @@
             {
                 "details": {
                     "id": "13",
+                    "order": 17,
                     "name": "weedle",
                     "types": [
                         "bug",
@@ -140,6 +153,7 @@
             {
                 "details": {
                     "id": "14",
+                    "order": 18,
                     "name": "kakuna",
                     "types": [
                         "bug",
@@ -151,6 +165,7 @@
             {
                 "details": {
                     "id": "15",
+                    "order": 19,
                     "name": "beedrill",
                     "types": [
                         "bug",
@@ -162,6 +177,7 @@
             {
                 "details": {
                     "id": "16",
+                    "order": 21,
                     "name": "pidgey",
                     "types": [
                         "normal",
@@ -173,6 +189,7 @@
             {
                 "details": {
                     "id": "17",
+                    "order": 22,
                     "name": "pidgeotto",
                     "types": [
                         "normal",
@@ -184,6 +201,7 @@
             {
                 "details": {
                     "id": "18",
+                    "order": 23,
                     "name": "pidgeot",
                     "types": [
                         "normal",
@@ -195,6 +213,7 @@
             {
                 "details": {
                     "id": "19",
+                    "order": 25,
                     "name": "rattata",
                     "types": [
                         "normal"
@@ -205,6 +224,7 @@
             {
                 "details": {
                     "id": "20",
+                    "order": 27,
                     "name": "raticate",
                     "types": [
                         "normal"

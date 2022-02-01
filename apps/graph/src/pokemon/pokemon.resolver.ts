@@ -26,6 +26,7 @@ export class PokemonResolver {
 
     return {
       id: dto.id,
+      order: dto.order,
       name: dto.name,
       types: dto.types.map(({ type }) => type.name),
       imageUrl: dto.sprites.back_default,

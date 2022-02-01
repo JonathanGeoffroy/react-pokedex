@@ -1,5 +1,5 @@
 overwrite: true
-schema: 'https://beta.pokeapi.co/graphql/v1beta'
+schema: './apps/graph/src/__generated/schema.gql'
 documents: 'apps/web/**/*.graphql'
 generates:
   apps/web/src/__generated/pokeapi.graphql.tsx:

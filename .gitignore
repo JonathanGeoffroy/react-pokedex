@@ -41,3 +41,5 @@ Thumbs.db
 # Graphql auto-generated files
 *.graphql.tsx
 graphql.schema.json
+
+__generated

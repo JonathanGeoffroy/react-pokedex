@@ -4,7 +4,7 @@ const cache = new InMemoryCache({
   typePolicies: {
     Query: {
       fields: {
-        pokemon_v2_pokemon: {
+        pokemon: {
           keyArgs: false,
           merge(existing = [], incoming) {
             return [...existing, ...incoming];
@@ -16,7 +16,7 @@ const cache = new InMemoryCache({
 });
 
 const client = new ApolloClient({
-  uri: 'https://beta.pokeapi.co/graphql/v1beta',
+  uri: 'http://localhost:3333/graphql',
   cache,
 });
 

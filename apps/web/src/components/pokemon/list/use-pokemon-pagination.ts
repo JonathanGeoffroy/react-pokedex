@@ -1,9 +1,6 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import useScroll from '../../../hooks/useScroll';
-import {
-  Order_By,
-  usePokemonListQuery,
-} from '../../../__generated/pokeapi.graphql';
+import { usePokemonListQuery } from '../../../__generated/pokeapi.graphql';
 
 export const NB_ITEM_PER_PAGES = 24;
 
@@ -13,11 +10,6 @@ export default function usePokemonPagination() {
 
   const { data, loading, error, fetchMore } = usePokemonListQuery({
     variables: {
-      orderBy: [
-        {
-          id: Order_By.AscNullsLast,
-        },
-      ],
       limit: NB_ITEM_PER_PAGES,
     },
   });
@@ -30,7 +22,7 @@ export default function usePokemonPagination() {
         offset,
       },
     }).then(({ data }) => {
-      if (data.pokemon_v2_pokemon.length === 0) {
+      if (data.pokemon.length === 0) {
         setReachEnd(true);
       }
     });
@@ -38,8 +30,13 @@ export default function usePokemonPagination() {
 
   useScroll(fetchNext, !reachEnd);
 
+  const pokemonList = useMemo(
+    () => data?.pokemon.map(({ details }) => details) || [],
+    [data]
+  );
+
   return {
-    pokemonList: data?.pokemon_v2_pokemon || [],
+    pokemonList,
     loading,
     error,
   };

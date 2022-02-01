@@ -5,6 +5,9 @@ export class PokemonDetails {
   @Field(() => ID)
   id: number;
 
+  @Field(() => Number)
+  order: number;
+
   @Field()
   name: string;
 

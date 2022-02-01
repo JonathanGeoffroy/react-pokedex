@@ -1,17 +1,11 @@
-query pokemonList(
-  $orderBy: [pokemon_v2_pokemon_order_by!]
-  $limit: Int
-  $offset: Int
-) {
-  pokemon_v2_pokemon(order_by: $orderBy, limit: $limit, offset: $offset) {
-    id
-    name
-    order
-    height
-    types: pokemon_v2_pokemontypes {
-      type: pokemon_v2_type {
-        name
-      }
+query pokemonList($limit: Int, $offset: Int) {
+  pokemon(limit: $limit, offset: $offset) {
+    details {
+      id
+      order
+      name
+      types
+      imageUrl
     }
   }
 }

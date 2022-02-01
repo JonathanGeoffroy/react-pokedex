@@ -24,9 +24,7 @@ export function List() {
           key={pokemon.id}
           name={pokemon.name}
           order={pokemon.order}
-          types={
-            pokemon.types.map(({ type }) => type!.name as PokemonType) || []
-          }
+          types={pokemon.types as PokemonType[]}
           sprite={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
         />
       ))}
