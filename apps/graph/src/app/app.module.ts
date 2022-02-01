@@ -8,7 +8,7 @@ import { PokemonModule } from '../pokemon/pokemon.module';
   imports: [
     PokemonModule,
     GraphQLModule.forRoot({
-      autoSchemaFile: join(__dirname, '../__generated/schema.gql'),
+      autoSchemaFile: join(process.cwd(), './apps/graph/src/schema.gql'),
       include: [PokemonModule],
       cache: new InMemoryLRUCache(),
     }),

@@ -1,0 +1,21 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type PokemonDetails {
+  id: ID!
+  order: Float!
+  name: String!
+  types: [String!]!
+  imageUrl: String!
+}
+
+type Pokemon {
+  id: ID!
+  name: String!
+  details: PokemonDetails!
+}
+
+type Query {
+  pokemon(limit: Int, offset: Int): [Pokemon!]!
+}
