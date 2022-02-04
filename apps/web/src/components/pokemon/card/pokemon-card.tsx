@@ -20,9 +20,9 @@ export function PokemonCard({ name, order, sprite, types }: CardProps) {
       <div className="w-full text-right text-neutral-900">
         {order ? `#${order.toString().padStart(3, '0')}` : ''}
       </div>
-      <h3 className="text-lg text-center text-neutral-900 capitalize">
+      <h2 className="text-lg text-center text-neutral-900 capitalize">
         {name}
-      </h3>
+      </h2>
 
       <div className="flex flex-row justify-between items-center px-4 gap-4">
         <div className="flex flex-col gap-1 flex-grow">
@@ -30,7 +30,7 @@ export function PokemonCard({ name, order, sprite, types }: CardProps) {
             <PokemonType key={type} className="w-full" type={type} />
           ))}
         </div>
-        <img src={sprite} alt={name} />
+        <img src={sprite} alt={name} width="96" height="96" />
       </div>
     </Card>
   );
