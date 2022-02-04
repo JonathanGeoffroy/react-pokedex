@@ -1,4 +1,4 @@
-export class PokemonDetailsDTO {
+export interface PokemonDetailsDTO {
   id: number;
   name: string;
   order: number;
@@ -9,9 +9,10 @@ export class PokemonDetailsDTO {
   height: number;
   weight: number;
   abilities: PokemonAbilityDTO[];
+  stats: PokemonStatsDTO[];
 }
 
-export class PokemonTypeDTO {
+export interface PokemonTypeDTO {
   slots: number;
   type: {
     name: string;
@@ -19,8 +20,15 @@ export class PokemonTypeDTO {
   };
 }
 
-export class PokemonAbilityDTO {
+export interface PokemonAbilityDTO {
   ability: {
+    name: string;
+  };
+}
+
+export interface PokemonStatsDTO {
+  base_stat: number;
+  stat: {
     name: string;
   };
 }

@@ -1,6 +1,27 @@
 import { Field, ID, Int, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
+export class PokemonStat {
+  @Field(() => Number)
+  hp: number;
+
+  @Field(() => Number)
+  attack: number;
+
+  @Field(() => Number)
+  defense: number;
+
+  @Field(() => Number)
+  specialAttack: number;
+
+  @Field(() => Number)
+  specialDefense: number;
+
+  @Field(() => Number)
+  speed: number;
+}
+
+@ObjectType()
 export class PokemonDetails {
   @Field(() => ID)
   id: number;
@@ -24,5 +45,8 @@ export class PokemonDetails {
   weight: number;
 
   @Field(() => [String])
-  abilities: string[]
+  abilities: string[];
+
+  @Field(() => PokemonStat)
+  stats: PokemonStat;
 }

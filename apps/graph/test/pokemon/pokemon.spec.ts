@@ -23,8 +23,29 @@ describe('pokemon query', () => {
   it('should handle correct query', () => {
     return axios
       .post('http://localhost:3333/graphql', {
-        query:
-          '{pokemon {details {id  order name types imageUrl height weight abilities}}}',
+        query: `
+        query pokemonList {
+          pokemon(limit: 20, offset: 0) {
+            details {
+              id
+              order
+              name
+              types
+              imageUrl
+              height
+              weight
+              abilities
+              stats {
+                hp
+                attack
+                defense
+                specialAttack
+                specialDefense
+                speed
+              }
+            }
+          }
+        }`,
       })
       .then((actual) => expect(actual.data).toEqual(expectedFindAll));
   });
@@ -32,13 +53,27 @@ describe('pokemon query', () => {
   it('should handle pagination', () => {
     return axios
       .post('http://localhost:3333/graphql', {
-        query:
-          '{pokemon(limit: 3, offset: 7) {details {id  order name types imageUrl height weight, abilities}}}',
+        query: `
+        query pokemonList {
+          pokemon(limit: 3, offset: 7) {
+            details {
+              id
+              order
+              name
+              types
+            }
+          }
+        }`,
       })
       .then((actual) =>
         expect(actual.data).toEqual({
           data: {
-            pokemon: expectedFindAll.data.pokemon.slice(7, 7 + 3),
+            pokemon: expectedFindAll.data.pokemon
+              .slice(7, 7 + 3)
+              .map(({ details }) => {
+                const { id, order, name, types } = details;
+                return { details: { id, order, name, types } };
+              }),
           },
         })
       );

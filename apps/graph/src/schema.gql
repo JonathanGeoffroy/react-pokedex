@@ -2,6 +2,15 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type PokemonStat {
+  hp: Float!
+  attack: Float!
+  defense: Float!
+  specialAttack: Float!
+  specialDefense: Float!
+  speed: Float!
+}
+
 type PokemonDetails {
   id: ID!
   order: Float!
@@ -11,6 +20,7 @@ type PokemonDetails {
   height: Int!
   weight: Int!
   abilities: [String!]!
+  stats: PokemonStat!
 }
 
 type Pokemon {
