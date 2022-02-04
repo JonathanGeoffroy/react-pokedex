@@ -10,7 +10,9 @@
                         "grass",
                         "poison"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
+                    "height": 7,
+                    "weight": 69
                 }
             },
             {
@@ -22,7 +24,9 @@
                         "grass",
                         "poison"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png",
+                    "height": 10,
+                    "weight": 130
                 }
             },
             {
@@ -34,7 +38,9 @@
                         "grass",
                         "poison"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png",
+                    "height": 20,
+                    "weight": 1000
                 }
             },
             {
@@ -45,7 +51,9 @@
                     "types": [
                         "fire"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png",
+                    "height": 6,
+                    "weight": 85
                 }
             },
             {
@@ -56,7 +64,9 @@
                     "types": [
                         "fire"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png",
+                    "height": 11,
+                    "weight": 190
                 }
             },
             {
@@ -68,7 +78,9 @@
                         "fire",
                         "flying"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png",
+                    "height": 17,
+                    "weight": 905
                 }
             },
             {
@@ -79,7 +91,9 @@
                     "types": [
                         "water"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png",
+                    "height": 5,
+                    "weight": 90
                 }
             },
             {
@@ -90,7 +104,9 @@
                     "types": [
                         "water"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/8.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/8.png",
+                    "height": 10,
+                    "weight": 225
                 }
             },
             {
@@ -101,7 +117,9 @@
                     "types": [
                         "water"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png",
+                    "height": 16,
+                    "weight": 855
                 }
             },
             {
@@ -112,7 +130,9 @@
                     "types": [
                         "bug"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png",
+                    "height": 3,
+                    "weight": 29
                 }
             },
             {
@@ -123,7 +143,9 @@
                     "types": [
                         "bug"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/11.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/11.png",
+                    "height": 7,
+                    "weight": 99
                 }
             },
             {
@@ -135,7 +157,9 @@
                         "bug",
                         "flying"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/12.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/12.png",
+                    "height": 11,
+                    "weight": 320
                 }
             },
             {
@@ -147,7 +171,9 @@
                         "bug",
                         "poison"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/13.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/13.png",
+                    "height": 3,
+                    "weight": 32
                 }
             },
             {
@@ -159,7 +185,9 @@
                         "bug",
                         "poison"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/14.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/14.png",
+                    "height": 6,
+                    "weight": 100
                 }
             },
             {
@@ -171,7 +199,9 @@
                         "bug",
                         "poison"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/15.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/15.png",
+                    "height": 10,
+                    "weight": 295
                 }
             },
             {
@@ -183,7 +213,9 @@
                         "normal",
                         "flying"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/16.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/16.png",
+                    "height": 3,
+                    "weight": 18
                 }
             },
             {
@@ -195,7 +227,9 @@
                         "normal",
                         "flying"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/17.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/17.png",
+                    "height": 11,
+                    "weight": 300
                 }
             },
             {
@@ -207,7 +241,9 @@
                         "normal",
                         "flying"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/18.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/18.png",
+                    "height": 15,
+                    "weight": 395
                 }
             },
             {
@@ -218,7 +254,9 @@
                     "types": [
                         "normal"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/19.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/19.png",
+                    "height": 3,
+                    "weight": 35
                 }
             },
             {
@@ -229,7 +267,9 @@
                     "types": [
                         "normal"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/20.png"
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/20.png",
+                    "height": 7,
+                    "weight": 185
                 }
             }
         ]

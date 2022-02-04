@@ -23,7 +23,8 @@ describe('pokemon query', () => {
   it('should handle correct query', () => {
     return axios
       .post('http://localhost:3333/graphql', {
-        query: '{pokemon {details {id  order name types imageUrl}}}',
+        query:
+          '{pokemon {details {id  order name types imageUrl height weight}}}',
       })
       .then((actual) => expect(actual.data).toEqual(expectedFindAll));
   });
@@ -32,7 +33,7 @@ describe('pokemon query', () => {
     return axios
       .post('http://localhost:3333/graphql', {
         query:
-          '{pokemon(limit: 3, offset: 7) {details {id  order name types imageUrl}}}',
+          '{pokemon(limit: 3, offset: 7) {details {id  order name types imageUrl height weight}}}',
       })
       .then((actual) =>
         expect(actual.data).toEqual({

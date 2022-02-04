@@ -8,6 +8,8 @@ type PokemonDetails {
   name: String!
   types: [String!]!
   imageUrl: String!
+  height: Int!
+  weight: Int!
 }
 
 type Pokemon {

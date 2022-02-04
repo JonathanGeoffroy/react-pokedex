@@ -25,9 +25,7 @@ export class PokemonResolver {
     const dto = await this.pokemonService.findDetails(pokemon.id);
 
     return {
-      id: dto.id,
-      order: dto.order,
-      name: dto.name,
+      ...dto,
       types: dto.types.map(({ type }) => type.name),
       imageUrl: dto.sprites.back_default,
     };

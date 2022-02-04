@@ -6,6 +6,8 @@ export class PokemonDetailsDTO {
     back_default: string;
   };
   types: PokemonTypeDTO[];
+  height: number;
+  weight: number;
 }
 
 export class PokemonTypeDTO {
