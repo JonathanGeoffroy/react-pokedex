@@ -8,6 +8,7 @@ export class PokemonDetailsDTO {
   types: PokemonTypeDTO[];
   height: number;
   weight: number;
+  abilities: PokemonAbilityDTO[];
 }
 
 export class PokemonTypeDTO {
@@ -15,5 +16,11 @@ export class PokemonTypeDTO {
   type: {
     name: string;
     url: string;
+  };
+}
+
+export class PokemonAbilityDTO {
+  ability: {
+    name: string;
   };
 }

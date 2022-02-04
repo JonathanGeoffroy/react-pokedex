@@ -24,7 +24,7 @@ describe('pokemon query', () => {
     return axios
       .post('http://localhost:3333/graphql', {
         query:
-          '{pokemon {details {id  order name types imageUrl height weight}}}',
+          '{pokemon {details {id  order name types imageUrl height weight abilities}}}',
       })
       .then((actual) => expect(actual.data).toEqual(expectedFindAll));
   });
@@ -33,7 +33,7 @@ describe('pokemon query', () => {
     return axios
       .post('http://localhost:3333/graphql', {
         query:
-          '{pokemon(limit: 3, offset: 7) {details {id  order name types imageUrl height weight}}}',
+          '{pokemon(limit: 3, offset: 7) {details {id  order name types imageUrl height weight, abilities}}}',
       })
       .then((actual) =>
         expect(actual.data).toEqual({

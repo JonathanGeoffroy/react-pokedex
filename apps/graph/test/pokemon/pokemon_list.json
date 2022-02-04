@@ -12,7 +12,11 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
                     "height": 7,
-                    "weight": 69
+                    "weight": 69,
+                    "abilities": [
+                        "overgrow",
+                        "chlorophyll"
+                    ]
                 }
             },
             {
@@ -26,7 +30,11 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png",
                     "height": 10,
-                    "weight": 130
+                    "weight": 130,
+                    "abilities": [
+                        "overgrow",
+                        "chlorophyll"
+                    ]
                 }
             },
             {
@@ -40,7 +48,11 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png",
                     "height": 20,
-                    "weight": 1000
+                    "weight": 1000,
+                    "abilities": [
+                        "overgrow",
+                        "chlorophyll"
+                    ]
                 }
             },
             {
@@ -53,7 +65,11 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png",
                     "height": 6,
-                    "weight": 85
+                    "weight": 85,
+                    "abilities": [
+                        "blaze",
+                        "solar-power"
+                    ]
                 }
             },
             {
@@ -66,7 +82,11 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png",
                     "height": 11,
-                    "weight": 190
+                    "weight": 190,
+                    "abilities": [
+                        "blaze",
+                        "solar-power"
+                    ]
                 }
             },
             {
@@ -80,7 +100,11 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png",
                     "height": 17,
-                    "weight": 905
+                    "weight": 905,
+                    "abilities": [
+                        "blaze",
+                        "solar-power"
+                    ]
                 }
             },
             {
@@ -93,7 +117,11 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png",
                     "height": 5,
-                    "weight": 90
+                    "weight": 90,
+                    "abilities": [
+                        "torrent",
+                        "rain-dish"
+                    ]
                 }
             },
             {
@@ -106,7 +134,11 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/8.png",
                     "height": 10,
-                    "weight": 225
+                    "weight": 225,
+                    "abilities": [
+                        "torrent",
+                        "rain-dish"
+                    ]
                 }
             },
             {
@@ -119,7 +151,11 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png",
                     "height": 16,
-                    "weight": 855
+                    "weight": 855,
+                    "abilities": [
+                        "torrent",
+                        "rain-dish"
+                    ]
                 }
             },
             {
@@ -132,7 +168,11 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png",
                     "height": 3,
-                    "weight": 29
+                    "weight": 29,
+                    "abilities": [
+                        "shield-dust",
+                        "run-away"
+                    ]
                 }
             },
             {
@@ -145,7 +185,10 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/11.png",
                     "height": 7,
-                    "weight": 99
+                    "weight": 99,
+                    "abilities": [
+                        "shed-skin"
+                    ]
                 }
             },
             {
@@ -159,7 +202,11 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/12.png",
                     "height": 11,
-                    "weight": 320
+                    "weight": 320,
+                    "abilities": [
+                        "compound-eyes",
+                        "tinted-lens"
+                    ]
                 }
             },
             {
@@ -173,7 +220,11 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/13.png",
                     "height": 3,
-                    "weight": 32
+                    "weight": 32,
+                    "abilities": [
+                        "shield-dust",
+                        "run-away"
+                    ]
                 }
             },
             {
@@ -187,7 +238,10 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/14.png",
                     "height": 6,
-                    "weight": 100
+                    "weight": 100,
+                    "abilities": [
+                        "shed-skin"
+                    ]
                 }
             },
             {
@@ -201,7 +255,11 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/15.png",
                     "height": 10,
-                    "weight": 295
+                    "weight": 295,
+                    "abilities": [
+                        "swarm",
+                        "sniper"
+                    ]
                 }
             },
             {
@@ -215,7 +273,12 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/16.png",
                     "height": 3,
-                    "weight": 18
+                    "weight": 18,
+                    "abilities": [
+                        "keen-eye",
+                        "tangled-feet",
+                        "big-pecks"
+                    ]
                 }
             },
             {
@@ -229,7 +292,12 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/17.png",
                     "height": 11,
-                    "weight": 300
+                    "weight": 300,
+                    "abilities": [
+                        "keen-eye",
+                        "tangled-feet",
+                        "big-pecks"
+                    ]
                 }
             },
             {
@@ -243,7 +311,12 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/18.png",
                     "height": 15,
-                    "weight": 395
+                    "weight": 395,
+                    "abilities": [
+                        "keen-eye",
+                        "tangled-feet",
+                        "big-pecks"
+                    ]
                 }
             },
             {
@@ -256,7 +329,12 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/19.png",
                     "height": 3,
-                    "weight": 35
+                    "weight": 35,
+                    "abilities": [
+                        "run-away",
+                        "guts",
+                        "hustle"
+                    ]
                 }
             },
             {
@@ -269,7 +347,12 @@
                     ],
                     "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/20.png",
                     "height": 7,
-                    "weight": 185
+                    "weight": 185,
+                    "abilities": [
+                        "run-away",
+                        "guts",
+                        "hustle"
+                    ]
                 }
             }
         ]

@@ -22,4 +22,7 @@ export class PokemonDetails {
 
   @Field(() => Int)
   weight: number;
+
+  @Field(() => [String])
+  abilities: string[]
 }
