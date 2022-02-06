@@ -17,7 +17,7 @@ export function List() {
   return (
     <div
       data-testid="pokemon-list"
-      className="m-4 max-w-screen-md mx-auto pokemon-list grid md:grid-cols-3 grid-cols-2 gap-4"
+      className="max-w-screen-lg mx-auto pokemon-list flex flex-wrap justify-center gap-1 md:gap-4"
     >
       {pokemonList.map((pokemon) => (
         <PokemonCard
@@ -25,7 +25,7 @@ export function List() {
           name={pokemon.name}
           order={pokemon.order}
           types={pokemon.types as PokemonType[]}
-          sprite={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
+          sprite={pokemon.imageUrl}
         />
       ))}
     </div>

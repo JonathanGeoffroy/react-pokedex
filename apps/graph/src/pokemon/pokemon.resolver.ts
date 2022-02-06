@@ -38,7 +38,7 @@ export class PokemonResolver {
     return {
       ...dto,
       types: dto.types.map(({ type }) => type.name),
-      imageUrl: dto.sprites.back_default,
+      imageUrl: dto.sprites.other?.dream_world?.front_default || dto.sprites.front_default,
       abilities: dto.abilities.map(({ ability }) => ability.name),
       stats: this.toStats(dto),
     };
