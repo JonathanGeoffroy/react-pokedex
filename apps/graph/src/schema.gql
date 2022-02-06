@@ -31,4 +31,5 @@ type Pokemon {
 
 type Query {
   pokemon(limit: Int, offset: Int): [Pokemon!]!
+  pokemonById(id: Int!): PokemonDetails!
 }

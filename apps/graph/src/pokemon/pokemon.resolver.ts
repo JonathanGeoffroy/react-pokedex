@@ -1,4 +1,5 @@
 import { Resolver, Query, ResolveField, Parent, Args } from '@nestjs/graphql';
+import { PokemonByIdArgs } from './pokemon-byid.args';
 import { PokemonDetailsDTO } from './pokemon-details.dto';
 import { PokemonDetails, PokemonStat } from './pokemon-details.model';
 import { PokemonListArgs } from './pokemon-list.args';
@@ -21,9 +22,18 @@ export class PokemonResolver {
     return result;
   }
 
+  @Query(() => PokemonDetails)
+  async pokemonById(@Args() args: PokemonByIdArgs): Promise<PokemonDetails> {
+    return await this.handleDetails(args.id);
+  }
+
   @ResolveField()
   async details(@Parent() pokemon: Pokemon): Promise<PokemonDetails> {
-    const dto = await this.pokemonService.findDetails(pokemon.id);
+    return await this.handleDetails(pokemon.id);
+  }
+
+  private async handleDetails(id: number): Promise<PokemonDetails> {
+    const dto = await this.pokemonService.findDetails(id);
 
     return {
       ...dto,
