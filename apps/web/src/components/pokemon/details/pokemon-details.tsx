@@ -3,8 +3,11 @@ import { useParams } from 'react-router-dom';
 import colors, { PokemonType as PokemonTypeModel } from '../colors';
 import classNames from 'classnames';
 import PokemonType from '../type/pokemon-type';
+import { Item } from '@react-stately/collections';
+import { Tabs } from '@react-pokedex/ui';
 
 import './pokemon-details.module.scss';
+import PokemonStats from '../stats/pokemon-stats';
 
 /* eslint-disable-next-line */
 export interface PokemonDetailsProps {}
@@ -25,7 +28,9 @@ export function PokemonDetails(props: PokemonDetailsProps) {
     : null;
 
   return (
-    <div className={classNames('fixed top-10 w-screen h-screen', background)}>
+    <div
+      className={classNames('min-h-screen h-full top-10 w-screen', background)}
+    >
       <div className="max-w-screen-md mx-auto flex flex-col gap-4 px-16 pt-16">
         <div className="flex justify-between">
           <h2 className="text-3xl text-center text-neutral-900 capitalize">
@@ -58,8 +63,21 @@ export function PokemonDetails(props: PokemonDetailsProps) {
         />
       </div>
 
-      <div className="h-full bg-white w-screen rounded-3xl pt-16 p-4">
-        <h3>Hello there</h3>
+      <div className="max-w-screen-md mx-auto h-full bg-white w-screen rounded-t-3xl px-4 pt-16">
+        <Tabs aria-label="Pokemon Details">
+          <Item key="About" title="About">
+            Arma virumque cano, Troiae qui primus ab oris.
+          </Item>
+          <Item key="stats" title="Base stats">
+            <PokemonStats stats={data?.pokemonById.stats} />
+          </Item>
+          <Item key="evolutions" title="Evolutions">
+            Alea jacta est.
+          </Item>
+          <Item key="moves" title="Moves">
+            Alea jacta est.
+          </Item>
+        </Tabs>
       </div>
     </div>
   );
