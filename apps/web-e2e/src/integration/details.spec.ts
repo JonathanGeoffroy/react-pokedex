@@ -3,11 +3,12 @@ describe('pokedex', () => {
 
   it('should display pokemon details', () => {
     cy.contains('bulbasaur');
+    cy.contains("#001")
     const getTypes = () => cy.get('[data-testid=types]');
 
     getTypes().contains('grass');
     getTypes().contains('poison');
 
-    cy.get('[data-tesid=visual]').should('be.visible');
+    cy.get('[data-testid=visual]').should('be.visible');
   });
 });

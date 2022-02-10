@@ -3,7 +3,12 @@ export interface PokemonDetailsDTO {
   name: string;
   order: number;
   sprites: {
-    back_default: string;
+    front_default: string;
+    other?: {
+      dream_world?: {
+        front_default?: string;
+      };
+    };
   };
   types: PokemonTypeDTO[];
   height: number;

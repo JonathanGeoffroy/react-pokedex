@@ -1,0 +1,21 @@
+query pokemonDetails($id: Int!) {
+  pokemonById(id: $id) {
+    id
+    name
+    order
+    types
+    imageUrl
+    height
+    weight
+    abilities
+    imageUrl
+    stats {
+      hp
+      attack
+      defense
+      specialAttack
+      specialDefense
+      speed
+    }
+  }
+}

@@ -22,6 +22,7 @@ export function List() {
       {pokemonList.map((pokemon) => (
         <PokemonCard
           key={pokemon.id}
+          id={pokemon.id}
           name={pokemon.name}
           order={pokemon.order}
           types={pokemon.types as PokemonType[]}
