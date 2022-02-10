@@ -10,7 +10,7 @@
                         "grass",
                         "poison"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
                     "height": 7,
                     "weight": 69,
                     "abilities": [
@@ -36,7 +36,7 @@
                         "grass",
                         "poison"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg",
                     "height": 10,
                     "weight": 130,
                     "abilities": [
@@ -62,7 +62,7 @@
                         "grass",
                         "poison"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
                     "height": 20,
                     "weight": 1000,
                     "abilities": [
@@ -87,7 +87,7 @@
                     "types": [
                         "fire"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg",
                     "height": 6,
                     "weight": 85,
                     "abilities": [
@@ -112,7 +112,7 @@
                     "types": [
                         "fire"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg",
                     "height": 11,
                     "weight": 190,
                     "abilities": [
@@ -138,7 +138,7 @@
                         "fire",
                         "flying"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg",
                     "height": 17,
                     "weight": 905,
                     "abilities": [
@@ -163,7 +163,7 @@
                     "types": [
                         "water"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg",
                     "height": 5,
                     "weight": 90,
                     "abilities": [
@@ -188,7 +188,7 @@
                     "types": [
                         "water"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/8.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/8.svg",
                     "height": 10,
                     "weight": 225,
                     "abilities": [
@@ -213,7 +213,7 @@
                     "types": [
                         "water"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/9.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/9.svg",
                     "height": 16,
                     "weight": 855,
                     "abilities": [
@@ -238,7 +238,7 @@
                     "types": [
                         "bug"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/10.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10.svg",
                     "height": 3,
                     "weight": 29,
                     "abilities": [
@@ -263,7 +263,7 @@
                     "types": [
                         "bug"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/11.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/11.svg",
                     "height": 7,
                     "weight": 99,
                     "abilities": [
@@ -288,7 +288,7 @@
                         "bug",
                         "flying"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/12.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/12.svg",
                     "height": 11,
                     "weight": 320,
                     "abilities": [
@@ -314,7 +314,7 @@
                         "bug",
                         "poison"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/13.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/13.svg",
                     "height": 3,
                     "weight": 32,
                     "abilities": [
@@ -340,7 +340,7 @@
                         "bug",
                         "poison"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/14.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/14.svg",
                     "height": 6,
                     "weight": 100,
                     "abilities": [
@@ -365,7 +365,7 @@
                         "bug",
                         "poison"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/15.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/15.svg",
                     "height": 10,
                     "weight": 295,
                     "abilities": [
@@ -391,7 +391,7 @@
                         "normal",
                         "flying"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/16.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/16.svg",
                     "height": 3,
                     "weight": 18,
                     "abilities": [
@@ -418,7 +418,7 @@
                         "normal",
                         "flying"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/17.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/17.svg",
                     "height": 11,
                     "weight": 300,
                     "abilities": [
@@ -445,7 +445,7 @@
                         "normal",
                         "flying"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/18.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/18.svg",
                     "height": 15,
                     "weight": 395,
                     "abilities": [
@@ -471,7 +471,7 @@
                     "types": [
                         "normal"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/19.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/19.svg",
                     "height": 3,
                     "weight": 35,
                     "abilities": [
@@ -497,7 +497,7 @@
                     "types": [
                         "normal"
                     ],
-                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/20.png",
+                    "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/20.svg",
                     "height": 7,
                     "weight": 185,
                     "abilities": [

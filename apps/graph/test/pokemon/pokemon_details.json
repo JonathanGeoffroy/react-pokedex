@@ -4,11 +4,17 @@
       "id": "1",
       "order": 1,
       "name": "bulbasaur",
-      "types": ["grass", "poison"],
-      "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
       "height": 7,
       "weight": 69,
-      "abilities": ["overgrow", "chlorophyll"],
+      "abilities": [
+        "overgrow",
+        "chlorophyll"
+      ],
       "stats": {
         "hp": 45,
         "attack": 49,
