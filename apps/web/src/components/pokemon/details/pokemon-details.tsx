@@ -28,10 +28,8 @@ export function PokemonDetails(props: PokemonDetailsProps) {
     : null;
 
   return (
-    <div
-      className={classNames('min-h-screen h-full top-10 w-screen', background)}
-    >
-      <div className="max-w-screen-md mx-auto flex flex-col gap-4 px-16 pt-16">
+    <div className={classNames('h-full top-10 w-screen', background)}>
+      <div className="max-w-screen-md mx-auto flex flex-col gap-4 px-4 md:px-16 pt-16">
         <div className="flex justify-between">
           <h2 className="text-3xl text-center text-neutral-900 capitalize">
             {data?.pokemonById.name}
@@ -43,7 +41,10 @@ export function PokemonDetails(props: PokemonDetailsProps) {
           </div>
         </div>
 
-        <div data-testid="types" className="flex gap-2">
+        <div
+          data-testid="types"
+          className="flex justify-start flex-grow-0 gap-2"
+        >
           {data?.pokemonById.types.map((type: string) => (
             <PokemonType
               className="w-24"
@@ -63,7 +64,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
         />
       </div>
 
-      <div className="max-w-screen-md mx-auto h-full bg-white w-screen rounded-t-3xl px-4 pt-16">
+      <div className="max-w-screen-md mx-auto flex flex-grow bg-gray-100 w-screen rounded-t-3xl px-4 md:px-16 pt-16">
         <Tabs aria-label="Pokemon Details">
           <Item key="About" title="About">
             Arma virumque cano, Troiae qui primus ab oris.

@@ -11,7 +11,7 @@ export function PokemonType({ type, className }: PokemonTypeProps) {
   return (
     <div
       className={cn(
-        'px-2 py-1 text-white text-sm text-center rounded-3xl w-full',
+        'px-2 py-1 text-white text-sm text-center rounded-3xl',
         colors[type].tag,
         className
       )}
