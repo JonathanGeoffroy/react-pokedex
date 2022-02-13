@@ -1,0 +1,7 @@
+.characteristics {
+  grid-template-columns: 1fr 2fr;
+  @apply gap-2;
+}
+.label {
+  @apply text-gray-700 capitalize;
+}

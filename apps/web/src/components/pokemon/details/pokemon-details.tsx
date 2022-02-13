@@ -5,10 +5,11 @@ import { Tabs } from '@react-pokedex/ui';
 import classNames from 'classnames';
 import { usePokemonDetailsQuery } from '../../../__generated/pokeapi.graphql';
 import { PokemonType as PokemonTypeModel } from '../../../app/colors';
-import PokemonStats from '../stats/pokemon-stats';
+import PokemonStats from './stats/pokemon-stats';
 import PokemonType from '../type/pokemon-type';
 import classes from './pokemon-details.module.scss';
 import useColor from '../../../app/useColor';
+import PokemonAbout from './about/pokemon-about';
 
 /* eslint-disable-next-line */
 export interface PokemonDetailsProps {}
@@ -79,7 +80,11 @@ export function PokemonDetails(props: PokemonDetailsProps) {
         >
           <Tabs aria-label="Pokemon Details">
             <Item key="About" title="About">
-              {data?.pokemonById.species.description}
+              <PokemonAbout
+                description={data?.pokemonById.species.description}
+                height={data?.pokemonById.height}
+                weight={data?.pokemonById.weight}
+              />
             </Item>
             <Item key="stats" title="Base stats">
               <PokemonStats stats={data?.pokemonById.stats} />
