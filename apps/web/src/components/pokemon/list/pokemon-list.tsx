@@ -1,10 +1,18 @@
+import { useEffect } from 'react';
 import { PokemonCard } from '../card/pokemon-card';
-import { PokemonType } from '../colors';
-import './pokemon-list.module.scss';
+import { PokemonType } from '../../../app/colors';
 import usePokemonPagination from './use-pokemon-pagination';
+import useColor from '../../../app/useColor';
+
+import './pokemon-list.module.scss';
 
 export function List() {
+  const { setColorType } = useColor();
   const { pokemonList, loading, error } = usePokemonPagination();
+
+  useEffect(() => {
+    setColorType('default');
+  }, [setColorType]);
 
   if (error) {
     throw error;
@@ -32,15 +40,5 @@ export function List() {
     </div>
   );
 }
-
-/*
- <div className="grid grid-cols-3 gap-4">
-      {data?.pokemon_v2_pokemon.map((pokemon) => (
-        <div key={pokemon.id} className="rounded">
-          {pokemon.name}
-        </div>
-      ))}
-    </div>
-*/
 
 export default List;

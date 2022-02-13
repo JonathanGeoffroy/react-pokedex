@@ -1,13 +1,14 @@
-import Header from '../components/header/header';
-import './app.module.scss';
+import ColorProvider from './color-provider';
 import GraphQLProvider from './graphql';
 import Router from './router';
+import './app.module.scss';
 
 export function App() {
   return (
     <GraphQLProvider>
-      <Header />
-      <Router />
+      <ColorProvider>
+        <Router />
+      </ColorProvider>
     </GraphQLProvider>
   );
 }

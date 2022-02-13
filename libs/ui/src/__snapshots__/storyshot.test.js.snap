@@ -150,7 +150,7 @@ exports[`Storyshots Card With Children 1`] = `
 
 exports[`Storyshots TopBar Empty 1`] = `
 <div
-  className="top-bar border"
+  className="top-bar"
 />
 `;
 
@@ -180,7 +180,7 @@ exports[`Storyshots TopBar Secondary 1`] = `
 
 exports[`Storyshots TopBar With Children 1`] = `
 <div
-  className="top-bar border"
+  className="top-bar"
 >
   Some content
 </div>

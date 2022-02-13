@@ -15,7 +15,7 @@ export function TopBar({ kind, children, className }: TopBarProps) {
       ? `bg-primary-500 text-primary-complementary`
       : kind === 'secondary'
       ? 'bg-secondary-500 text-secondary-complementary'
-      : 'border';
+      : '';
 
   return (
     <div className={cn(classes['top-bar'], kindClassnames, className)}>{children}</div>

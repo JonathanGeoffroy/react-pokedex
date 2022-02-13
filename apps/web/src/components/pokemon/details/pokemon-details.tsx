@@ -1,35 +1,45 @@
-import { usePokemonDetailsQuery } from '../../../__generated/pokeapi.graphql';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import colors, { PokemonType as PokemonTypeModel } from '../colors';
-import classNames from 'classnames';
-import PokemonType from '../type/pokemon-type';
 import { Item } from '@react-stately/collections';
 import { Tabs } from '@react-pokedex/ui';
-
-import './pokemon-details.module.scss';
+import classNames from 'classnames';
+import { usePokemonDetailsQuery } from '../../../__generated/pokeapi.graphql';
+import { PokemonType as PokemonTypeModel } from '../../../app/colors';
 import PokemonStats from '../stats/pokemon-stats';
+import PokemonType from '../type/pokemon-type';
+import classes from './pokemon-details.module.scss';
+import useColor from '../../../app/useColor';
 
 /* eslint-disable-next-line */
 export interface PokemonDetailsProps {}
 
 export function PokemonDetails(props: PokemonDetailsProps) {
   const { id } = useParams();
-
-  const { data, loading, error } = usePokemonDetailsQuery({
+  const { setColorType } = useColor();
+  const { data, error } = usePokemonDetailsQuery({
     variables: { id: parseInt(id!) },
   });
+
+  useEffect(() => {
+    if (!data) {
+      return;
+    }
+    const pokemonType = data.pokemonById.types[0] as PokemonTypeModel;
+    setColorType(pokemonType);
+  }, [data, setColorType]);
 
   if (error) {
     throw error;
   }
 
-  const background = data
-    ? colors[data.pokemonById.types[0] as PokemonTypeModel].background
-    : null;
-
   return (
-    <div className={classNames('h-full top-10 w-screen', background)}>
-      <div className="max-w-screen-md mx-auto flex flex-col gap-4 px-4 md:px-16 pt-16">
+    <div
+      className={classNames(
+        classes['pokemon-details'],
+        'h-full max-w-screen-md mx-auto flex flex-col pt-16'
+      )}
+    >
+      <div className="flex flex-col gap-4 px-4 md:px-16">
         <div className="flex justify-between">
           <h2 className="text-3xl text-center text-neutral-900 capitalize">
             {data?.pokemonById.name}
@@ -53,32 +63,33 @@ export function PokemonDetails(props: PokemonDetailsProps) {
             />
           ))}
         </div>
-
-        <img
-          data-testid="visual"
-          className="self-center relative top-8"
-          src={data?.pokemonById.imageUrl}
-          alt={data?.pokemonById.name}
-          width="192"
-          height="192"
-        />
       </div>
+      <img
+        data-testid="visual"
+        className="self-center relative top-12 z-10"
+        src={data?.pokemonById.imageUrl}
+        alt={data?.pokemonById.name}
+        width="192"
+        height="192"
+      />
 
-      <div className="max-w-screen-md mx-auto flex flex-grow bg-gray-100 w-screen rounded-t-3xl px-4 md:px-16 pt-16">
-        <Tabs aria-label="Pokemon Details">
-          <Item key="About" title="About">
-            Arma virumque cano, Troiae qui primus ab oris.
-          </Item>
-          <Item key="stats" title="Base stats">
-            <PokemonStats stats={data?.pokemonById.stats} />
-          </Item>
-          <Item key="evolutions" title="Evolutions">
-            Alea jacta est.
-          </Item>
-          <Item key="moves" title="Moves">
-            Alea jacta est.
-          </Item>
-        </Tabs>
+      <div className="relative w-full h-full max-w-screen-md mx-auto">
+        <div className="absolute bottom-0 w-full h-full flex flex-grow bg-gray-100 rounded-t-3xl px-4 md:px-16 pt-16">
+          <Tabs aria-label="Pokemon Details">
+            <Item key="About" title="About">
+              Arma virumque cano, Troiae qui primus ab oris.
+            </Item>
+            <Item key="stats" title="Base stats">
+              <PokemonStats stats={data?.pokemonById.stats} />
+            </Item>
+            <Item key="evolutions" title="Evolutions">
+              Alea jacta est.
+            </Item>
+            <Item key="moves" title="Moves">
+              Alea jacta est.
+            </Item>
+          </Tabs>
+        </div>
       </div>
     </div>
   );

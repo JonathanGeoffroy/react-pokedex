@@ -1,10 +1,17 @@
 import './header.module.scss';
 import { TopBar } from '@react-pokedex/ui';
+import classNames from 'classnames';
+import { Link } from 'react-router-dom';
+import useColor from '../../app/useColor';
 
 export function Header() {
+  const { color } = useColor();
+
   return (
-    <TopBar kind="primary" className='sticky top-0'>
-      <h1>React-Pokedex</h1>
+    <TopBar className={classNames('sticky top-0', color.darker)}>
+      <Link to="/">
+        <h1 className="text-gray-200">React-Pokedex</h1>
+      </Link>
     </TopBar>
   );
 }

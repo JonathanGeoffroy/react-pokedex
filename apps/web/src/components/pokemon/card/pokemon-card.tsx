@@ -1,7 +1,7 @@
 import './pokemon-card.module.scss';
 import { Card } from '@react-pokedex/ui';
 import { PokemonType } from '../type/pokemon-type';
-import colors, { PokemonType as Type } from '../colors';
+import colors, { PokemonType as Type } from '../../../app/colors';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { pokemonDetailsRoute } from '../../../app/router';
