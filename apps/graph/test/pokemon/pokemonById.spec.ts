@@ -61,6 +61,10 @@ describe('pokemonById query', () => {
             height
             weight
             abilities
+            species {
+              id
+              description
+            }
             stats {
               hp
               attack

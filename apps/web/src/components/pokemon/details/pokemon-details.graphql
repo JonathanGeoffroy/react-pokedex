@@ -17,5 +17,8 @@ query pokemonDetails($id: Int!) {
       specialDefense
       speed
     }
+    species {
+      description
+    }
   }
 }

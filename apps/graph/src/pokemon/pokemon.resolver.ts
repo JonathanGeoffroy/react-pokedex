@@ -23,22 +23,26 @@ export class PokemonResolver {
   }
 
   @Query(() => PokemonDetails)
-  async pokemonById(@Args() args: PokemonByIdArgs): Promise<PokemonDetails> {
+  async pokemonById(
+    @Args() args: PokemonByIdArgs
+  ): Promise<Partial<PokemonDetails>> {
     return await this.handleDetails(args.id);
   }
 
   @ResolveField()
-  async details(@Parent() pokemon: Pokemon): Promise<PokemonDetails> {
+  async details(@Parent() pokemon: Pokemon): Promise<Partial<PokemonDetails>> {
     return await this.handleDetails(pokemon.id);
   }
 
-  private async handleDetails(id: number): Promise<PokemonDetails> {
+  private async handleDetails(id: number): Promise<Partial<PokemonDetails>> {
     const dto = await this.pokemonService.findDetails(id);
 
     return {
       ...dto,
       types: dto.types.map(({ type }) => type.name),
-      imageUrl: dto.sprites.other?.dream_world?.front_default || dto.sprites.front_default,
+      imageUrl:
+        dto.sprites.other?.dream_world?.front_default ||
+        dto.sprites.front_default,
       abilities: dto.abilities.map(({ ability }) => ability.name),
       stats: this.toStats(dto),
     };

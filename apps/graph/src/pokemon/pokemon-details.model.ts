@@ -1,4 +1,5 @@
 import { Field, ID, Int, ObjectType } from '@nestjs/graphql';
+import { PokemonSpecies } from './pokemon-species.model';
 
 @ObjectType()
 export class PokemonStat {
@@ -49,4 +50,7 @@ export class PokemonDetails {
 
   @Field(() => PokemonStat)
   stats: PokemonStat;
+
+  @Field(() => PokemonSpecies)
+  species: PokemonSpecies;
 }

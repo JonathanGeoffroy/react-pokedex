@@ -79,7 +79,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
         >
           <Tabs aria-label="Pokemon Details">
             <Item key="About" title="About">
-              Arma virumque cano, Troiae qui primus ab oris.
+              {data?.pokemonById.species.description}
             </Item>
             <Item key="stats" title="Base stats">
               <PokemonStats stats={data?.pokemonById.stats} />
