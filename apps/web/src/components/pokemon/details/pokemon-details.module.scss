@@ -1,3 +1,7 @@
 .pokemon-details {
   height: calc(100vh - 2.5em);
 }
+
+.padding {
+  @apply px-4 md:px-16 pt-16;
+}

@@ -39,7 +39,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
         'h-full max-w-screen-md mx-auto flex flex-col pt-16'
       )}
     >
-      <div className="flex flex-col gap-4 px-4 md:px-16">
+      <div className={`flex flex-col gap-4 ${classes['padding']}`}>
         <div className="flex justify-between">
           <h2 className="text-3xl text-center text-neutral-900 capitalize">
             {data?.pokemonById.name}
@@ -74,7 +74,9 @@ export function PokemonDetails(props: PokemonDetailsProps) {
       />
 
       <div className="relative w-full h-full max-w-screen-md mx-auto">
-        <div className="absolute bottom-0 w-full h-full flex flex-grow bg-gray-100 rounded-t-3xl px-4 md:px-16 pt-16">
+        <div
+          className={`${classes['padding']} absolute bottom-0 w-full h-full flex flex-grow bg-gray-100 rounded-t-3xl`}
+        >
           <Tabs aria-label="Pokemon Details">
             <Item key="About" title="About">
               Arma virumque cano, Troiae qui primus ab oris.
