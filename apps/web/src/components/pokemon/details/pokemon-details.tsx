@@ -36,7 +36,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
     <div
       className={classNames(
         classes['pokemon-details'],
-        'h-full max-w-screen-md mx-auto flex flex-col pt-16'
+        'h-full max-w-screen-md mx-auto flex flex-col'
       )}
     >
       <div className={`flex flex-col gap-4 ${classes['padding']}`}>
