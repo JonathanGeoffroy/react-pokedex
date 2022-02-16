@@ -1,16 +1,19 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Item } from '@react-stately/collections';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 import { Tabs } from '@react-pokedex/ui';
 import classNames from 'classnames';
 import { PokemonType as PokemonTypeModel } from '../../../app/colors';
 import PokemonStats from './stats/pokemon-stats';
 import PokemonType from '../type/pokemon-type';
-import classes from './pokemon-details.module.scss';
 import useColor from '../../../app/useColor';
 import PokemonAbout from './about/pokemon-about';
 import PokemonEvolutions from './evolutions/pokemon-evolutions';
 import usePokemonDetails from './use-pokemon-details';
+import pokeball from './pokeball.svg';
+import classes from './pokemon-details.module.scss';
 
 /* eslint-disable-next-line */
 export interface PokemonDetailsProps {}
@@ -39,10 +42,14 @@ export function PokemonDetails(props: PokemonDetailsProps) {
       <div className={`flex flex-col gap-4 ${classes['padding']}`}>
         <div className="flex justify-between">
           <h2 className="text-3xl text-center text-neutral-900 capitalize">
-            {pokemon?.name}
+            {pokemon?.name || <Skeleton width={220} />}
           </h2>
           <div className="text-neutral-900">
-            {pokemon ? `#${pokemon.order.toString().padStart(3, '0')}` : ''}
+            {pokemon ? (
+              `#${pokemon.order.toString().padStart(3, '0')}`
+            ) : (
+              <Skeleton width={64} />
+            )}
           </div>
         </div>
 
@@ -56,13 +63,13 @@ export function PokemonDetails(props: PokemonDetailsProps) {
               type={type as PokemonTypeModel}
               key={type}
             />
-          ))}
+          )) || <Skeleton width={128} />}
         </div>
       </div>
       <img
         data-testid="visual"
         className="self-center relative top-12 z-10 h-48  w-48"
-        src={pokemon?.imageUrl}
+        src={pokemon?.imageUrl || pokeball}
         alt={pokemon?.name}
         width="192"
         height="192"

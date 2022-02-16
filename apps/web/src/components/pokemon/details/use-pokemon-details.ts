@@ -48,6 +48,7 @@ export default function usePokemonDetails(
 
     const { id, name, height, weight, order, imageUrl, stats, types, species } =
       data.pokemonById;
+
     return {
       id,
       name,
