@@ -9,6 +9,6 @@ export class Pokemon {
   @Field()
   name: string;
 
-  @Field()
+  @Field(() => PokemonDetails)
   details?: PokemonDetails;
 }

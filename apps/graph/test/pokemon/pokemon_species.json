@@ -1,0 +1,66 @@
+{
+  "data": {
+    "pokemonById": {
+      "id": "1",
+      "name": "bulbasaur",
+      "species": {
+        "evolutions": [
+          {
+            "minLevel": 16,
+            "from": {
+              "id": "1",
+              "name": "bulbasaur",
+              "details": {
+                "order": 1,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+              }
+            },
+            "to": {
+              "id": "2",
+              "name": "ivysaur",
+              "details": {
+                "order": 2,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+              }
+            }
+          },
+          {
+            "minLevel": 32,
+            "from": {
+              "id": "2",
+              "name": "ivysaur",
+              "details": {
+                "order": 2,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+              }
+            },
+            "to": {
+              "id": "3",
+              "name": "venusaur",
+              "details": {
+                "order": 3,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

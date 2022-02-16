@@ -1,15 +1,16 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { Item } from '@react-stately/collections';
 import { Tabs } from '@react-pokedex/ui';
 import classNames from 'classnames';
-import { usePokemonDetailsQuery } from '../../../__generated/pokeapi.graphql';
 import { PokemonType as PokemonTypeModel } from '../../../app/colors';
 import PokemonStats from './stats/pokemon-stats';
 import PokemonType from '../type/pokemon-type';
 import classes from './pokemon-details.module.scss';
 import useColor from '../../../app/useColor';
 import PokemonAbout from './about/pokemon-about';
+import PokemonEvolutions from './evolutions/pokemon-evolutions';
+import usePokemonDetails from './use-pokemon-details';
 
 /* eslint-disable-next-line */
 export interface PokemonDetailsProps {}
@@ -17,21 +18,16 @@ export interface PokemonDetailsProps {}
 export function PokemonDetails(props: PokemonDetailsProps) {
   const { id } = useParams();
   const { setColorType } = useColor();
-  const { data, error } = usePokemonDetailsQuery({
-    variables: { id: parseInt(id!) },
-  });
+  const pokemon = usePokemonDetails(parseInt(id!));
 
   useEffect(() => {
-    if (!data) {
+    if (!pokemon) {
       return;
     }
-    const pokemonType = data.pokemonById.types[0] as PokemonTypeModel;
-    setColorType(pokemonType);
-  }, [data, setColorType]);
 
-  if (error) {
-    throw error;
-  }
+    const pokemonType = pokemon.types[0] as PokemonTypeModel;
+    setColorType(pokemonType);
+  }, [pokemon, setColorType]);
 
   return (
     <div
@@ -43,12 +39,10 @@ export function PokemonDetails(props: PokemonDetailsProps) {
       <div className={`flex flex-col gap-4 ${classes['padding']}`}>
         <div className="flex justify-between">
           <h2 className="text-3xl text-center text-neutral-900 capitalize">
-            {data?.pokemonById.name}
+            {pokemon?.name}
           </h2>
           <div className="text-neutral-900">
-            {data
-              ? `#${data.pokemonById.order.toString().padStart(3, '0')}`
-              : ''}
+            {pokemon ? `#${pokemon.order.toString().padStart(3, '0')}` : ''}
           </div>
         </div>
 
@@ -56,7 +50,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
           data-testid="types"
           className="flex justify-start flex-grow-0 gap-2"
         >
-          {data?.pokemonById.types.map((type: string) => (
+          {pokemon?.types.map((type: string) => (
             <PokemonType
               className="w-24"
               type={type as PokemonTypeModel}
@@ -67,9 +61,9 @@ export function PokemonDetails(props: PokemonDetailsProps) {
       </div>
       <img
         data-testid="visual"
-        className="self-center relative top-12 z-10"
-        src={data?.pokemonById.imageUrl}
-        alt={data?.pokemonById.name}
+        className="self-center relative top-12 z-10 h-48  w-48"
+        src={pokemon?.imageUrl}
+        alt={pokemon?.name}
         width="192"
         height="192"
       />
@@ -81,16 +75,16 @@ export function PokemonDetails(props: PokemonDetailsProps) {
           <Tabs aria-label="Pokemon Details">
             <Item key="About" title="About">
               <PokemonAbout
-                description={data?.pokemonById.species.description}
-                height={data?.pokemonById.height}
-                weight={data?.pokemonById.weight}
+                description={pokemon?.description}
+                height={pokemon?.height}
+                weight={pokemon?.weight}
               />
             </Item>
             <Item key="stats" title="Base stats">
-              <PokemonStats stats={data?.pokemonById.stats} />
+              <PokemonStats stats={pokemon?.stats} />
             </Item>
             <Item key="evolutions" title="Evolutions">
-              Alea jacta est.
+              <PokemonEvolutions evolutions={pokemon?.evolutions} />
             </Item>
             <Item key="moves" title="Moves">
               Alea jacta est.

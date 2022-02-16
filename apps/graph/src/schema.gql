@@ -2,9 +2,22 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Pokemon {
+  id: ID!
+  name: String!
+  details: PokemonDetails!
+}
+
+type PokemonEvolution {
+  minLevel: Int
+  from: Pokemon!
+  to: Pokemon!
+}
+
 type PokemonSpecies {
   id: ID!
   description: String!
+  evolutions: [PokemonEvolution!]
 }
 
 type PokemonStat {
@@ -27,12 +40,6 @@ type PokemonDetails {
   abilities: [String!]!
   stats: PokemonStat!
   species: PokemonSpecies!
-}
-
-type Pokemon {
-  id: ID!
-  name: String!
-  details: PokemonDetails!
 }
 
 type Query {

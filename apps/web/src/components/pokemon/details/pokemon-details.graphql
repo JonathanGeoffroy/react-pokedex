@@ -1,3 +1,13 @@
+fragment Evolution on Pokemon {
+  id
+  name
+  details {
+    order
+    types
+    imageUrl
+  }
+}
+
 query pokemonDetails($id: Int!) {
   pokemonById(id: $id) {
     id
@@ -19,6 +29,15 @@ query pokemonDetails($id: Int!) {
     }
     species {
       description
+      evolutions {
+        minLevel
+        from {
+          ...Evolution
+        }
+        to {
+          ...Evolution
+        }
+      }
     }
   }
 }

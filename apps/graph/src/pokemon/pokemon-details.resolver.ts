@@ -20,6 +20,7 @@ export class PokemonDetailsResolver {
     return {
       id: species.id,
       description,
+      dto: species,
     };
   }
 
