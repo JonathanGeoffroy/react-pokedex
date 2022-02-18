@@ -93,9 +93,6 @@ export function PokemonDetails(props: PokemonDetailsProps) {
             <Item key="evolutions" title="Evolutions">
               <PokemonEvolutions evolutions={pokemon?.evolutions} />
             </Item>
-            <Item key="moves" title="Moves">
-              Alea jacta est.
-            </Item>
           </Tabs>
         </div>
       </div>
