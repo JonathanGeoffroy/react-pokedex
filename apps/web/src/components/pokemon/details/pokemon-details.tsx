@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Item } from '@react-stately/collections';
 import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
 import { Tabs } from '@react-pokedex/ui';
 import classNames from 'classnames';
 import { PokemonType as PokemonTypeModel } from '../../../app/colors';
@@ -68,7 +67,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
       </div>
       <img
         data-testid="visual"
-        className="self-center relative top-12 z-10 h-48  w-48"
+        className="self-center relative top-12 z-10 h-48 w-48"
         src={pokemon?.imageUrl || pokeball}
         alt={pokemon?.name}
         width="192"

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { createContext, ReactNode, useState } from 'react';
+import { ReactNode, createContext, useState } from 'react';
 import colors, { Color } from './colors';
 
 type ColorContextProps = [value: Color, setter: (color: Color) => void];
@@ -17,7 +17,14 @@ export default function ColorProvider({ children }: ColorProviderProps) {
 
   return (
     <ColorContext.Provider value={valueAndSetter}>
-      <div className={classNames('min-h-screen min-w-screen', valueAndSetter[0].background)}>{children}</div>
+      <div
+        className={classNames(
+          'min-h-screen min-w-screen',
+          valueAndSetter[0].background
+        )}
+      >
+        {children}
+      </div>
     </ColorContext.Provider>
   );
 }
