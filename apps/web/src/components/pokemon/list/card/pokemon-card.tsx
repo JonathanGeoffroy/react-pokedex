@@ -1,12 +1,12 @@
 import { Card } from '@react-pokedex/ui';
-import { PokemonType } from '../../type/pokemon-type';
-import colors from '../../../../app/colors';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import { pokemonDetailsRoute } from '../../../../app/router';
 import Skeleton from 'react-loading-skeleton';
-import pokeball from './../../details/pokeball.svg';
+import { PokemonType } from '../../type/pokemon-type';
+import colors from '../../../../app/colors';
+import { pokemonDetailsRoute } from '../../../../app/router';
 import PokemonItemModel from '../pokemon-item.model';
+import pokeball from './../../details/pokeball.svg';
 import './pokemon-card.module.scss';
 
 /* eslint-disable-next-line */

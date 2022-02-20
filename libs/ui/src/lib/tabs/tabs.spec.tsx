@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { Item } from '@react-stately/collections';
-import Tabs from './tabs';
 import userEvent from '@testing-library/user-event';
+import Tabs from './tabs';
 
 describe('Tabs', () => {
   it('should render successfully', () => {

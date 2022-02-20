@@ -1,9 +1,9 @@
-import { PokemonType } from '../../../app/colors';
 import { useCallback, useMemo, useState } from 'react';
+import { ApolloError } from '@apollo/client';
+import { PokemonType } from '../../../app/colors';
 import useScroll from '../../../hooks/useScroll';
 import { usePokemonListQuery } from '../../../__generated/pokeapi.graphql';
 import PokemonItemModel from './pokemon-item.model';
-import { ApolloError } from '@apollo/client';
 
 export const NB_ITEM_PER_PAGES = 24;
 

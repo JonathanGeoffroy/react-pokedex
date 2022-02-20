@@ -1,7 +1,7 @@
 import axios from 'axios';
-import * as expectedFindAll from './pokemon_list.json';
-import { bootstrap } from '../../src/server';
 import { INestApplication } from '@nestjs/common';
+import { bootstrap } from '../../src/server';
+import * as expectedFindAll from './pokemon_list.json';
 
 describe('pokemon query', () => {
   let app: INestApplication;

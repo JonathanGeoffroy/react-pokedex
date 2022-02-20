@@ -1,7 +1,7 @@
 import { screen, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Button from './button';
 import userEvent from '@testing-library/user-event';
+import Button from './button';
 
 describe('Button', () => {
   it('should render successfully', () => {

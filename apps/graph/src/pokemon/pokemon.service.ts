@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { PokemonListDTO } from './pokemon-list.dto';
 import { RESTDataSource } from 'apollo-datasource-rest';
 import { InMemoryLRUCache } from 'apollo-server-caching';
+import { PokemonListDTO } from './pokemon-list.dto';
 import { PokemonDetailsDTO } from './pokemon-details.dto';
 import { PokemonListArgs } from './pokemon-list.args';
 

@@ -1,7 +1,7 @@
 import axios from 'axios';
-import * as expectedSpecies from './pokemon_species.json';
-import { bootstrap } from '../../src/server';
 import { INestApplication } from '@nestjs/common';
+import { bootstrap } from '../../src/server';
+import * as expectedSpecies from './pokemon_species.json';
 
 describe('species', () => {
   let app: INestApplication;

@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
+import useColor from '../../../app/useColor';
 import { PokemonCard } from './card/pokemon-card';
 import usePokemonPagination, {
   NB_ITEM_PER_PAGES,
 } from './use-pokemon-pagination';
-import useColor from '../../../app/useColor';
 
 import './pokemon-list.module.scss';
 

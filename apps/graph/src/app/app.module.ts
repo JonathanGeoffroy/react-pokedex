@@ -1,7 +1,7 @@
+import { join } from 'path';
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { InMemoryLRUCache } from 'apollo-server-caching';
-import { join } from 'path';
 import { PokemonModule } from '../pokemon/pokemon.module';
 
 @Module({

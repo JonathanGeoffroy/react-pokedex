@@ -23,8 +23,16 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "extends": [
+        "plugin:@nrwl/nx/typescript",
+        "plugin:import/recommended",
+        "plugin:import/typescript"
+      ],
+      "rules": {
+        "import/order": "warn",
+        "import/no-unresolved": "off",
+        "import/no-named-as-default": "off"
+      }
     },
     {
       "files": ["*.js", "*.jsx"],

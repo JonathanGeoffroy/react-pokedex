@@ -1,6 +1,5 @@
 import { Field, ID, Int, ObjectType } from '@nestjs/graphql';
 import { PokemonDetailsDTO } from './pokemon-details.dto';
-import { PokemonEvolution } from './pokemon-evolution.model';
 import { PokemonSpecies } from './pokemon-species.model';
 
 @ObjectType()

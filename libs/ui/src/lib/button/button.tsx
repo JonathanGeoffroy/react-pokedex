@@ -1,9 +1,9 @@
-import classes from './button.module.scss';
 import { useButton } from '@react-aria/button';
 import { AriaButtonProps } from '@react-types/button';
 import { ReactChild, useRef } from 'react';
 import cn from 'classnames';
 import { Kind } from '../computeKind';
+import classes from './button.module.scss';
 
 /* eslint-disable-next-line */
 export interface ButtonProps extends AriaButtonProps<'button'> {

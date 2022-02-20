@@ -1,5 +1,5 @@
-import { usePokemonDetailsQuery } from '../../../__generated/pokeapi.graphql';
 import { useMemo } from 'react';
+import { usePokemonDetailsQuery } from '../../../__generated/pokeapi.graphql';
 
 export interface Pokemon {
   id: string;

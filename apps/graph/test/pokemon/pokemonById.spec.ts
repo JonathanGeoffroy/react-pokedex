@@ -1,7 +1,7 @@
 import axios from 'axios';
-import * as expectedDetails from './pokemon_details.json';
-import { bootstrap } from '../../src/server';
 import { INestApplication } from '@nestjs/common';
+import { bootstrap } from '../../src/server';
+import * as expectedDetails from './pokemon_details.json';
 
 describe('pokemonById query', () => {
   let app: INestApplication;
