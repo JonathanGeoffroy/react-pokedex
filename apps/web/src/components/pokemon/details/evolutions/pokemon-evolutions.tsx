@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 import { pokemonDetailsRoute } from '../../../../app/router';
 import {
   Evolution as EvolutionModel,
-  Pokemon as PokemonModel,
+  PokemonEvolution,
 } from '../use-pokemon-details';
 
 import './pokemon-evolutions.module.scss';
 
-export type PokemonProps = PokemonModel;
+export type PokemonProps = PokemonEvolution;
 
 function Pokemon({ id, name, imageUrl }: PokemonProps) {
   return (

@@ -7,12 +7,12 @@ import classNames from 'classnames';
 import { PokemonType as PokemonTypeModel } from '../../../app/colors';
 import PokemonType from '../type/pokemon-type';
 import useColor from '../../../app/useColor';
+import classes from './pokemon-details.module.scss';
 import PokemonStats from './stats/pokemon-stats';
 import PokemonAbout from './about/pokemon-about';
 import PokemonEvolutions from './evolutions/pokemon-evolutions';
 import usePokemonDetails from './use-pokemon-details';
 import pokeball from './pokeball.svg';
-import classes from './pokemon-details.module.scss';
 
 /* eslint-disable-next-line */
 export interface PokemonDetailsProps {}
@@ -23,7 +23,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
   const pokemon = usePokemonDetails(parseInt(id!));
 
   useEffect(() => {
-    if (!pokemon) {
+    if (!pokemon?.types) {
       return;
     }
 
@@ -44,7 +44,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
             {pokemon?.name || <Skeleton width={220} />}
           </h2>
           <div className="text-neutral-900">
-            {pokemon ? (
+            {pokemon?.order ? (
               `#${pokemon.order.toString().padStart(3, '0')}`
             ) : (
               <Skeleton width={64} />
@@ -56,7 +56,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
           data-testid="types"
           className="flex justify-start flex-grow-0 gap-2"
         >
-          {pokemon?.types.map((type: string) => (
+          {pokemon?.types?.map((type: string) => (
             <PokemonType
               className="w-24"
               type={type as PokemonTypeModel}

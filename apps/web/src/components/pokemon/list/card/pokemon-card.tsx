@@ -16,7 +16,7 @@ export interface CardProps {
 
 export function PokemonCard({ pokemon }: CardProps) {
   return (
-    <Link to={pokemon ? pokemonDetailsRoute(pokemon.id) : '#'}>
+    <Link to={pokemon ? pokemonDetailsRoute(pokemon.id) : '#'} state={pokemon}>
       <Card
         data-testid={`pokemon-card-${pokemon?.order || 'skeleton'}`}
         className={classNames(

@@ -1,14 +1,10 @@
 import { useMemo } from 'react';
+import useRouterPartialCache from '../../../hooks/useRouterPartialCache';
+import { PokemonType } from '../../../app/colors';
 import { usePokemonDetailsQuery } from '../../../__generated/pokeapi.graphql';
+import PokemonItemModel from '../list/pokemon-item.model';
 
-export interface Pokemon {
-  id: string;
-  name: string;
-  imageUrl: string;
-}
-
-export interface PokemonDetails extends Pokemon {
-  order: number;
+export interface PokemonDetailsModel extends PokemonItemModel {
   height: number;
   weight: number;
   description: string;
@@ -20,34 +16,39 @@ export interface PokemonDetails extends Pokemon {
     specialDefense: number;
     speed: number;
   };
-  types: string[];
   evolutions: Evolution[];
+}
+
+export interface PokemonEvolution {
+  id: string;
+  name: string;
+  imageUrl: string;
 }
 
 export interface Evolution {
   minLevel?: number | null;
-  from: Pokemon;
-  to: Pokemon;
+  from: PokemonEvolution;
+  to: PokemonEvolution;
 }
 
-export default function usePokemonDetails(
-  id: number
-): PokemonDetails | undefined {
+type UsePokemonDetails = Partial<PokemonDetailsModel> | undefined;
+export default function usePokemonDetails(id: number): UsePokemonDetails {
   const { data, error } = usePokemonDetailsQuery({
     variables: { id },
   });
+  const pokemon = useRouterPartialCache(data?.pokemonById);
 
   if (error) {
     throw error;
   }
 
-  return useMemo<PokemonDetails | undefined>(() => {
-    if (!data) {
+  return useMemo<UsePokemonDetails>(() => {
+    if (!pokemon) {
       return undefined;
     }
 
     const { id, name, height, weight, order, imageUrl, stats, types, species } =
-      data.pokemonById;
+      pokemon;
 
     return {
       id,
@@ -57,10 +58,10 @@ export default function usePokemonDetails(
       order,
       imageUrl,
       stats,
-      types,
-      description: species.description,
+      types: types as PokemonType[],
+      description: species?.description,
       evolutions:
-        species.evolutions?.map((evolution) => ({
+        species?.evolutions?.map((evolution) => ({
           from: {
             id: evolution.from.id,
             name: evolution.from.name,
@@ -74,5 +75,5 @@ export default function usePokemonDetails(
           minLevel: evolution.minLevel || null,
         })) || [],
     };
-  }, [data]);
+  }, [pokemon]);
 }
