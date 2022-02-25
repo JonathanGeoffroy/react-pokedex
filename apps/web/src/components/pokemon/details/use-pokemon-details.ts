@@ -17,6 +17,8 @@ export interface PokemonDetailsModel extends PokemonItemModel {
     speed: number;
   };
   evolutions: Evolution[];
+  previous: PokemonItemModel | null;
+  next: PokemonItemModel | null;
 }
 
 export interface PokemonEvolution {
@@ -47,8 +49,19 @@ export default function usePokemonDetails(id: number): UsePokemonDetails {
       return undefined;
     }
 
-    const { id, name, height, weight, order, imageUrl, stats, types, species } =
-      pokemon;
+    const {
+      id,
+      name,
+      height,
+      weight,
+      order,
+      imageUrl,
+      stats,
+      types,
+      species,
+      next,
+      previous,
+    } = pokemon;
 
     return {
       id,
@@ -74,6 +87,18 @@ export default function usePokemonDetails(id: number): UsePokemonDetails {
           },
           minLevel: evolution.minLevel || null,
         })) || [],
+      previous: previous
+        ? {
+            ...previous,
+            types: previous.types as PokemonType[],
+          }
+        : null,
+      next: next
+        ? {
+            ...next,
+            types: next.types as PokemonType[],
+          }
+        : null,
     };
   }, [pokemon]);
 }

@@ -4,6 +4,7 @@ import { PokemonDetailsDTO } from './pokemon-details.dto';
 import { PokemonDetails, PokemonStat } from './pokemon-details.model';
 import { PokemonListArgs } from './pokemon-list.args';
 import { Pokemon } from './pokemon-list.model';
+import toModel from './pokemon.mapper';
 import { PokemonService } from './pokemon.service';
 
 @Resolver(() => Pokemon)
@@ -36,35 +37,9 @@ export class PokemonResolver {
 
   private async handleDetails(id: number): Promise<Partial<PokemonDetails>> {
     const dto = await this.pokemonService.findDetails(id);
-
-    return {
-      ...dto,
-      types: dto.types.map(({ type }) => type.name),
-      imageUrl:
-        dto.sprites.other?.dream_world?.front_default ||
-        dto.sprites.front_default,
-      abilities: dto.abilities.map(({ ability }) => ability.name),
-      stats: this.toStats(dto),
-    };
+    return toModel(dto);
   }
 
-  private toStats(dto: PokemonDetailsDTO): PokemonStat {
-    return dto.stats.reduce((acc, stat) => {
-      acc[this.toStatsKey(stat.stat.name)] = stat.base_stat;
-      return acc;
-    }, {} as PokemonStat);
-  }
-
-  private toStatsKey(key: string): keyof PokemonStat {
-    switch (key) {
-      case 'special-attack':
-        return 'specialAttack';
-      case 'special-defense':
-        return 'specialDefense';
-      default:
-        return key as keyof PokemonStat;
-    }
-  }
   private idFromUrl(url: string): number {
     const matcher = /https:\/\/pokeapi.co\/api\/v2\/pokemon\/([0-9]+)\//g.exec(
       url

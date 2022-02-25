@@ -1,5 +1,6 @@
 import { Field, ID, Int, ObjectType } from '@nestjs/graphql';
 import { PokemonDetailsDTO } from './pokemon-details.dto';
+import { Pokemon } from './pokemon-list.model';
 import { PokemonSpecies } from './pokemon-species.model';
 
 @ObjectType()
@@ -54,6 +55,13 @@ export class PokemonDetails {
 
   @Field(() => PokemonSpecies)
   species: PokemonSpecies;
+
+  @Field(() => PokemonDetails, { nullable: true })
+  previous: PokemonDetails;
+  
+  @Field(() => PokemonDetails, { nullable: true })
+  next: PokemonDetails;
+  
 
   dto: PokemonDetailsDTO;
 }

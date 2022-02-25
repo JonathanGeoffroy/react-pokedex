@@ -8,17 +8,19 @@ fragment Evolution on Pokemon {
   }
 }
 
+fragment PokemonFragment on PokemonDetails {
+  id
+  name
+  order
+  types
+  imageUrl
+}
 query pokemonDetails($id: Int!) {
   pokemonById(id: $id) {
-    id
-    name
-    order
-    types
-    imageUrl
+    ...PokemonFragment
     height
     weight
     abilities
-    imageUrl
     stats {
       hp
       attack
@@ -38,6 +40,12 @@ query pokemonDetails($id: Int!) {
           ...Evolution
         }
       }
+    }
+    previous {
+      ...PokemonFragment
+    }
+    next {
+      ...PokemonFragment
     }
   }
 }

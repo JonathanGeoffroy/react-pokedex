@@ -40,6 +40,8 @@ type PokemonDetails {
   abilities: [String!]!
   stats: PokemonStat!
   species: PokemonSpecies!
+  previous: PokemonDetails
+  next: PokemonDetails
 }
 
 type Query {

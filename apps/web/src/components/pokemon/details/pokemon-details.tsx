@@ -13,6 +13,7 @@ import PokemonAbout from './about/pokemon-about';
 import PokemonEvolutions from './evolutions/pokemon-evolutions';
 import usePokemonDetails from './use-pokemon-details';
 import pokeball from './pokeball.svg';
+import SiblingPokemon from './sibling/sibling-pokemon';
 
 /* eslint-disable-next-line */
 export interface PokemonDetailsProps {}
@@ -35,7 +36,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
     <div
       className={classNames(
         classes['pokemon-details'],
-        'h-full max-w-screen-md mx-auto flex flex-col'
+        'h-full max-w-screen-md mx-auto flex flex-col overflow-x-hidden'
       )}
     >
       <div className={`flex flex-col gap-4 ${classes['padding']}`}>
@@ -65,14 +66,19 @@ export function PokemonDetails(props: PokemonDetailsProps) {
           )) || <Skeleton width={128} />}
         </div>
       </div>
-      <img
-        data-testid="visual"
-        className="self-center relative top-12 z-10 h-48 w-48"
-        src={pokemon?.imageUrl || pokeball}
-        alt={pokemon?.name}
-        width="192"
-        height="192"
-      />
+
+      <div className="flex flex-row justify-between items-end -mx-8">
+        <SiblingPokemon pokemon={pokemon?.previous} />
+        <img
+          data-testid="visual"
+          className="self-center relative top-12 z-10 h-48 w-48"
+          src={pokemon?.imageUrl || pokeball}
+          alt={pokemon?.name}
+          width="192"
+          height="192"
+        />
+        <SiblingPokemon pokemon={pokemon?.next} />
+      </div>
 
       <div className="relative w-full h-full max-w-screen-md mx-auto">
         <div
