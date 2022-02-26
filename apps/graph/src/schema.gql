@@ -5,7 +5,7 @@
 type Pokemon {
   id: ID!
   name: String!
-  details: PokemonDetails_1!
+  details: PokemonDetails!
 }
 
 type PokemonEvolution {
@@ -29,7 +29,7 @@ type PokemonStat {
   speed: Float!
 }
 
-type PokemonDetails_1 {
+type PokemonDetails {
   id: ID!
   order: Float!
   name: String!
@@ -40,11 +40,11 @@ type PokemonDetails_1 {
   abilities: [String!]!
   stats: PokemonStat!
   species: PokemonSpecies!
-  previous: PokemonDetails_1
-  next: PokemonDetails_1
+  previous: PokemonDetails
+  next: PokemonDetails
 }
 
 type Query {
   pokemon(limit: Int, offset: Int): [Pokemon!]!
-  pokemonById(id: Int!): PokemonDetails_1!
+  pokemonById(id: Int!): PokemonDetails!
 }
