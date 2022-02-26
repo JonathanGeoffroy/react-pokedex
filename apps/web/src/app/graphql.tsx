@@ -1,5 +1,6 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
+console.log(process.env['NX_GRAPHQL_URI'])
 const cache = new InMemoryCache({
   typePolicies: {
     Query: {
@@ -16,7 +17,7 @@ const cache = new InMemoryCache({
 });
 
 const client = new ApolloClient({
-  uri: 'http://localhost:3333/graphql',
+  uri: process.env['NX_GRAPHQL_URI'],
   cache,
 });
 

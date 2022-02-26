@@ -43,3 +43,7 @@ Thumbs.db
 graphql.schema.json
 
 __generated
+
+# local env variables
+.env.local
+.local.env
