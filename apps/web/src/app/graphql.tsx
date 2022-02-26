@@ -1,6 +1,5 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
-console.log(process.env['NX_GRAPHQL_URI'])
 const cache = new InMemoryCache({
   typePolicies: {
     Query: {
