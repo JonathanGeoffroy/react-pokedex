@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react';
 
 type OnBottomCB = () => Promise<unknown>;
-export default function useScroll(
-  onBottom: OnBottomCB,
-  enabled = true
-) {
+export default function useScroll(onBottom: OnBottomCB, enabled = true) {
   const [waiting, setWaiting] = useState<boolean>(false);
 
   useEffect(() => {
@@ -20,6 +17,7 @@ export default function useScroll(
     };
 
     window.addEventListener('scroll', scrollListener);
+    scrollListener();
 
     return () => {
       window?.removeEventListener('scroll', scrollListener);

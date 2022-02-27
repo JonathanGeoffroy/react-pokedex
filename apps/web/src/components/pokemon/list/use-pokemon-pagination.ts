@@ -41,7 +41,7 @@ export default function usePokemonPagination(): UsePokemonPagination {
     });
   }, [offset, fetchMore, loading]);
 
-  useScroll(fetchNext, !reachEnd);
+  useScroll(fetchNext, !loading && !reachEnd);
 
   const pokemonList = useMemo(
     () =>
