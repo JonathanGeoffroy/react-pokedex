@@ -1,0 +1,98 @@
+{
+  "data": {
+    "pokemonById": {
+      "id": "3",
+      "name": "フシギバナ",
+      "order": 3,
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
+      "height": 20,
+      "weight": 1000,
+      "abilities": [
+        "overgrow",
+        "chlorophyll"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 82,
+        "defense": 83,
+        "specialAttack": 100,
+        "specialDefense": 100,
+        "speed": 80
+      },
+      "species": {
+        "description": "The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+        "evolutions": [
+          {
+            "minLevel": 16,
+            "from": {
+              "id": "1",
+              "name": "フシギダネ",
+              "order": 1,
+              "types": [
+                "grass",
+                "poison"
+              ],
+              "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+            },
+            "to": {
+              "id": "2",
+              "name": "フシギソウ",
+              "order": 2,
+              "types": [
+                "grass",
+                "poison"
+              ],
+              "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+            }
+          },
+          {
+            "minLevel": 32,
+            "from": {
+              "id": "2",
+              "name": "フシギソウ",
+              "order": 2,
+              "types": [
+                "grass",
+                "poison"
+              ],
+              "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+            },
+            "to": {
+              "id": "3",
+              "name": "フシギバナ",
+              "order": 3,
+              "types": [
+                "grass",
+                "poison"
+              ],
+              "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
+            }
+          }
+        ]
+      },
+      "previous": {
+        "id": "2",
+        "name": "フシギソウ",
+        "order": 2,
+        "types": [
+          "grass",
+          "poison"
+        ],
+        "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+      },
+      "next": {
+        "id": "4",
+        "name": "ヒトカゲ",
+        "order": 5,
+        "types": [
+          "fire"
+        ],
+        "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
+      }
+    }
+  }
+}

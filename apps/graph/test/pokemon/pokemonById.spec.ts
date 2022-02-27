@@ -2,6 +2,7 @@ import axios from 'axios';
 import { INestApplication } from '@nestjs/common';
 import { bootstrap } from '../../src/server';
 import * as expectedDetails from './pokemon_details.json';
+import * as expectedDetailsJA from './pokemon_details_ja.json';
 
 describe('pokemonById query', () => {
   let app: INestApplication;
@@ -77,5 +78,55 @@ describe('pokemonById query', () => {
         }`,
       })
       .then((actual) => expect(actual.data).toEqual(expectedDetails));
+  });
+
+  it('should handle translation', () => {
+    return axios
+      .post('http://localhost:3333/graphql', {
+        variables: { lang: 'ja' },
+        query: `
+        fragment PokemonFragment on Pokemon {
+          id
+          name(lang: $lang)
+          order
+          types
+          imageUrl
+        }
+        query pokemonDetails($lang: Language) {
+          pokemonById(id: 3, lang: $lang) {
+            ...PokemonFragment
+            height
+            weight
+            abilities
+            stats {
+              hp
+              attack
+              defense
+              specialAttack
+              specialDefense
+              speed
+            }
+            species {
+              description
+              evolutions {
+                minLevel
+                from {
+                  ...PokemonFragment
+                }
+                to {
+                  ...PokemonFragment
+                }
+              }
+            }
+            previous {
+              ...PokemonFragment
+            }
+            next {
+              ...PokemonFragment
+            }
+          }
+        }`,
+      })
+      .then((actual) => expect(actual.data).toEqual(expectedDetailsJA));
   });
 });

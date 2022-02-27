@@ -1,0 +1,461 @@
+{
+  "data": {
+    "pokemon": [
+      {
+        "id": "1",
+        "name": "フシギダネ",
+        "order": 1,
+        "types": [
+          "grass",
+          "poison"
+        ],
+        "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
+        "height": 7,
+        "weight": 69,
+        "abilities": [
+          "overgrow",
+          "chlorophyll"
+        ],
+        "stats": {
+          "hp": 45,
+          "attack": 49,
+          "defense": 49,
+          "specialAttack": 65,
+          "specialDefense": 65,
+          "speed": 45
+        },
+        "species": {
+          "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.",
+          "evolutions": [
+            {
+              "minLevel": 16,
+              "from": {
+                "id": "1",
+                "name": "フシギダネ",
+                "order": 1,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+              },
+              "to": {
+                "id": "2",
+                "name": "フシギソウ",
+                "order": 2,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+              }
+            },
+            {
+              "minLevel": 32,
+              "from": {
+                "id": "2",
+                "name": "フシギソウ",
+                "order": 2,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+              },
+              "to": {
+                "id": "3",
+                "name": "フシギバナ",
+                "order": 3,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
+              }
+            }
+          ]
+        },
+        "previous": null,
+        "next": {
+          "id": "2",
+          "name": "フシギソウ",
+          "order": 2,
+          "types": [
+            "grass",
+            "poison"
+          ],
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+        }
+      },
+      {
+        "id": "2",
+        "name": "フシギソウ",
+        "order": 2,
+        "types": [
+          "grass",
+          "poison"
+        ],
+        "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg",
+        "height": 10,
+        "weight": 130,
+        "abilities": [
+          "overgrow",
+          "chlorophyll"
+        ],
+        "stats": {
+          "hp": 60,
+          "attack": 62,
+          "defense": 63,
+          "specialAttack": 80,
+          "specialDefense": 80,
+          "speed": 60
+        },
+        "species": {
+          "description": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+          "evolutions": [
+            {
+              "minLevel": 16,
+              "from": {
+                "id": "1",
+                "name": "フシギダネ",
+                "order": 1,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+              },
+              "to": {
+                "id": "2",
+                "name": "フシギソウ",
+                "order": 2,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+              }
+            },
+            {
+              "minLevel": 32,
+              "from": {
+                "id": "2",
+                "name": "フシギソウ",
+                "order": 2,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+              },
+              "to": {
+                "id": "3",
+                "name": "フシギバナ",
+                "order": 3,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
+              }
+            }
+          ]
+        },
+        "previous": {
+          "id": "1",
+          "name": "フシギダネ",
+          "order": 1,
+          "types": [
+            "grass",
+            "poison"
+          ],
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+        },
+        "next": {
+          "id": "3",
+          "name": "フシギバナ",
+          "order": 3,
+          "types": [
+            "grass",
+            "poison"
+          ],
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
+        }
+      },
+      {
+        "id": "3",
+        "name": "フシギバナ",
+        "order": 3,
+        "types": [
+          "grass",
+          "poison"
+        ],
+        "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
+        "height": 20,
+        "weight": 1000,
+        "abilities": [
+          "overgrow",
+          "chlorophyll"
+        ],
+        "stats": {
+          "hp": 80,
+          "attack": 82,
+          "defense": 83,
+          "specialAttack": 100,
+          "specialDefense": 100,
+          "speed": 80
+        },
+        "species": {
+          "description": "The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+          "evolutions": [
+            {
+              "minLevel": 16,
+              "from": {
+                "id": "1",
+                "name": "フシギダネ",
+                "order": 1,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+              },
+              "to": {
+                "id": "2",
+                "name": "フシギソウ",
+                "order": 2,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+              }
+            },
+            {
+              "minLevel": 32,
+              "from": {
+                "id": "2",
+                "name": "フシギソウ",
+                "order": 2,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+              },
+              "to": {
+                "id": "3",
+                "name": "フシギバナ",
+                "order": 3,
+                "types": [
+                  "grass",
+                  "poison"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
+              }
+            }
+          ]
+        },
+        "previous": {
+          "id": "2",
+          "name": "フシギソウ",
+          "order": 2,
+          "types": [
+            "grass",
+            "poison"
+          ],
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+        },
+        "next": {
+          "id": "4",
+          "name": "ヒトカゲ",
+          "order": 5,
+          "types": [
+            "fire"
+          ],
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
+        }
+      },
+      {
+        "id": "4",
+        "name": "ヒトカゲ",
+        "order": 5,
+        "types": [
+          "fire"
+        ],
+        "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg",
+        "height": 6,
+        "weight": 85,
+        "abilities": [
+          "blaze",
+          "solar-power"
+        ],
+        "stats": {
+          "hp": 39,
+          "attack": 52,
+          "defense": 43,
+          "specialAttack": 60,
+          "specialDefense": 50,
+          "speed": 65
+        },
+        "species": {
+          "description": "Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.",
+          "evolutions": [
+            {
+              "minLevel": 16,
+              "from": {
+                "id": "4",
+                "name": "ヒトカゲ",
+                "order": 5,
+                "types": [
+                  "fire"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
+              },
+              "to": {
+                "id": "5",
+                "name": "リザード",
+                "order": 6,
+                "types": [
+                  "fire"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
+              }
+            },
+            {
+              "minLevel": 36,
+              "from": {
+                "id": "5",
+                "name": "リザード",
+                "order": 6,
+                "types": [
+                  "fire"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
+              },
+              "to": {
+                "id": "6",
+                "name": "リザードン",
+                "order": 7,
+                "types": [
+                  "fire",
+                  "flying"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
+              }
+            }
+          ]
+        },
+        "previous": {
+          "id": "3",
+          "name": "フシギバナ",
+          "order": 3,
+          "types": [
+            "grass",
+            "poison"
+          ],
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
+        },
+        "next": {
+          "id": "5",
+          "name": "リザード",
+          "order": 6,
+          "types": [
+            "fire"
+          ],
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
+        }
+      },
+      {
+        "id": "5",
+        "name": "リザード",
+        "order": 6,
+        "types": [
+          "fire"
+        ],
+        "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg",
+        "height": 11,
+        "weight": 190,
+        "abilities": [
+          "blaze",
+          "solar-power"
+        ],
+        "stats": {
+          "hp": 58,
+          "attack": 64,
+          "defense": 58,
+          "specialAttack": 80,
+          "specialDefense": 65,
+          "speed": 80
+        },
+        "species": {
+          "description": "When it swings its burning tail, it elevates the temperature to unbearably high levels.",
+          "evolutions": [
+            {
+              "minLevel": 16,
+              "from": {
+                "id": "4",
+                "name": "ヒトカゲ",
+                "order": 5,
+                "types": [
+                  "fire"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
+              },
+              "to": {
+                "id": "5",
+                "name": "リザード",
+                "order": 6,
+                "types": [
+                  "fire"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
+              }
+            },
+            {
+              "minLevel": 36,
+              "from": {
+                "id": "5",
+                "name": "リザード",
+                "order": 6,
+                "types": [
+                  "fire"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
+              },
+              "to": {
+                "id": "6",
+                "name": "リザードン",
+                "order": 7,
+                "types": [
+                  "fire",
+                  "flying"
+                ],
+                "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
+              }
+            }
+          ]
+        },
+        "previous": {
+          "id": "4",
+          "name": "ヒトカゲ",
+          "order": 5,
+          "types": [
+            "fire"
+          ],
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
+        },
+        "next": {
+          "id": "6",
+          "name": "リザードン",
+          "order": 7,
+          "types": [
+            "fire",
+            "flying"
+          ],
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
+        }
+      }
+    ]
+  }
+}

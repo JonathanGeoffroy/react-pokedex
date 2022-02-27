@@ -2,7 +2,7 @@ import axios from 'axios';
 import { INestApplication } from '@nestjs/common';
 import { bootstrap } from '../../src/server';
 import * as expectedFindAll from './pokemon_list.json';
-
+import * as expectedFindAllJA from './pokemon_list_ja.json';
 describe('pokemon query', () => {
   let app: INestApplication;
   beforeAll(async () => {
@@ -80,5 +80,55 @@ describe('pokemon query', () => {
           },
         })
       );
+  });
+
+  it('should handle translation', () => {
+    return axios
+      .post('http://localhost:3333/graphql', {
+        variables: { lang: 'ja' },
+        query: `
+        fragment PokemonFragment on Pokemon {
+          id
+          name(lang: $lang)
+          order
+          types
+          imageUrl
+        }
+        query pokemonList($lang: Language) {
+          pokemon(limit: 5, lang: $lang) {
+            ...PokemonFragment
+            height 
+            weight
+            abilities
+            stats {
+              hp
+              attack
+              defense
+              specialAttack
+              specialDefense
+              speed
+            }
+            species {
+              description
+              evolutions {
+                minLevel
+                from {
+                  ...PokemonFragment
+                }
+                to {
+                  ...PokemonFragment
+                }
+              }
+            }
+            previous {
+              ...PokemonFragment
+            }
+            next {
+              ...PokemonFragment
+            }
+          }
+        }`,
+      })
+      .then((actual) => expect(actual.data).toEqual(expectedFindAllJA));
   });
 });
