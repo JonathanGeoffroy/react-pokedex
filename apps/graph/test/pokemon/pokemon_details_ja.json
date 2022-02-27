@@ -30,7 +30,7 @@
         "speed": 80
       },
       "species": {
-        "description": "The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+        "description": "大きな　花びらを　広げ 太陽の　光を　浴びていると 体に　元気が　みなぎっていく。",
         "evolutions": [
           {
             "minLevel": 16,

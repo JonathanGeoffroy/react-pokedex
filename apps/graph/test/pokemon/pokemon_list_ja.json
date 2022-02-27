@@ -31,7 +31,7 @@
           "speed": 45
         },
         "species": {
-          "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.",
+          "description": "生まれたときから　背中に 不思議な　タネが　植えてあって 体と　ともに　育つという。",
           "evolutions": [
             {
               "minLevel": 16,
@@ -153,7 +153,7 @@
           "speed": 60
         },
         "species": {
-          "description": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+          "description": "つぼみが　背中に　ついていて 養分を　吸収していくと 大きな　花が　咲くという。",
           "evolutions": [
             {
               "minLevel": 16,
@@ -290,7 +290,7 @@
           "speed": 80
         },
         "species": {
-          "description": "The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+          "description": "大きな　花びらを　広げ 太陽の　光を　浴びていると 体に　元気が　みなぎっていく。",
           "evolutions": [
             {
               "minLevel": 16,
@@ -419,7 +419,7 @@
           "speed": 65
         },
         "species": {
-          "description": "Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.",
+          "description": "尻尾の　炎は ヒトカゲの　生命力の　証。 元気だと　さかんに　燃えさかる。",
           "evolutions": [
             {
               "minLevel": 16,
@@ -536,7 +536,7 @@
           "speed": 80
         },
         "species": {
-          "description": "When it swings its burning tail, it elevates the temperature to unbearably high levels.",
+          "description": "尻尾を　振り回して 相手を　なぎ倒し　鋭い　ツメで ズタズタに　ひきさいてしまう。",
           "evolutions": [
             {
               "minLevel": 16,

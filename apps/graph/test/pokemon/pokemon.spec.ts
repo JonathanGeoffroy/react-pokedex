@@ -112,7 +112,7 @@ describe('pokemon query', () => {
               speed
             }
             species {
-              description
+              description(lang: $lang)
               evolutions {
                 minLevel
                 from {

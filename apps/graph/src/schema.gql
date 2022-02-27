@@ -10,8 +10,19 @@ type PokemonEvolution {
 
 type PokemonSpecies {
   id: ID!
-  description: String!
+  description(lang: Language = en): String!
   evolutions: [PokemonEvolution!]
+}
+
+enum Language {
+  ko
+  fr
+  de
+  es
+  it
+  en
+  cs
+  ja
 }
 
 type PokemonType {
@@ -40,17 +51,6 @@ enum PokemonTypeEnum {
   fairy
   unknown
   shadow
-}
-
-enum Language {
-  ko
-  fr
-  de
-  es
-  it
-  en
-  cs
-  ja
 }
 
 type PokemonStat {

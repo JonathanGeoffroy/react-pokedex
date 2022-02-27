@@ -1,4 +1,5 @@
-import { Resolver, ResolveField, Parent } from '@nestjs/graphql';
+import { Resolver, ResolveField, Parent, Args } from '@nestjs/graphql';
+import Language, { DEFAULT_LANGUAGE } from '../language/language';
 import { PokemonChainEvolutionDTO } from './pokemon-evolution.dto';
 import { PokemonEvolution } from './pokemon-evolution.model';
 import { PokemonEvolutionService } from './pokemon-evolution.service';
@@ -37,6 +38,27 @@ export class PokemonSpeciesResolver {
     }
 
     return results;
+  }
+
+  @ResolveField()
+  description(
+    @Parent() species: PokemonSpecies,
+    @Args('lang', {
+      type: () => Language,
+      nullable: true,
+      defaultValue: DEFAULT_LANGUAGE,
+    })
+    lang: Language
+  ) {
+    const rawDescription = species.dto.flavor_text_entries.find(
+      (entry) => entry.language.name === lang
+    ).flavor_text;
+
+    return this.sanitize(rawDescription);
+  }
+
+  private sanitize(description: string): string {
+    return description.replace(/[\n\r\t\f]/g, ' ');
   }
 
   private toEvolutionArray(

@@ -49,18 +49,11 @@ export class PokemonResolver {
   }
 
   @ResolveField()
-  async species(@Parent() details: Pokemon): Promise<PokemonSpecies> {
+  async species(@Parent() details: Pokemon): Promise<Partial<PokemonSpecies>> {
     const species = await this.pokemonSpeciesService.findById(details.id);
-
-    const rawDescription = species.flavor_text_entries.find(
-      (entry) => entry.language.name === 'en'
-    ).flavor_text;
-
-    const description = this.sanitize(rawDescription);
 
     return {
       id: species.id,
-      description,
       dto: species,
     };
   }
@@ -74,10 +67,6 @@ export class PokemonResolver {
         }))
       )
     );
-  }
-
-  private sanitize(description: string): string {
-    return description.replace(/[\n\r\t\f]/g, ' ');
   }
 
   @ResolveField()
