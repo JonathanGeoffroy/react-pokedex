@@ -1,9 +1,10 @@
 import cn from 'classnames';
-import colors, { PokemonType as Type } from '../../../app/colors';
+import colors from '../../../app/colors';
 import './pokemon-type.module.scss';
+import { PokemonType as PokemonTypeModel } from '../list/pokemon-item.model';
 
 export interface PokemonTypeProps {
-  type: Type;
+  type: PokemonTypeModel;
   className?: string;
 }
 
@@ -12,11 +13,11 @@ export function PokemonType({ type, className }: PokemonTypeProps) {
     <div
       className={cn(
         'px-2 py-1 text-white text-sm text-center rounded-3xl',
-        colors[type].darker,
+        colors[type.type].darker,
         className
       )}
     >
-      {type}
+      {type.name}
     </div>
   );
 }

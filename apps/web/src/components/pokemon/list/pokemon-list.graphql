@@ -3,7 +3,10 @@ query pokemonList($limit: Int, $offset: Int) {
     id
     order
     name
-    types
+    types {
+      type
+      name
+    }
     imageUrl
   }
 }

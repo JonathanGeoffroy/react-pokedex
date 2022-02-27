@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
 import useRouterPartialCache from '../../../hooks/useRouterPartialCache';
-import { PokemonType } from '../../../app/colors';
 import { usePokemonDetailsQuery } from '../../../__generated/pokeapi.graphql';
 import PokemonItemModel from '../list/pokemon-item.model';
 
@@ -71,7 +70,7 @@ export default function usePokemonDetails(id: string): UsePokemonDetails {
       order,
       imageUrl,
       stats,
-      types: types as PokemonType[],
+      types,
       description: species?.description,
       evolutions:
         species?.evolutions?.map((evolution) => ({
@@ -79,18 +78,8 @@ export default function usePokemonDetails(id: string): UsePokemonDetails {
           to: evolution.to,
           minLevel: evolution.minLevel || null,
         })) || [],
-      previous: previous
-        ? {
-            ...previous,
-            types: previous.types as PokemonType[],
-          }
-        : previous,
-      next: next
-        ? {
-            ...next,
-            types: next.types as PokemonType[],
-          }
-        : next,
+      previous,
+      next,
     };
   }, [pokemon]);
 }

@@ -20,10 +20,10 @@ function toStatsKey(key: string): keyof PokemonStat {
 }
 
 export default function toModel(dto: PokemonDetailsDTO): Partial<Pokemon> {
+  const { types, ...restDto } = dto;
   return {
-    ...dto,
+    ...restDto,
     dto,
-    types: dto.types.map(({ type }) => type.name),
     imageUrl:
       dto.sprites.other?.dream_world?.front_default ||
       dto.sprites.front_default,

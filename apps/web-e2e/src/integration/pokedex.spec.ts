@@ -7,8 +7,8 @@ describe('pokedex', () => {
 
     findFirst().contains('#001');
     findFirst().contains('Bulbasaur');
-    findFirst().contains('grass');
-    findFirst().contains('poison');
+    findFirst().contains('Grass');
+    findFirst().contains('Poison');
 
     findAll().should('have.length', 24);
     cy.contains('Pikachu').should('not.exist');

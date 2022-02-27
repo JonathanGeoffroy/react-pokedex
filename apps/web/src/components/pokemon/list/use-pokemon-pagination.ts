@@ -1,6 +1,5 @@
 import { useCallback, useMemo, useState } from 'react';
 import { ApolloError } from '@apollo/client';
-import { PokemonType } from '../../../app/colors';
 import useScroll from '../../../hooks/useScroll';
 import { usePokemonListQuery } from '../../../__generated/pokeapi.graphql';
 import PokemonItemModel from './pokemon-item.model';
@@ -47,7 +46,6 @@ export default function usePokemonPagination(): UsePokemonPagination {
     () =>
       data?.pokemon.map((pokemon) => ({
         ...pokemon,
-        types: pokemon.types as PokemonType[],
       })),
     [data]
   );

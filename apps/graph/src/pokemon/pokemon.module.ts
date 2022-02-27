@@ -5,6 +5,8 @@ import { PokemonSpeciesResolver } from './pokemon-species.resolver';
 import { PokemonSpeciesService } from './pokemon-species.service';
 import { PokemonService } from './pokemon.service';
 import { PokemonEvolutionResolver } from './pokemon-evolution.resolver';
+import { PokemonTypeService } from './pokemon-type.service';
+import { PokemonTypeResolver } from './pokemon-type.resolver';
 
 @Module({
   providers: [
@@ -14,6 +16,8 @@ import { PokemonEvolutionResolver } from './pokemon-evolution.resolver';
     PokemonSpeciesService,
     PokemonSpeciesResolver,
     PokemonService,
+    PokemonTypeService,
+    PokemonTypeResolver,
   ],
 })
 export class PokemonModule {}

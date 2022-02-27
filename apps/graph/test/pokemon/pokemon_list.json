@@ -6,8 +6,14 @@
         "order": 1,
         "name": "Bulbasaur",
         "types": [
-          "grass",
-          "poison"
+          {
+            "type": "grass",
+            "name": "Grass"
+          },
+          {
+            "type": "poison",
+            "name": "Poison"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
         "height": 7,
@@ -34,8 +40,14 @@
         "order": 2,
         "name": "Ivysaur",
         "types": [
-          "grass",
-          "poison"
+          {
+            "type": "grass",
+            "name": "Grass"
+          },
+          {
+            "type": "poison",
+            "name": "Poison"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg",
         "height": 10,
@@ -62,8 +74,14 @@
         "order": 3,
         "name": "Venusaur",
         "types": [
-          "grass",
-          "poison"
+          {
+            "type": "grass",
+            "name": "Grass"
+          },
+          {
+            "type": "poison",
+            "name": "Poison"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
         "height": 20,
@@ -90,7 +108,10 @@
         "order": 5,
         "name": "Charmander",
         "types": [
-          "fire"
+          {
+            "type": "fire",
+            "name": "Fire"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg",
         "height": 6,
@@ -117,7 +138,10 @@
         "order": 6,
         "name": "Charmeleon",
         "types": [
-          "fire"
+          {
+            "type": "fire",
+            "name": "Fire"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg",
         "height": 11,
@@ -144,8 +168,14 @@
         "order": 7,
         "name": "Charizard",
         "types": [
-          "fire",
-          "flying"
+          {
+            "type": "fire",
+            "name": "Fire"
+          },
+          {
+            "type": "flying",
+            "name": "Flying"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg",
         "height": 17,
@@ -172,7 +202,10 @@
         "order": 10,
         "name": "Squirtle",
         "types": [
-          "water"
+          {
+            "type": "water",
+            "name": "Water"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg",
         "height": 5,
@@ -199,7 +232,10 @@
         "order": 11,
         "name": "Wartortle",
         "types": [
-          "water"
+          {
+            "type": "water",
+            "name": "Water"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/8.svg",
         "height": 10,
@@ -226,7 +262,10 @@
         "order": 12,
         "name": "Blastoise",
         "types": [
-          "water"
+          {
+            "type": "water",
+            "name": "Water"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/9.svg",
         "height": 16,
@@ -253,7 +292,10 @@
         "order": 14,
         "name": "Caterpie",
         "types": [
-          "bug"
+          {
+            "type": "bug",
+            "name": "Bug"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10.svg",
         "height": 3,
@@ -280,7 +322,10 @@
         "order": 15,
         "name": "Metapod",
         "types": [
-          "bug"
+          {
+            "type": "bug",
+            "name": "Bug"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/11.svg",
         "height": 7,
@@ -306,8 +351,14 @@
         "order": 16,
         "name": "Butterfree",
         "types": [
-          "bug",
-          "flying"
+          {
+            "type": "bug",
+            "name": "Bug"
+          },
+          {
+            "type": "flying",
+            "name": "Flying"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/12.svg",
         "height": 11,
@@ -334,8 +385,14 @@
         "order": 17,
         "name": "Weedle",
         "types": [
-          "bug",
-          "poison"
+          {
+            "type": "bug",
+            "name": "Bug"
+          },
+          {
+            "type": "poison",
+            "name": "Poison"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/13.svg",
         "height": 3,
@@ -362,8 +419,14 @@
         "order": 18,
         "name": "Kakuna",
         "types": [
-          "bug",
-          "poison"
+          {
+            "type": "bug",
+            "name": "Bug"
+          },
+          {
+            "type": "poison",
+            "name": "Poison"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/14.svg",
         "height": 6,
@@ -389,8 +452,14 @@
         "order": 19,
         "name": "Beedrill",
         "types": [
-          "bug",
-          "poison"
+          {
+            "type": "bug",
+            "name": "Bug"
+          },
+          {
+            "type": "poison",
+            "name": "Poison"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/15.svg",
         "height": 10,
@@ -417,8 +486,14 @@
         "order": 21,
         "name": "Pidgey",
         "types": [
-          "normal",
-          "flying"
+          {
+            "type": "normal",
+            "name": "Normal"
+          },
+          {
+            "type": "flying",
+            "name": "Flying"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/16.svg",
         "height": 3,
@@ -446,8 +521,14 @@
         "order": 22,
         "name": "Pidgeotto",
         "types": [
-          "normal",
-          "flying"
+          {
+            "type": "normal",
+            "name": "Normal"
+          },
+          {
+            "type": "flying",
+            "name": "Flying"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/17.svg",
         "height": 11,
@@ -475,8 +556,14 @@
         "order": 23,
         "name": "Pidgeot",
         "types": [
-          "normal",
-          "flying"
+          {
+            "type": "normal",
+            "name": "Normal"
+          },
+          {
+            "type": "flying",
+            "name": "Flying"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/18.svg",
         "height": 15,
@@ -504,7 +591,10 @@
         "order": 25,
         "name": "Rattata",
         "types": [
-          "normal"
+          {
+            "type": "normal",
+            "name": "Normal"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/19.svg",
         "height": 3,
@@ -532,7 +622,10 @@
         "order": 27,
         "name": "Raticate",
         "types": [
-          "normal"
+          {
+            "type": "normal",
+            "name": "Normal"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/20.svg",
         "height": 7,

@@ -8,7 +8,7 @@ fragment PokemonFragment on Pokemon {
   id
   name
   order
-  types
+  types { type name }
   imageUrl
 }
 query pokemonDetails {

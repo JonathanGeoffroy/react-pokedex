@@ -6,8 +6,8 @@ describe('pokedex', () => {
     cy.contains('#001');
     const getTypes = () => cy.get('[data-testid=types]');
 
-    getTypes().contains('grass');
-    getTypes().contains('poison');
+    getTypes().contains('Grass');
+    getTypes().contains('Poison');
 
     cy.contains(
       'A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.'

@@ -1,12 +1,13 @@
-import { useCallback, useContext, useMemo } from 'react';
+import { useCallback, useContext } from 'react';
+import { PokemonTypeEnum } from '../__generated/pokeapi.graphql';
 import { ColorContext } from './color-provider';
-import colors, { PokemonType } from './colors';
+import colors, { ByTypeKey } from './colors';
 
 export default function useColor() {
   const [color, setColor] = useContext(ColorContext);
 
   const setColorType = useCallback(
-    (type: PokemonType) => {
+    (type: ByTypeKey) => {
       setColor(colors[type]);
     },
     [setColor]

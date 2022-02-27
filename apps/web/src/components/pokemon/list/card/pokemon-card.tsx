@@ -23,7 +23,7 @@ export function PokemonCard({ pokemon }: CardProps) {
         className={classNames(
           'w-48 md:w-72',
           pokemon?.types.length
-            ? colors[pokemon.types[0]].background
+            ? colors[pokemon.types[0].type].background
             : undefined
         )}
       >
@@ -45,7 +45,7 @@ export function PokemonCard({ pokemon }: CardProps) {
         <div className="flex flex-row justify-between items-center px-4 gap-4">
           <div className="flex flex-col gap-1 flex-grow">
             {pokemon?.types.map((type) => (
-              <PokemonType key={type} className="w-full" type={type} />
+              <PokemonType key={type.type} className="w-full" type={type} />
             )) || <Skeleton />}
           </div>
           <div className="m-1 w-12 h-12 md:w-24 md:h-24">

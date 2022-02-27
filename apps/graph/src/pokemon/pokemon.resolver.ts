@@ -8,12 +8,15 @@ import { PokemonSpecies } from './pokemon-species.model';
 import { PokemonSpeciesService } from './pokemon-species.service';
 import toModel from './pokemon.mapper';
 import { PokemonService } from './pokemon.service';
+import { PokemonTypeService } from './pokemon-type.service';
+import { PokemonType } from './pokemon-type.model';
 
 @Resolver(() => Pokemon)
 export class PokemonResolver {
   constructor(
     private readonly pokemonService: PokemonService,
-    private readonly pokemonSpeciesService: PokemonSpeciesService
+    private readonly pokemonSpeciesService: PokemonSpeciesService,
+    private readonly pokemonTypeService: PokemonTypeService
   ) {}
 
   @Query(() => [Pokemon])
@@ -60,6 +63,17 @@ export class PokemonResolver {
       description,
       dto: species,
     };
+  }
+
+  @ResolveField()
+  async types(@Parent() details: Pokemon): Promise<Partial<PokemonType>[]> {
+    return Promise.all(
+      details.dto.types.map(({ type }) =>
+        this.pokemonTypeService.findByUrl(type.url).then((dto) => ({
+          dto,
+        }))
+      )
+    );
   }
 
   private sanitize(description: string): string {

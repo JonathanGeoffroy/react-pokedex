@@ -57,7 +57,7 @@ describe('pokemonById query', () => {
             id
             order
             name
-            types
+            types { type name }
             imageUrl
             height
             weight
@@ -89,7 +89,10 @@ describe('pokemonById query', () => {
           id
           name(lang: $lang)
           order
-          types
+          types {
+            type
+            name(lang: $lang)
+          }
           imageUrl
         }
         query pokemonDetails($lang: Language) {

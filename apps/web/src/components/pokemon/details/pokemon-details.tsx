@@ -4,16 +4,15 @@ import { Item } from '@react-stately/collections';
 import Skeleton from 'react-loading-skeleton';
 import { Tabs } from '@react-pokedex/ui';
 import classNames from 'classnames';
-import { PokemonType as PokemonTypeModel } from '../../../app/colors';
-import PokemonType from '../type/pokemon-type';
 import useColor from '../../../app/useColor';
 import PokeballLoader from '../../pokeball-loader/pokeball-loader';
+import { PokemonType } from '../type/pokemon-type';
 import classes from './pokemon-details.module.scss';
 import PokemonStats from './stats/pokemon-stats';
 import PokemonAbout from './about/pokemon-about';
 import PokemonEvolutions from './evolutions/pokemon-evolutions';
-import usePokemonDetails from './use-pokemon-details';
 import SiblingPokemon from './sibling/sibling-pokemon';
+import usePokemonDetails from './use-pokemon-details';
 
 /* eslint-disable-next-line */
 export interface PokemonDetailsProps {}
@@ -28,7 +27,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
       return;
     }
 
-    const pokemonType = pokemon.types[0] as PokemonTypeModel;
+    const pokemonType = pokemon.types[0].type;
     setColorType(pokemonType);
   }, [pokemon, setColorType]);
 
@@ -57,12 +56,8 @@ export function PokemonDetails(props: PokemonDetailsProps) {
           data-testid="types"
           className="flex justify-start flex-grow-0 gap-2"
         >
-          {pokemon?.types?.map((type: string) => (
-            <PokemonType
-              className="w-24"
-              type={type as PokemonTypeModel}
-              key={type}
-            />
+          {pokemon?.types?.map((type) => (
+            <PokemonType className="w-24" type={type} key={type.type} />
           )) || <Skeleton width={128} />}
         </div>
       </div>
@@ -72,7 +67,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
         <div className="self-center relative top-12 z-10 h-48 w-48">
           {pokemon ? (
             <img
-              className='w-full h-full'
+              className="w-full h-full"
               data-testid="visual"
               src={pokemon?.imageUrl}
               alt={pokemon?.name}

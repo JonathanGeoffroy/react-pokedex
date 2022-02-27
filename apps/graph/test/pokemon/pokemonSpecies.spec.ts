@@ -21,7 +21,7 @@ describe('species', () => {
           id
           name
           order
-          types
+          types { type name }
           imageUrl
         }
         query pokemonDetails {

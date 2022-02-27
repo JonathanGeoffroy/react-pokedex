@@ -12,8 +12,14 @@
               "name": "Bulbasaur",
               "order": 1,
               "types": [
-                "grass",
-                "poison"
+                {
+                  "type": "grass",
+                  "name": "Grass"
+                },
+                {
+                  "type": "poison",
+                  "name": "Poison"
+                }
               ],
               "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
             },
@@ -22,8 +28,14 @@
               "name": "Ivysaur",
               "order": 2,
               "types": [
-                "grass",
-                "poison"
+                {
+                  "type": "grass",
+                  "name": "Grass"
+                },
+                {
+                  "type": "poison",
+                  "name": "Poison"
+                }
               ],
               "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
             }
@@ -35,8 +47,14 @@
               "name": "Ivysaur",
               "order": 2,
               "types": [
-                "grass",
-                "poison"
+                {
+                  "type": "grass",
+                  "name": "Grass"
+                },
+                {
+                  "type": "poison",
+                  "name": "Poison"
+                }
               ],
               "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
             },
@@ -45,8 +63,14 @@
               "name": "Venusaur",
               "order": 3,
               "types": [
-                "grass",
-                "poison"
+                {
+                  "type": "grass",
+                  "name": "Grass"
+                },
+                {
+                  "type": "poison",
+                  "name": "Poison"
+                }
               ],
               "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
             }

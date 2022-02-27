@@ -1,6 +1,7 @@
 import { Field, ID, Int, ObjectType } from '@nestjs/graphql';
 import { PokemonDetailsDTO } from './pokemon-details.dto';
 import { PokemonSpecies } from './pokemon-species.model';
+import { PokemonType } from './pokemon-type.model';
 
 @ObjectType()
 export class PokemonStat {
@@ -34,8 +35,8 @@ export class Pokemon {
   @Field()
   name: string;
 
-  @Field(() => [String])
-  types: string[];
+  @Field(() => [PokemonType])
+  types: PokemonType[];
 
   @Field(() => String)
   imageUrl: string;

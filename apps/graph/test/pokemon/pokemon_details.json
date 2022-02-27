@@ -4,11 +4,23 @@
       "id": "1",
       "order": 1,
       "name": "Bulbasaur",
-      "types": ["grass", "poison"],
+      "types": [
+        {
+          "type": "grass",
+          "name": "Grass"
+        },
+        {
+          "type": "poison",
+          "name": "Poison"
+        }
+      ],
       "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
       "height": 7,
       "weight": 69,
-      "abilities": ["overgrow", "chlorophyll"],
+      "abilities": [
+        "overgrow",
+        "chlorophyll"
+      ],
       "species": {
         "id": "1",
         "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON."

@@ -1,37 +1,17 @@
-export type PokemonType =
-  | 'default'
-  | 'normal'
-  | 'fighting'
-  | 'flying'
-  | 'poison'
-  | 'ground'
-  | 'rock'
-  | 'bug'
-  | 'ghost'
-  | 'steel'
-  | 'fire'
-  | 'water'
-  | 'grass'
-  | 'electric'
-  | 'psychic'
-  | 'ice'
-  | 'dragon'
-  | 'dark'
-  | 'fairy'
-  | 'unknown'
-  | 'shadow';
+import { PokemonTypeEnum } from '../__generated/pokeapi.graphql';
 
 export type Color = {
   background: string;
   darker: string;
 };
 
+export type ByTypeKey = PokemonTypeEnum | 'default';
 export type ByType = {
-  [K in PokemonType]: Color;
+  [K in ByTypeKey]: Color;
 };
 
 const colors: ByType = {
-  default: {background: 'bg-white', darker: 'bg-black'},
+  default: { background: 'bg-white', darker: 'bg-black' },
   normal: { background: 'bg-gray-200', darker: 'bg-gray-700' },
   fighting: { background: 'bg-orange-500', darker: 'bg-orange-700' },
   flying: { background: 'bg-sky-500', darker: 'bg-sky-700' },

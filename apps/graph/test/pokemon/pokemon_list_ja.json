@@ -6,8 +6,14 @@
         "name": "フシギダネ",
         "order": 1,
         "types": [
-          "grass",
-          "poison"
+          {
+            "type": "grass",
+            "name": "くさ"
+          },
+          {
+            "type": "poison",
+            "name": "どく"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
         "height": 7,
@@ -34,8 +40,14 @@
                 "name": "フシギダネ",
                 "order": 1,
                 "types": [
-                  "grass",
-                  "poison"
+                  {
+                    "type": "grass",
+                    "name": "くさ"
+                  },
+                  {
+                    "type": "poison",
+                    "name": "どく"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
               },
@@ -44,8 +56,14 @@
                 "name": "フシギソウ",
                 "order": 2,
                 "types": [
-                  "grass",
-                  "poison"
+                  {
+                    "type": "grass",
+                    "name": "くさ"
+                  },
+                  {
+                    "type": "poison",
+                    "name": "どく"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
               }
@@ -57,8 +75,14 @@
                 "name": "フシギソウ",
                 "order": 2,
                 "types": [
-                  "grass",
-                  "poison"
+                  {
+                    "type": "grass",
+                    "name": "くさ"
+                  },
+                  {
+                    "type": "poison",
+                    "name": "どく"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
               },
@@ -67,8 +91,14 @@
                 "name": "フシギバナ",
                 "order": 3,
                 "types": [
-                  "grass",
-                  "poison"
+                  {
+                    "type": "grass",
+                    "name": "くさ"
+                  },
+                  {
+                    "type": "poison",
+                    "name": "どく"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
               }
@@ -81,8 +111,14 @@
           "name": "フシギソウ",
           "order": 2,
           "types": [
-            "grass",
-            "poison"
+            {
+              "type": "grass",
+              "name": "くさ"
+            },
+            {
+              "type": "poison",
+              "name": "どく"
+            }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
         }
@@ -92,8 +128,14 @@
         "name": "フシギソウ",
         "order": 2,
         "types": [
-          "grass",
-          "poison"
+          {
+            "type": "grass",
+            "name": "くさ"
+          },
+          {
+            "type": "poison",
+            "name": "どく"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg",
         "height": 10,
@@ -120,8 +162,14 @@
                 "name": "フシギダネ",
                 "order": 1,
                 "types": [
-                  "grass",
-                  "poison"
+                  {
+                    "type": "grass",
+                    "name": "くさ"
+                  },
+                  {
+                    "type": "poison",
+                    "name": "どく"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
               },
@@ -130,8 +178,14 @@
                 "name": "フシギソウ",
                 "order": 2,
                 "types": [
-                  "grass",
-                  "poison"
+                  {
+                    "type": "grass",
+                    "name": "くさ"
+                  },
+                  {
+                    "type": "poison",
+                    "name": "どく"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
               }
@@ -143,8 +197,14 @@
                 "name": "フシギソウ",
                 "order": 2,
                 "types": [
-                  "grass",
-                  "poison"
+                  {
+                    "type": "grass",
+                    "name": "くさ"
+                  },
+                  {
+                    "type": "poison",
+                    "name": "どく"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
               },
@@ -153,8 +213,14 @@
                 "name": "フシギバナ",
                 "order": 3,
                 "types": [
-                  "grass",
-                  "poison"
+                  {
+                    "type": "grass",
+                    "name": "くさ"
+                  },
+                  {
+                    "type": "poison",
+                    "name": "どく"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
               }
@@ -166,8 +232,14 @@
           "name": "フシギダネ",
           "order": 1,
           "types": [
-            "grass",
-            "poison"
+            {
+              "type": "grass",
+              "name": "くさ"
+            },
+            {
+              "type": "poison",
+              "name": "どく"
+            }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
         },
@@ -176,8 +248,14 @@
           "name": "フシギバナ",
           "order": 3,
           "types": [
-            "grass",
-            "poison"
+            {
+              "type": "grass",
+              "name": "くさ"
+            },
+            {
+              "type": "poison",
+              "name": "どく"
+            }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
         }
@@ -187,8 +265,14 @@
         "name": "フシギバナ",
         "order": 3,
         "types": [
-          "grass",
-          "poison"
+          {
+            "type": "grass",
+            "name": "くさ"
+          },
+          {
+            "type": "poison",
+            "name": "どく"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
         "height": 20,
@@ -215,8 +299,14 @@
                 "name": "フシギダネ",
                 "order": 1,
                 "types": [
-                  "grass",
-                  "poison"
+                  {
+                    "type": "grass",
+                    "name": "くさ"
+                  },
+                  {
+                    "type": "poison",
+                    "name": "どく"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
               },
@@ -225,8 +315,14 @@
                 "name": "フシギソウ",
                 "order": 2,
                 "types": [
-                  "grass",
-                  "poison"
+                  {
+                    "type": "grass",
+                    "name": "くさ"
+                  },
+                  {
+                    "type": "poison",
+                    "name": "どく"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
               }
@@ -238,8 +334,14 @@
                 "name": "フシギソウ",
                 "order": 2,
                 "types": [
-                  "grass",
-                  "poison"
+                  {
+                    "type": "grass",
+                    "name": "くさ"
+                  },
+                  {
+                    "type": "poison",
+                    "name": "どく"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
               },
@@ -248,8 +350,14 @@
                 "name": "フシギバナ",
                 "order": 3,
                 "types": [
-                  "grass",
-                  "poison"
+                  {
+                    "type": "grass",
+                    "name": "くさ"
+                  },
+                  {
+                    "type": "poison",
+                    "name": "どく"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
               }
@@ -261,8 +369,14 @@
           "name": "フシギソウ",
           "order": 2,
           "types": [
-            "grass",
-            "poison"
+            {
+              "type": "grass",
+              "name": "くさ"
+            },
+            {
+              "type": "poison",
+              "name": "どく"
+            }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
         },
@@ -271,7 +385,10 @@
           "name": "ヒトカゲ",
           "order": 5,
           "types": [
-            "fire"
+            {
+              "type": "fire",
+              "name": "ほのお"
+            }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
         }
@@ -281,7 +398,10 @@
         "name": "ヒトカゲ",
         "order": 5,
         "types": [
-          "fire"
+          {
+            "type": "fire",
+            "name": "ほのお"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg",
         "height": 6,
@@ -308,7 +428,10 @@
                 "name": "ヒトカゲ",
                 "order": 5,
                 "types": [
-                  "fire"
+                  {
+                    "type": "fire",
+                    "name": "ほのお"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
               },
@@ -317,7 +440,10 @@
                 "name": "リザード",
                 "order": 6,
                 "types": [
-                  "fire"
+                  {
+                    "type": "fire",
+                    "name": "ほのお"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
               }
@@ -329,7 +455,10 @@
                 "name": "リザード",
                 "order": 6,
                 "types": [
-                  "fire"
+                  {
+                    "type": "fire",
+                    "name": "ほのお"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
               },
@@ -338,8 +467,14 @@
                 "name": "リザードン",
                 "order": 7,
                 "types": [
-                  "fire",
-                  "flying"
+                  {
+                    "type": "fire",
+                    "name": "ほのお"
+                  },
+                  {
+                    "type": "flying",
+                    "name": "ひこう"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
               }
@@ -351,8 +486,14 @@
           "name": "フシギバナ",
           "order": 3,
           "types": [
-            "grass",
-            "poison"
+            {
+              "type": "grass",
+              "name": "くさ"
+            },
+            {
+              "type": "poison",
+              "name": "どく"
+            }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
         },
@@ -361,7 +502,10 @@
           "name": "リザード",
           "order": 6,
           "types": [
-            "fire"
+            {
+              "type": "fire",
+              "name": "ほのお"
+            }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
         }
@@ -371,7 +515,10 @@
         "name": "リザード",
         "order": 6,
         "types": [
-          "fire"
+          {
+            "type": "fire",
+            "name": "ほのお"
+          }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg",
         "height": 11,
@@ -398,7 +545,10 @@
                 "name": "ヒトカゲ",
                 "order": 5,
                 "types": [
-                  "fire"
+                  {
+                    "type": "fire",
+                    "name": "ほのお"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
               },
@@ -407,7 +557,10 @@
                 "name": "リザード",
                 "order": 6,
                 "types": [
-                  "fire"
+                  {
+                    "type": "fire",
+                    "name": "ほのお"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
               }
@@ -419,7 +572,10 @@
                 "name": "リザード",
                 "order": 6,
                 "types": [
-                  "fire"
+                  {
+                    "type": "fire",
+                    "name": "ほのお"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
               },
@@ -428,8 +584,14 @@
                 "name": "リザードン",
                 "order": 7,
                 "types": [
-                  "fire",
-                  "flying"
+                  {
+                    "type": "fire",
+                    "name": "ほのお"
+                  },
+                  {
+                    "type": "flying",
+                    "name": "ひこう"
+                  }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
               }
@@ -441,7 +603,10 @@
           "name": "ヒトカゲ",
           "order": 5,
           "types": [
-            "fire"
+            {
+              "type": "fire",
+              "name": "ほのお"
+            }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
         },
@@ -450,8 +615,14 @@
           "name": "リザードン",
           "order": 7,
           "types": [
-            "fire",
-            "flying"
+            {
+              "type": "fire",
+              "name": "ほのお"
+            },
+            {
+              "type": "flying",
+              "name": "ひこう"
+            }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
         }

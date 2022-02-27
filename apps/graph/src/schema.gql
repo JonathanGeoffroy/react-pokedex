@@ -14,6 +14,45 @@ type PokemonSpecies {
   evolutions: [PokemonEvolution!]
 }
 
+type PokemonType {
+  type: PokemonTypeEnum!
+  name(lang: Language = en): String!
+}
+
+enum PokemonTypeEnum {
+  normal
+  fighting
+  flying
+  poison
+  ground
+  rock
+  bug
+  ghost
+  steel
+  fire
+  water
+  grass
+  electric
+  psychic
+  ice
+  dragon
+  dark
+  fairy
+  unknown
+  shadow
+}
+
+enum Language {
+  ko
+  fr
+  de
+  es
+  it
+  en
+  cs
+  ja
+}
+
 type PokemonStat {
   hp: Float!
   attack: Float!
@@ -27,7 +66,7 @@ type Pokemon {
   id: ID!
   order: Float!
   name(lang: Language = en): String!
-  types: [String!]!
+  types: [PokemonType!]!
   imageUrl: String!
   height: Int!
   weight: Int!
@@ -36,17 +75,6 @@ type Pokemon {
   species: PokemonSpecies!
   previous: Pokemon
   next: Pokemon
-}
-
-enum Language {
-  ko
-  fr
-  de
-  es
-  it
-  en
-  cs
-  ja
 }
 
 type Query {

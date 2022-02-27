@@ -2,7 +2,10 @@ fragment PokemonFragment on Pokemon {
   id
   name(lang: $lang)
   order
-  types
+  types {
+    type
+    name
+  }
   imageUrl
 }
 
