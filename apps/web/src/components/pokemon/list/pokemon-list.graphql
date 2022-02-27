@@ -1,11 +1,9 @@
 query pokemonList($limit: Int, $offset: Int) {
   pokemon(limit: $limit, offset: $offset) {
-    details {
-      id
-      order
-      name
-      types
-      imageUrl
-    }
+    id
+    order
+    name
+    types
+    imageUrl
   }
 }

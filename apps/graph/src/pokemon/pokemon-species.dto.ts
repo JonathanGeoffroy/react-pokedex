@@ -1,6 +1,7 @@
 export interface PokemonSpeciesDTO {
   id: number;
   name: string;
+  names: NameEntry[];
   order: number;
   flavor_text_entries: FlavorTextEntry[];
   evolution_chain: {
@@ -10,7 +11,14 @@ export interface PokemonSpeciesDTO {
 
 export interface FlavorTextEntry {
   flavor_text: string;
-  language: {
-    name: string;
-  };
+  language: Language;
+}
+
+export interface NameEntry {
+  name: string;
+  language: Language;
+}
+
+export interface Language {
+  name: string;
 }

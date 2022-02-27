@@ -1,7 +1,11 @@
-import { ArgsType, Field, Int } from '@nestjs/graphql';
+import { ArgsType, Field, ID } from '@nestjs/graphql';
+import Language, { DEFAULT_LANGUAGE } from '../language/language';
 
 @ArgsType()
 export class PokemonByIdArgs {
-  @Field(() => Int)
+  @Field(() => ID)
   id: number;
+
+  @Field(() => Language, { nullable: true })
+  lang: Language = DEFAULT_LANGUAGE;
 }

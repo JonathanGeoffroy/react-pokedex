@@ -20,11 +20,9 @@ describe('species', () => {
         fragment Evolution on Pokemon {
           id
           name
-          details {
-            order
-            types
-            imageUrl
-          }
+          order
+          types
+          imageUrl
         }
         query pokemonDetails {
           pokemonById(id: 1) {

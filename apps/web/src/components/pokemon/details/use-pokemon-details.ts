@@ -34,7 +34,7 @@ export interface Evolution {
 }
 
 type UsePokemonDetails = Partial<PokemonDetailsModel> | undefined;
-export default function usePokemonDetails(id: number): UsePokemonDetails {
+export default function usePokemonDetails(id: string): UsePokemonDetails {
   const { data, error } = usePokemonDetailsQuery({
     variables: { id },
   });
@@ -75,16 +75,8 @@ export default function usePokemonDetails(id: number): UsePokemonDetails {
       description: species?.description,
       evolutions:
         species?.evolutions?.map((evolution) => ({
-          from: {
-            id: evolution.from.id,
-            name: evolution.from.name,
-            imageUrl: evolution.from.details.imageUrl,
-          },
-          to: {
-            id: evolution.to.id,
-            name: evolution.to.name,
-            imageUrl: evolution.to.details.imageUrl,
-          },
+          from: evolution.from,
+          to: evolution.to,
           minLevel: evolution.minLevel || null,
         })) || [],
       previous: previous

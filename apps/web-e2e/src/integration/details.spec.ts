@@ -2,7 +2,7 @@ describe('pokedex', () => {
   it('should display pokemon details', () => {
     cy.visit('/1');
 
-    cy.contains('bulbasaur');
+    cy.contains('Bulbasaur');
     cy.contains('#001');
     const getTypes = () => cy.get('[data-testid=types]');
 
@@ -26,7 +26,7 @@ describe('pokedex', () => {
 
   it('should display siblings', () => {
     cy.visit('/2');
-    cy.contains('ivysaur');
+    cy.contains('Ivysaur');
     cy.contains('#002');
 
     cy.get('[data-testid=pokemon-sibling-1]').should('exist');

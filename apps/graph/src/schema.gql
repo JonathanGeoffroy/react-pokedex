@@ -2,12 +2,6 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type Pokemon {
-  id: ID!
-  name: String!
-  details: PokemonDetails!
-}
-
 type PokemonEvolution {
   minLevel: Int
   from: Pokemon!
@@ -29,10 +23,10 @@ type PokemonStat {
   speed: Float!
 }
 
-type PokemonDetails {
+type Pokemon {
   id: ID!
   order: Float!
-  name: String!
+  name(lang: Language = en): String!
   types: [String!]!
   imageUrl: String!
   height: Int!
@@ -40,11 +34,22 @@ type PokemonDetails {
   abilities: [String!]!
   stats: PokemonStat!
   species: PokemonSpecies!
-  previous: PokemonDetails
-  next: PokemonDetails
+  previous: Pokemon
+  next: Pokemon
+}
+
+enum Language {
+  ko
+  fr
+  de
+  es
+  it
+  en
+  cs
+  ja
 }
 
 type Query {
-  pokemon(limit: Int, offset: Int): [Pokemon!]!
-  pokemonById(id: Int!): PokemonDetails!
+  pokemon(limit: Int, offset: Int, lang: Language = en): [Pokemon!]!
+  pokemonById(id: ID!, lang: Language = en): Pokemon!
 }

@@ -21,7 +21,7 @@ export interface PokemonDetailsProps {}
 export function PokemonDetails(props: PokemonDetailsProps) {
   const { id } = useParams();
   const { setColorType } = useColor();
-  const pokemon = usePokemonDetails(parseInt(id!));
+  const pokemon = usePokemonDetails(id!);
 
   useEffect(() => {
     if (!pokemon?.types) {

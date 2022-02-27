@@ -1,41 +1,94 @@
-import { Resolver, Query, ResolveField, Parent, Args } from '@nestjs/graphql';
+import { Resolver, ResolveField, Parent, Args, Query } from '@nestjs/graphql';
+import { ApolloError } from 'apollo-server-core';
+import Language, { DEFAULT_LANGUAGE } from '../language/language';
 import { PokemonByIdArgs } from './pokemon-byid.args';
-import { PokemonDetailsDTO } from './pokemon-details.dto';
-import { PokemonDetails, PokemonStat } from './pokemon-details.model';
+import { Pokemon } from './pokemon.model';
 import { PokemonListArgs } from './pokemon-list.args';
-import { Pokemon } from './pokemon-list.model';
+import { PokemonSpecies } from './pokemon-species.model';
+import { PokemonSpeciesService } from './pokemon-species.service';
 import toModel from './pokemon.mapper';
 import { PokemonService } from './pokemon.service';
 
 @Resolver(() => Pokemon)
 export class PokemonResolver {
-  constructor(private readonly pokemonService: PokemonService) {}
+  constructor(
+    private readonly pokemonService: PokemonService,
+    private readonly pokemonSpeciesService: PokemonSpeciesService
+  ) {}
 
   @Query(() => [Pokemon])
-  async pokemon(@Args() args: PokemonListArgs): Promise<Pokemon[]> {
+  async pokemon(@Args() args: PokemonListArgs): Promise<Partial<Pokemon>[]> {
     const dto = await this.pokemonService.list(args);
 
-    const result: Pokemon[] = dto.results.map((dto) => ({
-      id: this.idFromUrl(dto.url),
-      name: dto.name,
-    }));
-
-    return result;
+    return Promise.all(
+      dto.results.map(({ url }) => this.handleDetails(this.idFromUrl(url)))
+    );
   }
 
-  @Query(() => PokemonDetails)
-  async pokemonById(
-    @Args() args: PokemonByIdArgs
-  ): Promise<Partial<PokemonDetails>> {
+  @Query(() => Pokemon)
+  async pokemonById(@Args() args: PokemonByIdArgs): Promise<Partial<Pokemon>> {
     return await this.handleDetails(args.id);
   }
 
   @ResolveField()
-  async details(@Parent() pokemon: Pokemon): Promise<Partial<PokemonDetails>> {
-    return await this.handleDetails(pokemon.id);
+  async name(
+    @Parent() details: Pokemon,
+    @Args('lang', {
+      type: () => Language,
+      nullable: true,
+      defaultValue: DEFAULT_LANGUAGE,
+    })
+    lang: Language
+  ) {
+    const species = await this.pokemonSpeciesService.findById(details.id);
+    return species.names.find((nameEntry) => nameEntry.language.name === lang)
+      .name;
   }
 
-  private async handleDetails(id: number): Promise<Partial<PokemonDetails>> {
+  @ResolveField()
+  async species(@Parent() details: Pokemon): Promise<PokemonSpecies> {
+    const species = await this.pokemonSpeciesService.findById(details.id);
+
+    const rawDescription = species.flavor_text_entries.find(
+      (entry) => entry.language.name === 'en'
+    ).flavor_text;
+
+    const description = this.sanitize(rawDescription);
+
+    return {
+      id: species.id,
+      description,
+      dto: species,
+    };
+  }
+
+  private sanitize(description: string): string {
+    return description.replace(/[\n\r\t\f]/g, ' ');
+  }
+
+  @ResolveField()
+  async previous(@Parent() details: Pokemon): Promise<Partial<Pokemon>> {
+    return this.maybePokemon(details.id - 1);
+  }
+
+  @ResolveField()
+  async next(@Parent() details: Pokemon): Promise<Partial<Pokemon>> {
+    return this.maybePokemon(details.id + 1);
+  }
+
+  private maybePokemon(id: number): Promise<Partial<Pokemon>> {
+    return this.pokemonService
+      .findDetails(id)
+      .then(toModel)
+      .catch((err: ApolloError) => {
+        if (err.extensions.response.status === 404) {
+          return null;
+        }
+        throw err;
+      });
+  }
+
+  private async handleDetails(id: number): Promise<Partial<Pokemon>> {
     const dto = await this.pokemonService.findDetails(id);
     return toModel(dto);
   }

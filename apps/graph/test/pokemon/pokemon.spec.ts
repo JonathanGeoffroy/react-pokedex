@@ -26,30 +26,29 @@ describe('pokemon query', () => {
         query: `
         query pokemonList {
           pokemon(limit: 20, offset: 0) {
-            details {
+            id
+            order
+            name
+            types
+            imageUrl
+            height
+            weight
+            abilities
+            species {
               id
-              order
-              name
-              types
-              imageUrl
-              height
-              weight
-              abilities
-              species {
-                id
-                description
-              }
-              stats {
-                hp
-                attack
-                defense
-                specialAttack
-                specialDefense
-                speed
-              }
+              description
+            }
+            stats {
+              hp
+              attack
+              defense
+              specialAttack
+              specialDefense
+              speed
             }
           }
-        }`,
+        }
+        `,
       })
       .then((actual) => expect(actual.data).toEqual(expectedFindAll));
   });
@@ -60,12 +59,10 @@ describe('pokemon query', () => {
         query: `
         query pokemonList {
           pokemon(limit: 3, offset: 7) {
-            details {
-              id
-              order
-              name
-              types
-            }
+            id
+            order
+            name
+            types
           }
         }`,
       })
@@ -74,10 +71,12 @@ describe('pokemon query', () => {
           data: {
             pokemon: expectedFindAll.data.pokemon
               .slice(7, 7 + 3)
-              .map(({ details }) => {
-                const { id, order, name, types } = details;
-                return { details: { id, order, name, types } };
-              }),
+              .map(({ id, order, name, types }) => ({
+                id,
+                order,
+                name,
+                types,
+              })),
           },
         })
       );

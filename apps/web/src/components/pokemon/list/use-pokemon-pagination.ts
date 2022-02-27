@@ -45,9 +45,9 @@ export default function usePokemonPagination(): UsePokemonPagination {
 
   const pokemonList = useMemo(
     () =>
-      data?.pokemon.map(({ details }) => ({
-        ...details,
-        types: details.types as PokemonType[],
+      data?.pokemon.map((pokemon) => ({
+        ...pokemon,
+        types: pokemon.types as PokemonType[],
       })),
     [data]
   );

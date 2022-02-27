@@ -1,5 +1,5 @@
 import { Field, Int, ObjectType } from '@nestjs/graphql';
-import { Pokemon } from './pokemon-list.model';
+import { Pokemon } from './pokemon.model';
 
 @ObjectType()
 export class PokemonEvolution {
@@ -7,8 +7,12 @@ export class PokemonEvolution {
   minLevel?: number;
 
   @Field(() => Pokemon)
-  from: Pokemon;
+  from: Partial<Pokemon>;
+
+  fromUrl: string;
 
   @Field(() => Pokemon)
-  to: Pokemon;
+  to: Partial<Pokemon>;
+
+  toUrl: string;
 }

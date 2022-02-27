@@ -1,9 +1,7 @@
 import { Resolver, ResolveField, Parent } from '@nestjs/graphql';
-import { idFromUrl } from '../utils/url';
 import { PokemonChainEvolutionDTO } from './pokemon-evolution.dto';
 import { PokemonEvolution } from './pokemon-evolution.model';
 import { PokemonEvolutionService } from './pokemon-evolution.service';
-import { Pokemon } from './pokemon-list.model';
 import { PokemonSpecies } from './pokemon-species.model';
 
 @Resolver(() => PokemonSpecies)
@@ -15,7 +13,7 @@ export class PokemonSpeciesResolver {
   @ResolveField()
   async evolutions(
     @Parent() species: PokemonSpecies
-  ): Promise<PokemonEvolution[]> {
+  ): Promise<Partial<PokemonEvolution>[]> {
     const evolutions = await this.pokemonEvolutionService.findByUrl(
       species.dto.evolution_chain.url
     );
@@ -25,16 +23,16 @@ export class PokemonSpeciesResolver {
 
   private computeEvolutions(
     chain: PokemonChainEvolutionDTO
-  ): PokemonEvolution[] {
+  ): Partial<PokemonEvolution>[] {
     const evolutions = this.toEvolutionArray(chain);
 
-    const results: PokemonEvolution[] = [];
+    const results: Partial<PokemonEvolution>[] = [];
 
     for (let i = 0; i < evolutions.length - 1; i++) {
       results.push({
-        from: evolutions[i].pokemon,
+        fromUrl: evolutions[i].pokemonUrl,
+        toUrl: evolutions[i + 1].pokemonUrl,
         minLevel: evolutions[i + 1].minLevel,
-        to: evolutions[i + 1].pokemon,
       });
     }
 
@@ -54,10 +52,7 @@ export class PokemonSpeciesResolver {
       minLevel: evolvesTo.evolution_details?.length
         ? evolvesTo.evolution_details[0].min_level
         : null,
-      pokemon: {
-        id: idFromUrl(evolvesToSpecies.url),
-        name: evolvesToSpecies.name,
-      },
+      pokemonUrl: evolvesToSpecies.url,
     });
 
     return this.toEvolutionArray(evolvesTo.evolves_to[0], result);
@@ -66,5 +61,5 @@ export class PokemonSpeciesResolver {
 
 interface Evolution {
   minLevel?: number;
-  pokemon: Pokemon;
+  pokemonUrl: string;
 }

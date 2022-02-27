@@ -1,19 +1,19 @@
 import { Module } from '@nestjs/common';
-import { PokemonDetailsResolver } from './pokemon-details.resolver';
+import { PokemonResolver } from './pokemon.resolver';
 import { PokemonEvolutionService } from './pokemon-evolution.service';
 import { PokemonSpeciesResolver } from './pokemon-species.resolver';
 import { PokemonSpeciesService } from './pokemon-species.service';
-import { PokemonResolver } from './pokemon.resolver';
 import { PokemonService } from './pokemon.service';
+import { PokemonEvolutionResolver } from './pokemon-evolution.resolver';
 
 @Module({
   providers: [
-    PokemonDetailsResolver,
+    PokemonResolver,
+    PokemonEvolutionService,
+    PokemonEvolutionResolver,
     PokemonSpeciesService,
     PokemonSpeciesResolver,
-    PokemonResolver,
     PokemonService,
-    PokemonEvolutionService,
   ],
 })
 export class PokemonModule {}

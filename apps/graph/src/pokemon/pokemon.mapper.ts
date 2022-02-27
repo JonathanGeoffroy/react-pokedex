@@ -1,5 +1,5 @@
 import { PokemonDetailsDTO } from './pokemon-details.dto';
-import { PokemonDetails, PokemonStat } from './pokemon-details.model';
+import { Pokemon, PokemonStat } from './pokemon.model';
 
 function toStats(dto: PokemonDetailsDTO): PokemonStat {
   return dto.stats.reduce((acc, stat) => {
@@ -19,11 +19,10 @@ function toStatsKey(key: string): keyof PokemonStat {
   }
 }
 
-export default function toModel(
-  dto: PokemonDetailsDTO
-): Partial<PokemonDetails> {
+export default function toModel(dto: PokemonDetailsDTO): Partial<Pokemon> {
   return {
     ...dto,
+    dto,
     types: dto.types.map(({ type }) => type.name),
     imageUrl:
       dto.sprites.other?.dream_world?.front_default ||

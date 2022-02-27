@@ -4,7 +4,7 @@ import { bootstrap } from '../../src/server';
 import * as expectedFindAll from './pokemon_list.json';
 
 const siblingQuery = (id: number) => `
-fragment PokemonFragment on PokemonDetails {
+fragment PokemonFragment on Pokemon {
   id
   name
   order
@@ -99,5 +99,5 @@ describe('pokemon siblings query', () => {
   });
 });
 function getAt(index: number) {
-  return expectedFindAll.data.pokemon[index].details;
+  return expectedFindAll.data.pokemon[index];
 }

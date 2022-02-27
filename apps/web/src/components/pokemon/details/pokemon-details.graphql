@@ -1,22 +1,13 @@
-fragment Evolution on Pokemon {
+fragment PokemonFragment on Pokemon {
   id
-  name
-  details {
-    order
-    types
-    imageUrl
-  }
-}
-
-fragment PokemonFragment on PokemonDetails {
-  id
-  name
+  name(lang: $lang)
   order
   types
   imageUrl
 }
-query pokemonDetails($id: Int!) {
-  pokemonById(id: $id) {
+
+query pokemonDetails($id: ID!, $lang: Language) {
+  pokemonById(id: $id, lang: $lang) {
     ...PokemonFragment
     height
     weight
@@ -34,10 +25,10 @@ query pokemonDetails($id: Int!) {
       evolutions {
         minLevel
         from {
-          ...Evolution
+          ...PokemonFragment
         }
         to {
-          ...Evolution
+          ...PokemonFragment
         }
       }
     }
