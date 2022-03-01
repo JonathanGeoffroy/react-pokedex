@@ -67,7 +67,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
         </div>
       </div>
 
-      <div className="flex flex-row justify-between items-end -mx-8">
+      <div className="flex flex-row justify-between items-end -mx-8 sm:mx-0">
         <SiblingPokemon pokemon={pokemon?.previous} />
         <div className="self-center relative top-12 z-10 h-48 w-48">
           {pokemon ? (
