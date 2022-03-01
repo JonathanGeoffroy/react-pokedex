@@ -1,94 +1,60 @@
 
 
-# ReactPokedex
+# React-Pokedex
 
-This project was generated using [Nx](https://nx.dev).
+React-Pokedex is an educational project offering a way to _test and experiment_ whatever I want.  
+In particular, you may feel that some parts could be overkill to you : it's because we favor experimentations and learning instead of "traditional" architecture.
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+## Technologies
 
-🔎 **Smart, Fast and Extensible Build System**
+### Mono-repository
 
-## Adding capabilities to your workspace
+React-Pokedex uses [Nx](https://nx.dev/) as monorepo system.  
+As an effort to learn it, we try to use some of best features of Nx, such as [custom commands](https://nx.dev/executors/run-commands-builder).
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+### GraphQL
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+React-pokedex eavily uses GraphQL technology : 
+ * An NestJS (Apollo) graphql server is responsible for providing an easier mapping model to [Poke-Api](https://pokeapi.co/)
 
-Below are our core plugins:
+> [Poke-Api](https://pokeapi.co/) also offers a great GraphQL endpoint ; we created our own for educational purpose only, but we recommend to use [Poke-API Graphql](https://pokeapi.co/docs/v2) endpoint for any other project.
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+ * A [React-Apollo client](https://www.apollographql.com/docs/react/), included in our web front-end
 
-There are also many [community plugins](https://nx.dev/community) you could add.
+ > We plan to use [@defer](https://www.apollographql.com/blog/community/backend/introducing-defer-in-apollo-server/) feature as soon it's ready in Apollo.
 
-## Generate an application
+### Front-End
+ * As its name suggest, React-Pokedex eavily use [ReactJS](https://reactjs.org/) for its website. 
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+ > We plan to turn this website into a PWA, including smart caching and disconected mutations.
 
-> You can use any of the plugins above to generate applications as well.
+#### Accessibility
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+We aim to make this pokedex accessible for everybody. This includes vision, auditory, motor, and cognitive disabilities.
+This is the reason why we chose to use (React-Aria)[https://react-spectrum.adobe.com/react-aria/].
 
-## Generate a library
-
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are shareable across libraries and applications. They can be imported from `@react-pokedex/mylib`.
-
-## Development server
-
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+In particular, we plan to : 
+ * Offer a theme accessible for vision disabilities, yet as colorful as possible,
+ * Handle keyboard navigation,
+ * Take care about screen-readers.
+ * Enable internationalization.
 
 
+### CI / CD
 
-## ☁ Nx Cloud
+React-Pokedex uses automatic [Github Actions](https://github.com/features/actions) in order to build, test, and (soon) deploy on [Heroku](https://www.heroku.com/).
 
-### Distributed Computation Caching & Distributed Task Execution
+## Contributing
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+Want to be part of this project ? Any help is of course welcome ; we accept any kind of fixes / features / docs / ... as soon as :  
+ * it works (including CI and deployment),
+ * it remains as inclusive and accessible as possible (and follows our [Code of conduct]()),
+ * it's free for everybody (so no licence should be necessary),
+ * it complies to our dependencies code-of-conduct (especially [poke-api fair-policy](https://pokeapi.co/docs/v2#fairuse))
 
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+Please read our [contributing guide](./CONTRIBUTING.md) and our [code of conduct](./CODE_OF_CONDUCT.MD) for more information.
 
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+### What if I expect something else ? 
 
-Visit [Nx Cloud](https://nx.app/) to learn more.
+We won't accept any issue / pull request which doesn't comply our goals or code of conduct.  
+If you expect something else, feel free to [fork this repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo) and enjoy freedom :)
