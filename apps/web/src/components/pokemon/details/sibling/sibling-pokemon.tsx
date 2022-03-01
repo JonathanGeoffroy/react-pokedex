@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { pokemonDetailsRoute } from '../../../../app/router';
+import PokeballLoader from '../../../pokeball-loader/pokeball-loader';
 import PokemonItemModel from '../../list/pokemon-item.model';
-import pokeball from '../pokeball.svg';
 import classes from './sibling-pokemon.module.scss';
 
 export interface SiblingPokemonProps {
@@ -10,6 +10,7 @@ export interface SiblingPokemonProps {
 }
 
 export function SiblingPokemon({ pokemon }: SiblingPokemonProps) {
+  console.log(pokemon)
   if (pokemon === null) {
     return <div className="w-24 h-24" />;
   }
@@ -18,12 +19,13 @@ export function SiblingPokemon({ pokemon }: SiblingPokemonProps) {
       data-testid={`pokemon-sibling-${pokemon?.id || 'loading'}`}
       to={pokemon ? pokemonDetailsRoute(pokemon.id) : '#'}
       state={pokemon}
+      className={classNames('w-24 h-24', classes['sibling-pokemon'])}
     >
-      <img
-        className={classNames('w-24 h-24', classes['sibling-pokemon'])}
-        src={pokemon?.imageUrl || pokeball}
-        alt={pokemon?.name || 'Loading'}
-      />
+      {pokemon ? (
+        <img src={pokemon?.imageUrl} alt={pokemon?.name} />
+      ) : (
+        <PokeballLoader />
+      )}
     </Link>
   );
 }

@@ -7,12 +7,12 @@ import classNames from 'classnames';
 import { PokemonType as PokemonTypeModel } from '../../../app/colors';
 import PokemonType from '../type/pokemon-type';
 import useColor from '../../../app/useColor';
+import PokeballLoader from '../../pokeball-loader/pokeball-loader';
 import classes from './pokemon-details.module.scss';
 import PokemonStats from './stats/pokemon-stats';
 import PokemonAbout from './about/pokemon-about';
 import PokemonEvolutions from './evolutions/pokemon-evolutions';
 import usePokemonDetails from './use-pokemon-details';
-import pokeball from './pokeball.svg';
 import SiblingPokemon from './sibling/sibling-pokemon';
 
 /* eslint-disable-next-line */
@@ -69,14 +69,20 @@ export function PokemonDetails(props: PokemonDetailsProps) {
 
       <div className="flex flex-row justify-between items-end -mx-8">
         <SiblingPokemon pokemon={pokemon?.previous} />
-        <img
-          data-testid="visual"
-          className="self-center relative top-12 z-10 h-48 w-48"
-          src={pokemon?.imageUrl || pokeball}
-          alt={pokemon?.name}
-          width="192"
-          height="192"
-        />
+        <div className="self-center relative top-12 z-10 h-48 w-48">
+          {pokemon ? (
+            <img
+              className='w-full h-full'
+              data-testid="visual"
+              src={pokemon?.imageUrl}
+              alt={pokemon?.name}
+              width="192"
+              height="192"
+            />
+          ) : (
+            <PokeballLoader />
+          )}
+        </div>
         <SiblingPokemon pokemon={pokemon?.next} />
       </div>
 

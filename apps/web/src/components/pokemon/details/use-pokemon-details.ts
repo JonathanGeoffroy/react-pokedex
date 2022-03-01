@@ -17,8 +17,8 @@ export interface PokemonDetailsModel extends PokemonItemModel {
     speed: number;
   };
   evolutions: Evolution[];
-  previous: PokemonItemModel | null;
-  next: PokemonItemModel | null;
+  previous?: PokemonItemModel | null;
+  next?: PokemonItemModel | null;
 }
 
 export interface PokemonEvolution {
@@ -92,13 +92,13 @@ export default function usePokemonDetails(id: number): UsePokemonDetails {
             ...previous,
             types: previous.types as PokemonType[],
           }
-        : null,
+        : previous,
       next: next
         ? {
             ...next,
             types: next.types as PokemonType[],
           }
-        : null,
+        : next,
     };
   }, [pokemon]);
 }

@@ -6,6 +6,7 @@ import { PokemonType } from '../../type/pokemon-type';
 import colors from '../../../../app/colors';
 import { pokemonDetailsRoute } from '../../../../app/router';
 import PokemonItemModel from '../pokemon-item.model';
+import PokeballLoader from '../../../pokeball-loader/pokeball-loader';
 import pokeball from './../../details/pokeball.svg';
 import './pokemon-card.module.scss';
 
@@ -47,13 +48,19 @@ export function PokemonCard({ pokemon }: CardProps) {
               <PokemonType key={type} className="w-full" type={type} />
             )) || <Skeleton />}
           </div>
-          <img
-            className="m-1 object-contain w-12 h-12 md:w-24 md:h-24"
-            src={pokemon?.imageUrl || pokeball}
-            alt={pokemon?.name || 'Loading'}
-            width="96"
-            height="96"
-          />
+          <div className="m-1 w-12 h-12 md:w-24 md:h-24">
+            {pokemon ? (
+              <img
+                className="object-contain w-full h-full"
+                src={pokemon.imageUrl}
+                alt={pokemon.name}
+                width="96"
+                height="96"
+              />
+            ) : (
+              <PokeballLoader />
+            )}
+          </div>
         </div>
       </Card>
     </Link>
