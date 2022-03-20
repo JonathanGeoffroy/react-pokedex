@@ -3,6 +3,7 @@ import { TopBar } from '@react-pokedex/ui';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import useColor from '../../app/useColor';
+import LanguageSelect from './language-select/language-select';
 
 export function Header() {
   const { color } = useColor();
@@ -12,6 +13,7 @@ export function Header() {
       <Link to="/">
         <h1 className="text-gray-200">React-Pokedex</h1>
       </Link>
+      <LanguageSelect />
     </TopBar>
   );
 }

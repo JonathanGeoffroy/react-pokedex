@@ -10,7 +10,6 @@ export interface SiblingPokemonProps {
 }
 
 export function SiblingPokemon({ pokemon }: SiblingPokemonProps) {
-  console.log(pokemon)
   if (pokemon === null) {
     return <div className="w-24 h-24" />;
   }

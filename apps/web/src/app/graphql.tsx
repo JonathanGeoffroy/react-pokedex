@@ -5,8 +5,12 @@ const cache = new InMemoryCache({
     Query: {
       fields: {
         pokemon: {
-          keyArgs: false,
-          merge(existing = [], incoming) {
+          keyArgs: ['lang'],
+          merge(existing = [], incoming, { args }) {
+            // Workaround to avoid pokemon duplicates when changing language
+            if (!args?.['offset']) {
+              return incoming;
+            }
             return [...existing, ...incoming];
           },
         },

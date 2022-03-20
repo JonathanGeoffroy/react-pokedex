@@ -1,11 +1,11 @@
-query pokemonList($limit: Int, $offset: Int) {
-  pokemon(limit: $limit, offset: $offset) {
+query pokemonList($limit: Int, $offset: Int, $lang: Language) {
+  pokemon(limit: $limit, offset: $offset, lang: $lang) {
     id
     order
-    name
+    name(lang: $lang)
     types {
       type
-      name
+      name(lang: $lang)
     }
     imageUrl
   }

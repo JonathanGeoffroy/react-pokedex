@@ -1,4 +1,5 @@
-import { useMemo } from 'react';
+import { useContext, useMemo } from 'react';
+import { LanguageContext } from '../../../app/language-provider';
 import useRouterPartialCache from '../../../hooks/useRouterPartialCache';
 import { usePokemonDetailsQuery } from '../../../__generated/pokeapi.graphql';
 import PokemonItemModel from '../list/pokemon-item.model';
@@ -34,8 +35,9 @@ export interface Evolution {
 
 type UsePokemonDetails = Partial<PokemonDetailsModel> | undefined;
 export default function usePokemonDetails(id: string): UsePokemonDetails {
+  const [lang] = useContext(LanguageContext);
   const { data, error } = usePokemonDetailsQuery({
-    variables: { id },
+    variables: { id, lang },
   });
   const pokemon = useRouterPartialCache(data?.pokemonById);
 
