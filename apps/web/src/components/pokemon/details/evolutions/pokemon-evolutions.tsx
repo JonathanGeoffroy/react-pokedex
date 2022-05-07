@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { pokemonDetailsRoute } from '../../../../app/router';
 import {
@@ -49,10 +50,12 @@ interface LevelProps {
 }
 
 function Level({ level }: LevelProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col gap-1 items-center">
       <div>→</div>
-      <div>{level ? `Lvl ${level}` : '???'}</div>
+      <div>{level ? `${t('lvl')} ${level}` : '???'}</div>
     </div>
   );
 }

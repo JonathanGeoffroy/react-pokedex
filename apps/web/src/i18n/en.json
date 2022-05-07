@@ -1,0 +1,16 @@
+{
+    "height": "Height",
+    "weight": "Weigth",
+    "about": "About",
+    "base_stats": "Base stats",
+    "evolutions": "Evolutions",
+    "lvl": "Lvl.",
+    "stats": {
+        "hp": "HP",
+        "attack": "Attack",
+        "defense": "Defense",
+        "special_attack": "Special Attack",
+        "special_defense": "Special Defense",
+        "speed": "Speed"
+    }
+}

@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { useTranslation } from 'react-i18next';
 import Skeleton from 'react-loading-skeleton';
 import './pokemon-stats.module.scss';
 
@@ -14,24 +15,26 @@ export interface PokemonStatsProps {
 }
 
 export function PokemonStats({ stats }: PokemonStatsProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="grid grid-cols-2 gap-2">
-      <span>HP:</span>
+      <span>{t('stats.hp')}:</span>
       <PokemonStat data-testid="hp" stat={stats?.hp} />
 
-      <span>Attack:</span>
+      <span>{t('stats.attack')}:</span>
       <PokemonStat data-testid="attack" stat={stats?.attack} />
 
-      <span>Defense:</span>
+      <span>{t('stats.defense')}:</span>
       <PokemonStat data-testid="defense" stat={stats?.defense} />
 
-      <span>Special Attack:</span>
+      <span>{t('stats.special_attack')}:</span>
       <PokemonStat data-testid="specialAttack" stat={stats?.specialAttack} />
 
-      <span>Special Defense:</span>
+      <span>{t('stats.special_defense')}:</span>
       <PokemonStat data-testid="specialDefense" stat={stats?.specialDefense} />
 
-      <span>Speed:</span>
+      <span>{t('stats.speed')}:</span>
       <PokemonStat data-testid="speed" stat={stats?.speed} />
     </div>
   );

@@ -75,5 +75,8 @@ describe('pokedex', () => {
     cy.contains(
       'Au matin de sa vie, la graine sur son dos lui fournit les éléments dont il a besoin pour grandir.'
     ).should('be.visible');
+
+    cy.contains('Statistiques').click();
+    cy.contains('Attaque spéciale');
   });
 });

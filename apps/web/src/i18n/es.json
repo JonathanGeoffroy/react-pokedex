@@ -1,0 +1,16 @@
+{
+    "height": "Tamaño",
+    "weight": "Peso",
+    "about": "Características",
+    "base_stats": "Estadística",
+    "evolutions": "Evolución",
+    "lvl": "Nvl.",
+    "stats": {
+        "hp": "HP",
+        "attack": "Ataque",
+        "defense": "Defensa",
+        "special_attack": "Ataque especial",
+        "special_defense": "Defensa especial",
+        "speed": "Speed"
+    }
+}

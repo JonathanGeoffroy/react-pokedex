@@ -1,4 +1,5 @@
-import { ReactNode, createContext, useState } from 'react';
+import { ReactNode, createContext, useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Language } from '../__generated/pokeapi.graphql';
 
 type LanguageContextProps = [
@@ -16,6 +17,12 @@ interface LanguageProviderProps {
 
 export default function LanguageProvider({ children }: LanguageProviderProps) {
   const valueAndSetter = useState<Language>(Language.En);
+  const [language] = valueAndSetter;
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage(language);
+  }, [language, i18n]);
 
   return (
     <LanguageContext.Provider value={valueAndSetter}>

@@ -4,6 +4,7 @@ import { Item } from '@react-stately/collections';
 import Skeleton from 'react-loading-skeleton';
 import { Tabs } from '@react-pokedex/ui';
 import classNames from 'classnames';
+import { useTranslation } from 'react-i18next';
 import useColor from '../../../app/useColor';
 import PokeballLoader from '../../pokeball-loader/pokeball-loader';
 import { PokemonType } from '../type/pokemon-type';
@@ -21,6 +22,7 @@ export function PokemonDetails(props: PokemonDetailsProps) {
   const { id } = useParams();
   const { setColorType } = useColor();
   const pokemon = usePokemonDetails(id!);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (!pokemon?.types) {
@@ -86,17 +88,17 @@ export function PokemonDetails(props: PokemonDetailsProps) {
           className={`${classes['padding']} absolute bottom-0 w-full h-full flex flex-grow bg-gray-100 rounded-t-3xl`}
         >
           <Tabs aria-label="Pokemon Details">
-            <Item key="About" title="About">
+            <Item key="About" title={t('about')}>
               <PokemonAbout
                 description={pokemon?.description}
                 height={pokemon?.height}
                 weight={pokemon?.weight}
               />
             </Item>
-            <Item key="stats" title="Base stats">
+            <Item key="stats" title={t('base_stats')}>
               <PokemonStats stats={pokemon?.stats} />
             </Item>
-            <Item key="evolutions" title="Evolutions">
+            <Item key="evolutions" title={t('evolutions')}>
               <PokemonEvolutions evolutions={pokemon?.evolutions} />
             </Item>
           </Tabs>
