@@ -24,7 +24,7 @@ query pokemonDetails($id: ID!, $lang: Language) {
       speed
     }
     species {
-      description
+      description(lang: $lang)
       evolutions {
         minLevel
         from {

@@ -73,7 +73,7 @@ describe('pokedex', () => {
     getTypes().contains('Poison');
 
     cy.contains(
-      'A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.'
+      'Au matin de sa vie, la graine sur son dos lui fournit les éléments dont il a besoin pour grandir.'
     ).should('be.visible');
   });
 });
