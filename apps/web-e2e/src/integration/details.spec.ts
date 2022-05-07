@@ -54,4 +54,26 @@ describe('pokedex', () => {
     cy.get('[data-testid=pokemon-sibling-899]').should('not.exist');
     cy.get('[data-testid^=pokemon-sibling]').should('have.length', 1);
   });
+
+  it('should handle language changes', () => {
+    cy.visit('/1');
+
+    cy.get('[data-testid=language-select]')
+      .first()
+      .click()
+      .find('li') // FIXME : not sure why Cypress need this to deeply find selection
+      .contains('Français')
+      .click();
+
+    cy.contains('Bulbizarre');
+    cy.contains('#001');
+    const getTypes = () => cy.get('[data-testid=types]');
+
+    getTypes().contains('Plante');
+    getTypes().contains('Poison');
+
+    cy.contains(
+      'A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.'
+    ).should('be.visible');
+  });
 });

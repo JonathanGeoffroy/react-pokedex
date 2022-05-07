@@ -4,7 +4,7 @@ fragment PokemonFragment on Pokemon {
   order
   types {
     type
-    name
+    name(lang: $lang)
   }
   imageUrl
 }
