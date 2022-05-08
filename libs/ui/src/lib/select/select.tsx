@@ -12,6 +12,7 @@ import ListBox from '../list-box/list-box';
 export interface SelectProps<T> extends AriaSelectProps<T> {
   name?: string;
   className?: string;
+  selectionClassName?: string;
   'data-testid'?: string;
 }
 
@@ -31,10 +32,7 @@ export function Select<T extends object>(props: SelectProps<T>) {
   const { buttonProps } = useButton(triggerProps, ref);
 
   return (
-    <div
-      data-testid={props['data-testid']}
-      className={classNames(props.className)}
-    >
+    <div data-testid={props['data-testid']} className="relative">
       <div {...labelProps}>{props.label}</div>
       <HiddenSelect
         state={state}
@@ -44,7 +42,10 @@ export function Select<T extends object>(props: SelectProps<T>) {
       />
       <button
         {...buttonProps}
-        className="rounded-xl px-2 bg-white w-full flex justify-between gap-2"
+        className={classNames(
+          'rounded-xl px-2 bg-white flex justify-between gap-2',
+          props.className
+        )}
         ref={ref}
       >
         <span {...valueProps}>
@@ -55,7 +56,11 @@ export function Select<T extends object>(props: SelectProps<T>) {
         <span aria-hidden="true">▼</span>
       </button>
       {state.isOpen && (
-        <Popover isOpen={state.isOpen} onClose={state.close}>
+        <Popover
+          className={classNames('absolute w-full', props.selectionClassName)}
+          isOpen={state.isOpen}
+          onClose={state.close}
+        >
           <ListBox {...menuProps} state={state} />
         </Popover>
       )}

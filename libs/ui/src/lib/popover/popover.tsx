@@ -2,12 +2,14 @@ import { MutableRefObject, ReactNode, useRef } from 'react';
 import { DismissButton, useOverlay } from '@react-aria/overlays';
 import { FocusScope } from '@react-aria/focus';
 import './popover.module.scss';
+import classNames from 'classnames';
 
 export interface PopoverProps {
   isOpen: boolean;
   onClose: () => void;
   children: ReactNode;
   popoverRef?: MutableRefObject<HTMLDivElement>;
+  className?: string;
 }
 
 function Popover(props: PopoverProps) {
@@ -29,7 +31,10 @@ function Popover(props: PopoverProps) {
       <div
         {...overlayProps}
         ref={popoverRef}
-        className="absolute w-full border bg-gray-300 mt-1"
+        className={classNames(
+          'absolute border bg-gray-300 mt-1',
+          props.className
+        )}
       >
         {children}
         <DismissButton onDismiss={onClose} />

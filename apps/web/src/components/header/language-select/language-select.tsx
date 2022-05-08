@@ -26,7 +26,7 @@ export function LanguageSelect() {
     <Select
       selectedKey={language}
       onSelectionChange={(key) => setLanguage(key as Language)}
-      className="w-24"
+      className="w-32"
       name="Language"
       data-testid="language-select"
     >
