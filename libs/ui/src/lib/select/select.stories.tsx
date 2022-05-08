@@ -24,5 +24,6 @@ const Template: Story<SelectProps<any>> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  name: '',
+  name: 'My Select',
+  label: 'My Select',
 };

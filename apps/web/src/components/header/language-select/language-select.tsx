@@ -27,7 +27,8 @@ export function LanguageSelect() {
       selectedKey={language}
       onSelectionChange={(key) => setLanguage(key as Language)}
       className="w-32"
-      name="Language"
+      aria-label="Language"
+      aria-labelledby="Language"
       data-testid="language-select"
     >
       {LANGUAGES.map((lang) => (

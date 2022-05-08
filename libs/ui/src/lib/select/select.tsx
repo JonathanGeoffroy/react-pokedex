@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import { HiddenSelect, useSelect } from '@react-aria/select';
-import { Item } from '@react-stately/collections';
 import { useButton } from '@react-aria/button';
 import { useSelectState } from '@react-stately/select';
 import { SelectProps as AriaSelectProps } from '@react-types/select';

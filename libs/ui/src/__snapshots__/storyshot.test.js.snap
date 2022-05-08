@@ -153,8 +153,11 @@ exports[`Storyshots Select Primary 1`] = `
   className="relative"
 >
   <div
+    id="react-aria2468151146-4"
     onClick={[Function]}
-  />
+  >
+    My Select
+  </div>
   <div
     aria-hidden={true}
     style={
@@ -183,8 +186,9 @@ exports[`Storyshots Select Primary 1`] = `
       type="text"
     />
     <label>
+      My Select
       <select
-        name=""
+        name="My Select"
         onChange={[Function]}
         size={10}
         tabIndex={-1}
@@ -248,9 +252,9 @@ exports[`Storyshots Select Primary 1`] = `
     aria-controls={null}
     aria-expanded={false}
     aria-haspopup="listbox"
-    aria-labelledby="react-aria852275168-7"
+    aria-labelledby="react-aria2468151146-4 react-aria2468151146-7"
     className="rounded-xl px-2 bg-white flex justify-between gap-2"
-    id="react-aria852275168-3"
+    id="react-aria2468151146-3"
     onBlur={[Function]}
     onClick={[Function]}
     onDragStart={[Function]}
@@ -268,7 +272,7 @@ exports[`Storyshots Select Primary 1`] = `
     type="button"
   >
     <span
-      id="react-aria852275168-7"
+      id="react-aria2468151146-7"
     >
       Select an option
     </span>
