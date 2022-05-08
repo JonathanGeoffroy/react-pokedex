@@ -248,9 +248,9 @@ exports[`Storyshots Select Primary 1`] = `
     aria-controls={null}
     aria-expanded={false}
     aria-haspopup="listbox"
-    aria-labelledby="react-aria1749880169-7"
+    aria-labelledby="react-aria852275168-7"
     className="rounded-xl px-2 bg-white flex justify-between gap-2"
-    id="react-aria1749880169-3"
+    id="react-aria852275168-3"
     onBlur={[Function]}
     onClick={[Function]}
     onDragStart={[Function]}
@@ -268,7 +268,7 @@ exports[`Storyshots Select Primary 1`] = `
     type="button"
   >
     <span
-      id="react-aria1749880169-7"
+      id="react-aria852275168-7"
     >
       Select an option
     </span>
