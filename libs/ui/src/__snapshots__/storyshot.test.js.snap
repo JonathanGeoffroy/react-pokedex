@@ -148,6 +148,139 @@ exports[`Storyshots Card With Children 1`] = `
 </div>
 `;
 
+exports[`Storyshots Select Primary 1`] = `
+<div
+  className=""
+>
+  <div
+    onClick={[Function]}
+  />
+  <div
+    aria-hidden={true}
+    style={
+      Object {
+        "border": 0,
+        "clip": "rect(0 0 0 0)",
+        "clipPath": "inset(50%)",
+        "height": 1,
+        "margin": "0 -1px -1px 0",
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "absolute",
+        "whiteSpace": "nowrap",
+        "width": 1,
+      }
+    }
+  >
+    <input
+      onFocus={[Function]}
+      style={
+        Object {
+          "fontSize": 16,
+        }
+      }
+      tabIndex={-1}
+      type="text"
+    />
+    <label>
+      <select
+        name=""
+        onChange={[Function]}
+        size={10}
+        tabIndex={-1}
+        value=""
+      >
+        <option />
+        <option
+          value="$.0"
+        >
+          Red
+        </option>
+        <option
+          value="$.1"
+        >
+          Orange
+        </option>
+        <option
+          value="$.2"
+        >
+          Yellow
+        </option>
+        <option
+          value="$.3"
+        >
+          Green
+        </option>
+        <option
+          value="$.4"
+        >
+          Blue
+        </option>
+        <option
+          value="$.5"
+        >
+          Purple
+        </option>
+        <option
+          value="$.6"
+        >
+          Black
+        </option>
+        <option
+          value="$.7"
+        >
+          White
+        </option>
+        <option
+          value="$.8"
+        >
+          Lime
+        </option>
+        <option
+          value="$.9"
+        >
+          Fushsia
+        </option>
+      </select>
+    </label>
+  </div>
+  <button
+    aria-controls={null}
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    aria-labelledby="react-aria5932619224-7"
+    className="rounded-xl px-2 bg-white w-full flex justify-between gap-2"
+    id="react-aria5932619224-3"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragStart={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchCancel={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    type="button"
+  >
+    <span
+      id="react-aria5932619224-7"
+    >
+      Select an option
+    </span>
+    <span
+      aria-hidden="true"
+    >
+      ▼
+    </span>
+  </button>
+</div>
+`;
+
 exports[`Storyshots TopBar Empty 1`] = `
 <div
   className="top-bar"
