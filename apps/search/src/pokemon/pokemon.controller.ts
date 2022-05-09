@@ -1,9 +1,9 @@
 import { Controller, Get } from '@nestjs/common';
 import { ApiOkResponse, ApiQuery, ApiTags } from '@nestjs/swagger';
 import { plainToClass } from 'class-transformer';
+import { Language } from '@react-pokedex/dto';
 import { EnumQuery, RequiredQuery } from '../decorators';
-import { Language } from '../enum/language';
-import { PokemonDto } from './pokemon.dto';
+import { SearchPokemonDto } from '../../../../libs/dto/src/search/search-pokemon.dto';
 import { PokemonService } from './pokemon.service';
 
 @ApiTags('pokemon')
@@ -13,15 +13,15 @@ export class PokemonController {
 
   @Get()
   @ApiOkResponse({
-    type: [PokemonDto],
+    type: [SearchPokemonDto],
   })
   @ApiQuery({ name: 'term', type: String })
   @ApiQuery({ name: 'lang', enum: Language })
   async searchPokemon(
     @RequiredQuery('term') term: string,
     @EnumQuery({ key: 'lang', type: Language }) lang: Language
-  ): Promise<PokemonDto[]> {
+  ): Promise<SearchPokemonDto[]> {
     const entities = await this.pokemonService.find(term, lang);
-    return plainToClass(PokemonDto, entities);
+    return plainToClass(SearchPokemonDto, entities);
   }
 }

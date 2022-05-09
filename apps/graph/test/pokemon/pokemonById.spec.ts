@@ -2,7 +2,7 @@ import * as request from 'supertest';
 import { INestApplication } from '@nestjs/common';
 import { bootstrap } from '../../src/server';
 import * as expectedDetails from './pokemon_details.json';
-import * as expectedDetailsJA from './pokemon_details_ja.json';
+import * as expectedDetailsFR from './pokemon_details_fr.json';
 
 describe('pokemonById query', () => {
   let app: INestApplication;
@@ -89,7 +89,7 @@ describe('pokemonById query', () => {
     return request('http://localhost:3333/graphql')
       .post('')
       .send({
-        variables: { lang: 'ja' },
+        variables: { lang: 'fr' },
         query: `
         fragment PokemonFragment on Pokemon {
           id
@@ -137,6 +137,6 @@ describe('pokemonById query', () => {
         }`,
       })
       .expect(200)
-      .expect(expectedDetailsJA);
+      .expect(expectedDetailsFR);
   });
 });

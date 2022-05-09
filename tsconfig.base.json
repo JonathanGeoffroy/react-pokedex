@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@react-pokedex/dto": ["libs/dto/src/index.ts"],
       "@react-pokedex/ui": ["libs/ui/src/index.ts"]
     }
   },

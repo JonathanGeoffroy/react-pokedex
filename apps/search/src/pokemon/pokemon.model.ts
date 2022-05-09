@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { Language } from '../enum/language';
+import { Language } from '@react-pokedex/dto';
 
 export type PokemonDocument = Pokemon & Document;
 

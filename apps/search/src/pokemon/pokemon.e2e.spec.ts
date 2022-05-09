@@ -2,12 +2,12 @@ import * as request from 'supertest';
 import { Test } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import mongoose from 'mongoose';
+import { searchPokemonDataset } from '@react-pokedex/dto';
 import {
   closeInMongodConnection,
   mongod,
   rootMongooseTestModule,
 } from '../test-utils/mongo/MongooseTestModule';
-import * as pokemonDataset from '../test-utils/pokemon/pokemon.dataset.json';
 import { PokemonModule } from './pokemon.module';
 import { PokemonSchema } from './pokemon.model';
 
@@ -22,7 +22,7 @@ describe('Pokemon', () => {
     await mongoose.connect(mongod.getUri(), {});
     await mongoose.connection.db.dropDatabase();
     const pokemonModel = mongoose.model('pokemons', PokemonSchema);
-    await pokemonModel.insertMany(pokemonDataset);
+    await pokemonModel.insertMany(searchPokemonDataset);
 
     app = moduleRef.createNestApplication();
     await app.init();

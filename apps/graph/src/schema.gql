@@ -15,14 +15,9 @@ type PokemonSpecies {
 }
 
 enum Language {
-  ko
   fr
-  de
-  es
-  it
   en
-  cs
-  ja
+  es
 }
 
 type PokemonType {

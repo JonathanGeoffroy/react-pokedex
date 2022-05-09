@@ -2,16 +2,16 @@
   "data": {
     "pokemonById": {
       "id": "3",
-      "name": "フシギバナ",
+      "name": "Florizarre",
       "order": 3,
       "types": [
         {
           "type": "grass",
-          "name": "くさ"
+          "name": "Plante"
         },
         {
           "type": "poison",
-          "name": "どく"
+          "name": "Poison"
         }
       ],
       "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
@@ -30,38 +30,38 @@
         "speed": 80
       },
       "species": {
-        "description": "大きな　花びらを　広げ 太陽の　光を　浴びていると 体に　元気が　みなぎっていく。",
+        "description": "Le parfum de sa fleur se fait plus pénétrant les lendemains de pluie. Cela appâte les autres Pokémon.",
         "evolutions": [
           {
             "minLevel": 16,
             "from": {
               "id": "1",
-              "name": "フシギダネ",
+              "name": "Bulbizarre",
               "order": 1,
               "types": [
                 {
                   "type": "grass",
-                  "name": "くさ"
+                  "name": "Plante"
                 },
                 {
                   "type": "poison",
-                  "name": "どく"
+                  "name": "Poison"
                 }
               ],
               "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
             },
             "to": {
               "id": "2",
-              "name": "フシギソウ",
+              "name": "Herbizarre",
               "order": 2,
               "types": [
                 {
                   "type": "grass",
-                  "name": "くさ"
+                  "name": "Plante"
                 },
                 {
                   "type": "poison",
-                  "name": "どく"
+                  "name": "Poison"
                 }
               ],
               "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
@@ -71,32 +71,32 @@
             "minLevel": 32,
             "from": {
               "id": "2",
-              "name": "フシギソウ",
+              "name": "Herbizarre",
               "order": 2,
               "types": [
                 {
                   "type": "grass",
-                  "name": "くさ"
+                  "name": "Plante"
                 },
                 {
                   "type": "poison",
-                  "name": "どく"
+                  "name": "Poison"
                 }
               ],
               "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
             },
             "to": {
               "id": "3",
-              "name": "フシギバナ",
+              "name": "Florizarre",
               "order": 3,
               "types": [
                 {
                   "type": "grass",
-                  "name": "くさ"
+                  "name": "Plante"
                 },
                 {
                   "type": "poison",
-                  "name": "どく"
+                  "name": "Poison"
                 }
               ],
               "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
@@ -106,28 +106,28 @@
       },
       "previous": {
         "id": "2",
-        "name": "フシギソウ",
+        "name": "Herbizarre",
         "order": 2,
         "types": [
           {
             "type": "grass",
-            "name": "くさ"
+            "name": "Plante"
           },
           {
             "type": "poison",
-            "name": "どく"
+            "name": "Poison"
           }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
       },
       "next": {
         "id": "4",
-        "name": "ヒトカゲ",
+        "name": "Salamèche",
         "order": 5,
         "types": [
           {
             "type": "fire",
-            "name": "ほのお"
+            "name": "Feu"
           }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"

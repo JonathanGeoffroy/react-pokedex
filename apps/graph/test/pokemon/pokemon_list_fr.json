@@ -3,16 +3,16 @@
     "pokemon": [
       {
         "id": "1",
-        "name": "フシギダネ",
+        "name": "Bulbizarre",
         "order": 1,
         "types": [
           {
             "type": "grass",
-            "name": "くさ"
+            "name": "Plante"
           },
           {
             "type": "poison",
-            "name": "どく"
+            "name": "Poison"
           }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
@@ -31,38 +31,38 @@
           "speed": 45
         },
         "species": {
-          "description": "生まれたときから　背中に 不思議な　タネが　植えてあって 体と　ともに　育つという。",
+          "description": "Au matin de sa vie, la graine sur son dos lui fournit les éléments dont il a besoin pour grandir.",
           "evolutions": [
             {
               "minLevel": 16,
               "from": {
                 "id": "1",
-                "name": "フシギダネ",
+                "name": "Bulbizarre",
                 "order": 1,
                 "types": [
                   {
                     "type": "grass",
-                    "name": "くさ"
+                    "name": "Plante"
                   },
                   {
                     "type": "poison",
-                    "name": "どく"
+                    "name": "Poison"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
               },
               "to": {
                 "id": "2",
-                "name": "フシギソウ",
+                "name": "Herbizarre",
                 "order": 2,
                 "types": [
                   {
                     "type": "grass",
-                    "name": "くさ"
+                    "name": "Plante"
                   },
                   {
                     "type": "poison",
-                    "name": "どく"
+                    "name": "Poison"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
@@ -72,32 +72,32 @@
               "minLevel": 32,
               "from": {
                 "id": "2",
-                "name": "フシギソウ",
+                "name": "Herbizarre",
                 "order": 2,
                 "types": [
                   {
                     "type": "grass",
-                    "name": "くさ"
+                    "name": "Plante"
                   },
                   {
                     "type": "poison",
-                    "name": "どく"
+                    "name": "Poison"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
               },
               "to": {
                 "id": "3",
-                "name": "フシギバナ",
+                "name": "Florizarre",
                 "order": 3,
                 "types": [
                   {
                     "type": "grass",
-                    "name": "くさ"
+                    "name": "Plante"
                   },
                   {
                     "type": "poison",
-                    "name": "どく"
+                    "name": "Poison"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
@@ -108,16 +108,16 @@
         "previous": null,
         "next": {
           "id": "2",
-          "name": "フシギソウ",
+          "name": "Herbizarre",
           "order": 2,
           "types": [
             {
               "type": "grass",
-              "name": "くさ"
+              "name": "Plante"
             },
             {
               "type": "poison",
-              "name": "どく"
+              "name": "Poison"
             }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
@@ -125,16 +125,16 @@
       },
       {
         "id": "2",
-        "name": "フシギソウ",
+        "name": "Herbizarre",
         "order": 2,
         "types": [
           {
             "type": "grass",
-            "name": "くさ"
+            "name": "Plante"
           },
           {
             "type": "poison",
-            "name": "どく"
+            "name": "Poison"
           }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg",
@@ -153,38 +153,38 @@
           "speed": 60
         },
         "species": {
-          "description": "つぼみが　背中に　ついていて 養分を　吸収していくと 大きな　花が　咲くという。",
+          "description": "Lorsque le bourgeon sur son dos éclot, il répand un doux parfum pour célébrer sa floraison.",
           "evolutions": [
             {
               "minLevel": 16,
               "from": {
                 "id": "1",
-                "name": "フシギダネ",
+                "name": "Bulbizarre",
                 "order": 1,
                 "types": [
                   {
                     "type": "grass",
-                    "name": "くさ"
+                    "name": "Plante"
                   },
                   {
                     "type": "poison",
-                    "name": "どく"
+                    "name": "Poison"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
               },
               "to": {
                 "id": "2",
-                "name": "フシギソウ",
+                "name": "Herbizarre",
                 "order": 2,
                 "types": [
                   {
                     "type": "grass",
-                    "name": "くさ"
+                    "name": "Plante"
                   },
                   {
                     "type": "poison",
-                    "name": "どく"
+                    "name": "Poison"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
@@ -194,32 +194,32 @@
               "minLevel": 32,
               "from": {
                 "id": "2",
-                "name": "フシギソウ",
+                "name": "Herbizarre",
                 "order": 2,
                 "types": [
                   {
                     "type": "grass",
-                    "name": "くさ"
+                    "name": "Plante"
                   },
                   {
                     "type": "poison",
-                    "name": "どく"
+                    "name": "Poison"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
               },
               "to": {
                 "id": "3",
-                "name": "フシギバナ",
+                "name": "Florizarre",
                 "order": 3,
                 "types": [
                   {
                     "type": "grass",
-                    "name": "くさ"
+                    "name": "Plante"
                   },
                   {
                     "type": "poison",
-                    "name": "どく"
+                    "name": "Poison"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
@@ -229,32 +229,32 @@
         },
         "previous": {
           "id": "1",
-          "name": "フシギダネ",
+          "name": "Bulbizarre",
           "order": 1,
           "types": [
             {
               "type": "grass",
-              "name": "くさ"
+              "name": "Plante"
             },
             {
               "type": "poison",
-              "name": "どく"
+              "name": "Poison"
             }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
         },
         "next": {
           "id": "3",
-          "name": "フシギバナ",
+          "name": "Florizarre",
           "order": 3,
           "types": [
             {
               "type": "grass",
-              "name": "くさ"
+              "name": "Plante"
             },
             {
               "type": "poison",
-              "name": "どく"
+              "name": "Poison"
             }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
@@ -262,16 +262,16 @@
       },
       {
         "id": "3",
-        "name": "フシギバナ",
+        "name": "Florizarre",
         "order": 3,
         "types": [
           {
             "type": "grass",
-            "name": "くさ"
+            "name": "Plante"
           },
           {
             "type": "poison",
-            "name": "どく"
+            "name": "Poison"
           }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
@@ -290,38 +290,38 @@
           "speed": 80
         },
         "species": {
-          "description": "大きな　花びらを　広げ 太陽の　光を　浴びていると 体に　元気が　みなぎっていく。",
+          "description": "Le parfum de sa fleur se fait plus pénétrant les lendemains de pluie. Cela appâte les autres Pokémon.",
           "evolutions": [
             {
               "minLevel": 16,
               "from": {
                 "id": "1",
-                "name": "フシギダネ",
+                "name": "Bulbizarre",
                 "order": 1,
                 "types": [
                   {
                     "type": "grass",
-                    "name": "くさ"
+                    "name": "Plante"
                   },
                   {
                     "type": "poison",
-                    "name": "どく"
+                    "name": "Poison"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
               },
               "to": {
                 "id": "2",
-                "name": "フシギソウ",
+                "name": "Herbizarre",
                 "order": 2,
                 "types": [
                   {
                     "type": "grass",
-                    "name": "くさ"
+                    "name": "Plante"
                   },
                   {
                     "type": "poison",
-                    "name": "どく"
+                    "name": "Poison"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
@@ -331,32 +331,32 @@
               "minLevel": 32,
               "from": {
                 "id": "2",
-                "name": "フシギソウ",
+                "name": "Herbizarre",
                 "order": 2,
                 "types": [
                   {
                     "type": "grass",
-                    "name": "くさ"
+                    "name": "Plante"
                   },
                   {
                     "type": "poison",
-                    "name": "どく"
+                    "name": "Poison"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
               },
               "to": {
                 "id": "3",
-                "name": "フシギバナ",
+                "name": "Florizarre",
                 "order": 3,
                 "types": [
                   {
                     "type": "grass",
-                    "name": "くさ"
+                    "name": "Plante"
                   },
                   {
                     "type": "poison",
-                    "name": "どく"
+                    "name": "Poison"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
@@ -366,28 +366,28 @@
         },
         "previous": {
           "id": "2",
-          "name": "フシギソウ",
+          "name": "Herbizarre",
           "order": 2,
           "types": [
             {
               "type": "grass",
-              "name": "くさ"
+              "name": "Plante"
             },
             {
               "type": "poison",
-              "name": "どく"
+              "name": "Poison"
             }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
         },
         "next": {
           "id": "4",
-          "name": "ヒトカゲ",
+          "name": "Salamèche",
           "order": 5,
           "types": [
             {
               "type": "fire",
-              "name": "ほのお"
+              "name": "Feu"
             }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
@@ -395,12 +395,12 @@
       },
       {
         "id": "4",
-        "name": "ヒトカゲ",
+        "name": "Salamèche",
         "order": 5,
         "types": [
           {
             "type": "fire",
-            "name": "ほのお"
+            "name": "Feu"
           }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg",
@@ -419,30 +419,30 @@
           "speed": 65
         },
         "species": {
-          "description": "尻尾の　炎は ヒトカゲの　生命力の　証。 元気だと　さかんに　燃えさかる。",
+          "description": "La flamme de sa queue symbolise sa vitalité. Elle est intense quand il est en bonne santé.",
           "evolutions": [
             {
               "minLevel": 16,
               "from": {
                 "id": "4",
-                "name": "ヒトカゲ",
+                "name": "Salamèche",
                 "order": 5,
                 "types": [
                   {
                     "type": "fire",
-                    "name": "ほのお"
+                    "name": "Feu"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
               },
               "to": {
                 "id": "5",
-                "name": "リザード",
+                "name": "Reptincel",
                 "order": 6,
                 "types": [
                   {
                     "type": "fire",
-                    "name": "ほのお"
+                    "name": "Feu"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
@@ -452,28 +452,28 @@
               "minLevel": 36,
               "from": {
                 "id": "5",
-                "name": "リザード",
+                "name": "Reptincel",
                 "order": 6,
                 "types": [
                   {
                     "type": "fire",
-                    "name": "ほのお"
+                    "name": "Feu"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
               },
               "to": {
                 "id": "6",
-                "name": "リザードン",
+                "name": "Dracaufeu",
                 "order": 7,
                 "types": [
                   {
                     "type": "fire",
-                    "name": "ほのお"
+                    "name": "Feu"
                   },
                   {
                     "type": "flying",
-                    "name": "ひこう"
+                    "name": "Vol"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
@@ -483,28 +483,28 @@
         },
         "previous": {
           "id": "3",
-          "name": "フシギバナ",
+          "name": "Florizarre",
           "order": 3,
           "types": [
             {
               "type": "grass",
-              "name": "くさ"
+              "name": "Plante"
             },
             {
               "type": "poison",
-              "name": "どく"
+              "name": "Poison"
             }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
         },
         "next": {
           "id": "5",
-          "name": "リザード",
+          "name": "Reptincel",
           "order": 6,
           "types": [
             {
               "type": "fire",
-              "name": "ほのお"
+              "name": "Feu"
             }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
@@ -512,12 +512,12 @@
       },
       {
         "id": "5",
-        "name": "リザード",
+        "name": "Reptincel",
         "order": 6,
         "types": [
           {
             "type": "fire",
-            "name": "ほのお"
+            "name": "Feu"
           }
         ],
         "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg",
@@ -536,30 +536,30 @@
           "speed": 80
         },
         "species": {
-          "description": "尻尾を　振り回して 相手を　なぎ倒し　鋭い　ツメで ズタズタに　ひきさいてしまう。",
+          "description": "La nuit, la queue ardente du Reptincel brille comme une étoile dans son repaire montagneux.",
           "evolutions": [
             {
               "minLevel": 16,
               "from": {
                 "id": "4",
-                "name": "ヒトカゲ",
+                "name": "Salamèche",
                 "order": 5,
                 "types": [
                   {
                     "type": "fire",
-                    "name": "ほのお"
+                    "name": "Feu"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
               },
               "to": {
                 "id": "5",
-                "name": "リザード",
+                "name": "Reptincel",
                 "order": 6,
                 "types": [
                   {
                     "type": "fire",
-                    "name": "ほのお"
+                    "name": "Feu"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
@@ -569,28 +569,28 @@
               "minLevel": 36,
               "from": {
                 "id": "5",
-                "name": "リザード",
+                "name": "Reptincel",
                 "order": 6,
                 "types": [
                   {
                     "type": "fire",
-                    "name": "ほのお"
+                    "name": "Feu"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
               },
               "to": {
                 "id": "6",
-                "name": "リザードン",
+                "name": "Dracaufeu",
                 "order": 7,
                 "types": [
                   {
                     "type": "fire",
-                    "name": "ほのお"
+                    "name": "Feu"
                   },
                   {
                     "type": "flying",
-                    "name": "ひこう"
+                    "name": "Vol"
                   }
                 ],
                 "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
@@ -600,28 +600,28 @@
         },
         "previous": {
           "id": "4",
-          "name": "ヒトカゲ",
+          "name": "Salamèche",
           "order": 5,
           "types": [
             {
               "type": "fire",
-              "name": "ほのお"
+              "name": "Feu"
             }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
         },
         "next": {
           "id": "6",
-          "name": "リザードン",
+          "name": "Dracaufeu",
           "order": 7,
           "types": [
             {
               "type": "fire",
-              "name": "ほのお"
+              "name": "Feu"
             },
             {
               "type": "flying",
-              "name": "ひこう"
+              "name": "Vol"
             }
           ],
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"

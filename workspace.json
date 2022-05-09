@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "dto": "libs/dto",
     "graph": "apps/graph",
     "search": "apps/search",
     "ui": "libs/ui",

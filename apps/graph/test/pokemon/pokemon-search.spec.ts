@@ -3,6 +3,7 @@ import * as request from 'supertest';
 import { bootstrap } from '../../src/server';
 import { server } from '../mocks/server';
 import * as expectedSearchBulbasaur from './search_bulbasaur.json';
+
 describe('pokemon query', () => {
   let app: INestApplication;
   beforeAll(async () => {

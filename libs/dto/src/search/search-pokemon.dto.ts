@@ -3,7 +3,7 @@ import { Exclude, Expose } from 'class-transformer';
 import { Language } from '../enum/language';
 
 @Exclude()
-export class PokemonDto {
+export class SearchPokemonDto {
   @ApiProperty()
   @Expose()
   id: number;
