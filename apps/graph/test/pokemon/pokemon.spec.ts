@@ -1,4 +1,4 @@
-import axios from 'axios';
+import * as request from 'supertest';
 import { INestApplication } from '@nestjs/common';
 import { bootstrap } from '../../src/server';
 import * as expectedFindAll from './pokemon_list.json';
@@ -14,15 +14,17 @@ describe('pokemon query', () => {
   });
 
   it('should handle no query error', () => {
-    return expect(
-      axios.post('http://localhost:3333/graphql', {
+    return request('http://localhost:3333/graphql')
+      .post('')
+      .send({
         query: '{}',
       })
-    ).rejects.toMatchObject({ response: { status: 400 } });
+      .expect(400);
   });
   it('should handle correct query', () => {
-    return axios
-      .post('http://localhost:3333/graphql', {
+    return request('http://localhost:3333/graphql')
+      .post('')
+      .send({
         query: `
         query pokemonList {
           pokemon(limit: 20, offset: 0) {
@@ -50,12 +52,14 @@ describe('pokemon query', () => {
         }
         `,
       })
-      .then((actual) => expect(actual.data).toEqual(expectedFindAll));
+      .expect(200)
+      .expect(expectedFindAll);
   });
 
   it('should handle pagination', () => {
-    return axios
-      .post('http://localhost:3333/graphql', {
+    return request('http://localhost:3333/graphql')
+      .post('')
+      .send({
         query: `
         query pokemonList {
           pokemon(limit: 3, offset: 7) {
@@ -66,25 +70,25 @@ describe('pokemon query', () => {
           }
         }`,
       })
-      .then((actual) =>
-        expect(actual.data).toEqual({
-          data: {
-            pokemon: expectedFindAll.data.pokemon
-              .slice(7, 7 + 3)
-              .map(({ id, order, name, types }) => ({
-                id,
-                order,
-                name,
-                types,
-              })),
-          },
-        })
-      );
+      .expect(200)
+      .expect({
+        data: {
+          pokemon: expectedFindAll.data.pokemon
+            .slice(7, 7 + 3)
+            .map(({ id, order, name, types }) => ({
+              id,
+              order,
+              name,
+              types,
+            })),
+        },
+      });
   });
 
   it('should handle translation', () => {
-    return axios
-      .post('http://localhost:3333/graphql', {
+    return request('http://localhost:3333/graphql')
+      .post('')
+      .send({
         variables: { lang: 'ja' },
         query: `
         fragment PokemonFragment on Pokemon {
@@ -132,6 +136,7 @@ describe('pokemon query', () => {
           }
         }`,
       })
-      .then((actual) => expect(actual.data).toEqual(expectedFindAllJA));
+      .expect(200)
+      .expect(expectedFindAllJA);
   });
 });

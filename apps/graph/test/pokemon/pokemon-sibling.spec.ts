@@ -1,9 +1,9 @@
-import axios from 'axios';
 import { INestApplication } from '@nestjs/common';
+import * as request from 'supertest';
 import { bootstrap } from '../../src/server';
 import * as expectedFindAll from './pokemon_list.json';
 
-const siblingQuery = (id: number) => `
+const siblingQuery = `
 fragment PokemonFragment on Pokemon {
   id
   name
@@ -11,8 +11,8 @@ fragment PokemonFragment on Pokemon {
   types { type name }
   imageUrl
 }
-query pokemonDetails {
-  pokemonById(id:${id}) {
+query pokemonDetails($id: ID!) {
+  pokemonById(id:$id) {
     id
     name
     previous {
@@ -56,11 +56,14 @@ describe('pokemon siblings query', () => {
       },
     };
 
-    return axios
-      .post('http://localhost:3333/graphql', {
-        query: siblingQuery(1),
+    return request('http://localhost:3333/graphql')
+      .post('/')
+      .send({
+        query: siblingQuery,
+        variables: { id: 1 },
       })
-      .then((actual) => expect(actual.data).toEqual(expected));
+      .expect(200)
+      .expect(expected);
   });
 
   it('should handle pokemon with both previous and next ', () => {
@@ -91,13 +94,17 @@ describe('pokemon siblings query', () => {
       },
     };
 
-    return axios
-      .post('http://localhost:3333/graphql', {
-        query: siblingQuery(2),
+    return request('http://localhost:3333/graphql')
+      .post('/')
+      .send({
+        query: siblingQuery,
+        variables: { id: 2 },
       })
-      .then((actual) => expect(actual.data).toEqual(expected));
+      .expect(200)
+      .expect(expected);
   });
 });
+
 function getAt(index: number) {
   return expectedFindAll.data.pokemon[index];
 }

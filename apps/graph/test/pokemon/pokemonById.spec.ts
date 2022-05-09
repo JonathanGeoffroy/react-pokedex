@@ -1,4 +1,4 @@
-import axios from 'axios';
+import * as request from 'supertest';
 import { INestApplication } from '@nestjs/common';
 import { bootstrap } from '../../src/server';
 import * as expectedDetails from './pokemon_details.json';
@@ -15,8 +15,9 @@ describe('pokemonById query', () => {
   });
 
   it('should handle non-number id error', () => {
-    return expect(
-      axios.post('http://localhost:3333/graphql', {
+    return request('http://localhost:3333/graphql')
+      .post('')
+      .send({
         query: `
         query pokemonDetails {
           pokemonById(id: hello) {
@@ -24,65 +25,70 @@ describe('pokemonById query', () => {
           }
         }`,
       })
-    ).rejects.toMatchObject({ response: { status: 400 } });
+      .expect(400);
   });
 
   it('should handle unexisting id error', async () => {
-    return expect(
-      axios.post('http://localhost:3333/graphql', {
+    return request('http://localhost:3333/graphql')
+      .post('')
+      .send({
         query: `
-      query pokemonDetails {
-        pokemonById(id: 0) {
-          id
-        }
-      }`,
+            query pokemonDetails {
+              pokemonById(id: 0) {
+                id
+              }
+            }`,
       })
-    ).resolves.toMatchObject({
-      data: {
-        errors: [
-          {
-            message: '404: Not Found',
-          },
-        ],
-      },
-    });
+      .expect(200)
+      .then((response) => {
+        expect(response.body).toMatchObject({
+          errors: [
+            {
+              message: '404: Not Found',
+            },
+          ],
+        });
+      });
   });
 
   it('should handle correct query', () => {
-    return axios
-      .post('http://localhost:3333/graphql', {
+    return request('http://localhost:3333/graphql')
+      .post('')
+      .send({
         query: `
-        query pokemonDetails {
-          pokemonById(id: 1) {
-            id
-            order
-            name
-            types { type name }
-            imageUrl
-            height
-            weight
-            abilities
-            species {
+          query pokemonDetails {
+            pokemonById(id: 1) {
               id
-              description
+              order
+              name
+              types { type name }
+              imageUrl
+              height
+              weight
+              abilities
+              species {
+                id
+                description
+              }
+              stats {
+                hp
+                attack
+                defense
+                specialAttack
+                specialDefense
+                speed
+              }
             }
-            stats {
-              hp
-              attack
-              defense
-              specialAttack
-              specialDefense
-              speed
-            }
-          }
-        }`,
+          }`,
       })
-      .then((actual) => expect(actual.data).toEqual(expectedDetails));
+      .expect(200)
+      .expect(expectedDetails);
   });
 
   it('should handle translation', () => {
-    return axios
-      .post('http://localhost:3333/graphql', {
+    return request('http://localhost:3333/graphql')
+      .post('')
+      .send({
         variables: { lang: 'ja' },
         query: `
         fragment PokemonFragment on Pokemon {
@@ -130,6 +136,7 @@ describe('pokemonById query', () => {
           }
         }`,
       })
-      .then((actual) => expect(actual.data).toEqual(expectedDetailsJA));
+      .expect(200)
+      .expect(expectedDetailsJA);
   });
 });

@@ -1,4 +1,4 @@
-import axios from 'axios';
+import * as request from 'supertest';
 import { INestApplication } from '@nestjs/common';
 import { bootstrap } from '../../src/server';
 import * as expectedSpecies from './pokemon_species.json';
@@ -14,8 +14,9 @@ describe('species', () => {
   });
 
   it('should handle evolution', () => {
-    return axios
-      .post('http://localhost:3333/graphql', {
+    return request('http://localhost:3333/graphql')
+      .post('')
+      .send({
         query: `
         fragment Evolution on Pokemon {
           id
@@ -42,6 +43,7 @@ describe('species', () => {
           }
         }`,
       })
-      .then((actual) => expect(actual.data).toEqual(expectedSpecies));
+      .expect(200)
+      .expect(expectedSpecies);
   });
 });
