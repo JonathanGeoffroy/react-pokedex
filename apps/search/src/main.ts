@@ -1,16 +1,21 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
-
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app/app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
   const globalPrefix = 'api';
+  const app = await NestFactory.create(AppModule);
+
+  const config = new DocumentBuilder()
+    .setTitle('Search Pokemon API')
+    .setDescription('The pokemon search engine API description.')
+    .setVersion('1.0')
+    .addTag('search')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup(globalPrefix, app, document);
+
   app.setGlobalPrefix(globalPrefix);
   const port = process.env.PORT || 3000;
   await app.listen(port);

@@ -98,6 +98,7 @@
     "@nestjs/graphql": "^9.1.2",
     "@nestjs/mongoose": "^9.0.3",
     "@nestjs/platform-express": "^8.0.0",
+    "@nestjs/swagger": "^5.2.1",
     "apollo-datasource-rest": "^3.5.1",
     "apollo-server-caching": "^3.3.0",
     "apollo-server-express": "^3.6.2",
@@ -121,6 +122,7 @@
     "regenerator-runtime": "0.13.7",
     "rxjs": "^7.0.0",
     "sonic-channel": "^1.2.7",
+    "swagger-ui-express": "^4.3.0",
     "tslib": "^2.0.0"
   }
 }
