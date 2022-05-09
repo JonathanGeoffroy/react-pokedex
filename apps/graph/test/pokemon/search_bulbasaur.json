@@ -1,0 +1,27 @@
+{
+  "data": {
+    "searchPokemon": [
+      {
+        "pokemon": {
+          "id": "1",
+          "order": 1,
+          "name": "Bulbasaur",
+          "types": [
+            {
+              "type": "grass",
+              "name": "Grass"
+            },
+            {
+              "type": "poison",
+              "name": "Poison"
+            }
+          ],
+          "stats": {
+            "hp": 45,
+            "attack": 49
+          }
+        }
+      }
+    ]
+  }
+}

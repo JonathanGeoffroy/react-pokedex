@@ -77,7 +77,12 @@ type Pokemon {
   next: Pokemon
 }
 
+type PokemonSearch {
+  pokemon: Pokemon!
+}
+
 type Query {
   pokemon(limit: Int, offset: Int, lang: Language = en): [Pokemon!]!
   pokemonById(id: ID!, lang: Language = en): Pokemon!
+  searchPokemon(term: String!, lang: Language = en): [PokemonSearch!]!
 }
