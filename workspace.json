@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "graph": "apps/graph",
+    "search": "apps/search",
     "ui": "libs/ui",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
