@@ -1,0 +1,18 @@
+fragment PokemonFragment on Pokemon {
+  id
+  name(lang: $lang)
+  order
+  types {
+    type
+    name(lang: $lang)
+  }
+  imageUrl
+}
+
+query searchPokemon($term: String!, $lang: Language) {
+  searchPokemon(term: $term, lang: $lang) {
+    pokemon {
+      ...PokemonFragment
+    }
+  }
+}

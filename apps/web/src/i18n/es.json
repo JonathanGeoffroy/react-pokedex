@@ -12,5 +12,7 @@
         "special_attack": "Ataque especial",
         "special_defense": "Defensa especial",
         "speed": "Speed"
-    }
+    },
+    "no_result": "No hay resultado",
+    "search": "Buscar"
 }
