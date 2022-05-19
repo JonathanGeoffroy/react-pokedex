@@ -18,7 +18,7 @@
     "test:ui": "start-server-and-test storybook http://localhost:4400 test:ui-jest",
     "test:ui-jest": "cd ./libs/ui && npx jest",
     "test:ui-jest-update": "cd ./libs/ui && npx jest -u",
-    "test:e2e": "env-cmd -f apps/web/.env start-server-and-test graph:serve 'http-get://localhost:3333/graphql?query={ __schema { queryType { name } } }' 'nx run-many --target=e2e --all'",
+    "test:e2e": "env-cmd -f apps/web/.env start-server-and-test graph:serve 'http-get://localhost:3333/graphql?query={ __schema { queryType { name } } }' search:serve 'http://localhost:3000/api/' 'nx run-many --target=e2e --all'",
     "test:graph": "nx run graph:test -- --runInBand",
     "test:search": "nx run search:test"
   },
