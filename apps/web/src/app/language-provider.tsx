@@ -16,9 +16,9 @@ interface LanguageProviderProps {
 }
 
 export default function LanguageProvider({ children }: LanguageProviderProps) {
-  const valueAndSetter = useState<Language>(Language.En);
-  const [language] = valueAndSetter;
   const { i18n } = useTranslation();
+  const valueAndSetter = useState<Language>(i18n.languages[0] as Language);
+  const [language] = valueAndSetter;
 
   useEffect(() => {
     i18n.changeLanguage(language);
