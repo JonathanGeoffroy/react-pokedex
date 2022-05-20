@@ -1,9 +1,8 @@
 import { Controller, Get } from '@nestjs/common';
 import { ApiOkResponse, ApiQuery, ApiTags } from '@nestjs/swagger';
 import { plainToClass } from 'class-transformer';
-import { Language } from '@react-pokedex/dto';
+import { Language , SearchPokemonDto } from '@react-pokedex/dto';
 import { EnumQuery, RequiredQuery } from '../decorators';
-import { SearchPokemonDto } from '../../../../libs/dto/src/search/search-pokemon.dto';
 import { PokemonService } from './pokemon.service';
 
 @ApiTags('pokemon')
