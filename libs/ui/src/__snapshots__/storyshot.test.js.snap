@@ -148,6 +148,40 @@ exports[`Storyshots Card With Children 1`] = `
 </div>
 `;
 
+exports[`Storyshots Input Primary 1`] = `
+<div
+  className="flex flex-col"
+>
+  <label
+    className="label pb-1"
+    htmlFor="react-aria3256283909-1"
+    id="react-aria3256283909-2"
+  >
+    Email
+  </label>
+  <div
+    className="flex flex-row bg-gray-100 p-2 border border-gray-300 rounded"
+  >
+    <input
+      aria-labelledby="react-aria3256283909-2"
+      className="w-full grow-0 bg-gray-100"
+      disabled={false}
+      id="react-aria3256283909-1"
+      onChange={[Function]}
+      readOnly={false}
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="label pt-1"
+    id={null}
+  >
+    Email description
+  </div>
+</div>
+`;
+
 exports[`Storyshots TopBar Empty 1`] = `
 <div
   className="top-bar"
