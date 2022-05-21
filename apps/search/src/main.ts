@@ -5,7 +5,9 @@ import { AppModule } from './app/app.module';
 
 async function bootstrap() {
   const globalPrefix = 'api';
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, {
+    cors: true,
+  });
 
   const config = new DocumentBuilder()
     .setTitle('Search Pokemon API')
