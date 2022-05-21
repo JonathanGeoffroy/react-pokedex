@@ -1,1 +1,1 @@
-web: npm run graph:serve
+web: node dist/apps/graph/main.js
