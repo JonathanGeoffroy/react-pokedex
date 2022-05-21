@@ -1,1 +1,1 @@
-web: npm run search:serve
+web: node  dist/apps/search/main.js

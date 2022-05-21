@@ -7,7 +7,7 @@
     "start": "nx serve",
     "storybook": "nx run ui:storybook",
     "build": "nx run-many --target=build --all",
-    "heroku-postbuild": "npm run $PROJECT_NAME:build",
+    "heroku-postbuild": "npm run $PROJECT_NAME:build --prod",
     "graph:build": "nx run graph:build --prod",
     "graph:serve": "nx run graph:serve",
     "search:build": "nx run search:build --prod",
