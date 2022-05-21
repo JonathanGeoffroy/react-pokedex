@@ -9,6 +9,7 @@ export const rootMongooseTestModule = (options: MongooseModuleOptions = {}) =>
       mongod = new MongoMemoryServer();
       await mongod.start();
       const mongoUri = await mongod.getUri();
+      console.log('testing in-memory db', mongoUri);
       return {
         uri: mongoUri,
         ...options,
