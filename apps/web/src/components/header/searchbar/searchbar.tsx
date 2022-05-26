@@ -1,11 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { Input, Card } from '@react-pokedex/ui';
 import classNames from 'classnames';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { EmojiSadIcon, SearchIcon } from '@heroicons/react/outline';
-import { LanguageContext } from '../../../app/language-provider';
-import { useSearchPokemonLazyQuery } from '../../../__generated/pokeapi.graphql';
 import Results from './results/results';
+import useResults from './useResults';
 
 import './searchbar.module.scss';
 
@@ -13,31 +12,10 @@ export type SearchbarProps = React.HTMLProps<HTMLDivElement>;
 
 export function Searchbar({ className, ...passThrough }: SearchbarProps) {
   const [term, setTerm] = useState<string>('');
-  const [resultsOpen, setResultsOpen] = useState<boolean>(false);
-  const [language] = useContext(LanguageContext);
-  const [search, { data }] = useSearchPokemonLazyQuery();
-  const [focus, setFocus] = useState<boolean>(false);
+  const { resultsOpen, setResultsOpen, focus, setFocus, data } =
+    useResults(term);
+
   const { t } = useTranslation();
-
-  useEffect(() => {
-    if (!term.length) {
-      setResultsOpen(false);
-    } else if (focus) {
-      setResultsOpen(true);
-    }
-  }, [term, focus]);
-
-  useEffect(() => {
-    if (data?.searchPokemon) {
-      setResultsOpen(true);
-    }
-  }, [data]);
-
-  useEffect(() => {
-    if (term.length) {
-      search({ variables: { term, lang: language } });
-    }
-  }, [term, language, search]);
 
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -51,7 +29,7 @@ export function Searchbar({ className, ...passThrough }: SearchbarProps) {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, [setFocus, setResultsOpen]);
 
   const bigSearch = focus || resultsOpen;
 
